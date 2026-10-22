@@ -304,7 +304,7 @@ details.deriv[open]>summary::before{content:none}
 
 /* Nota / aviso */
 .note{
-  display:flex;gap:10px;align-items:flex-start;
+  display:flow-root;
   margin-top:12px;padding:11px 14px;border-radius:10px;
   font-size:12.5px;line-height:1.55;color:var(--muted);
   background:rgba(251,191,36,.05);border:1px solid rgba(251,191,36,.2);
