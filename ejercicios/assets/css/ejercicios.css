@@ -295,6 +295,12 @@ details.deriv[open]>summary::before{content:none}
 .note b{color:#f5e6c2;font-weight:600}
 .note--key{background:rgba(45,212,191,.05);border-color:rgba(45,212,191,.2)}
 .note--key b{color:#c9f6ee}
+.note__link{
+  display:inline-block;margin-left:6px;white-space:nowrap;
+  color:var(--orange-l);font-weight:600;font-size:11.5px;
+  border-bottom:1px dotted rgba(253,186,116,.55);
+}
+.note__link:hover{color:#ffe0c2;border-bottom-color:#ffe0c2}
 
 /* ---------- Tablas ---------- */
 .table-wrap{margin-top:12px;overflow:auto;border-radius:11px;border:1px solid var(--line)}

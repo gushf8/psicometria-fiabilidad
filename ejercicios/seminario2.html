@@ -73,14 +73,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Parte de la fiabilidad expresada con el error.<div class="fx">\[ r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Pasa la fiabilidad al otro miembro.<div class="fx">\[ 1-r_{xx}=\dfrac{\sigma^2_E}{\sigma^2_X} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Invierte los dos lados de la igualdad.<div class="fx">\[ \dfrac{\sigma^2_X}{\sigma^2_E}=\dfrac{1}{1-r_{xx}} \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Multiplica por σ²E.<div class="fx">\[ \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq3">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq3">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">El coeficiente es la proporción de varianza verdadera, así que el error es el resto:<div class="fx">\[ 1-r_{xx}=1-.80=.20 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">De \( r_{xx}=1-\sigma^2_E/\sigma^2_X \) despeja la varianza observada:<div class="fx">\[ \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}}=\dfrac{8}{.20}=40 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">La varianza verdadera es lo que queda:<div class="fx">\[ \sigma^2_V=\sigma^2_X-\sigma^2_E=40-8=32 \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Desviaciones típicas (raíz cuadrada de cada varianza):<div class="fx">\[ \sigma_V=\sqrt{32}=5.6569 \qquad \sigma_E=\sqrt{8}=2.8284 \]</div></div></li><li class="step"><span class="step__n">5</span><div class="step__tx">Índice de fiabilidad:<div class="fx">\[ r_{XV}=\sqrt{r_{xx}}=\sqrt{.80}=.8944 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">σ²X = <b>40</b> · σ²V = <b>32</b> · σV = <b>5,6569</b> · σE = <b>2,8284</b> · índice = <b>0,8944</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> el dato que faltaba (σ²X) se obtiene despejando, no restando: dividir entre (1 − r), no multiplicar.</div>
+      <div class="note note--key"><b>Ojo:</b> el dato que faltaba (σ²X) se obtiene despejando, no restando: dividir entre (1 − r), no multiplicar. <a class="note__link" href="teoria.html#t1">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -105,14 +105,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">El coeficiente es el índice al cuadrado.<div class="fx">\[ r_{xx}=r_{XV}^{\,2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Y el índice se recupera con una raíz.<div class="fx">\[ r_{XV}=\sqrt{r_{xx}} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">De la definición del índice, multiplica por σX.<div class="fx">\[ \sigma_V=r_{XV}\,\sigma_X \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r_{xx}=r_{XV}^{\,2}\qquad \sigma_V=r_{XV}\,\sigma_X \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq4">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq4">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">El coeficiente es el índice al cuadrado:<div class="fx">\[ r_{xx}=r_{XV}^2=.90^2=.81 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">De \( r_{XV}=\sigma_V/\sigma_X \) despeja σV:<div class="fx">\[ \sigma_V=r_{XV}\,\sigma_X=.90\times 12=10.8 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Y eleva al cuadrado para la varianza verdadera:<div class="fx">\[ \sigma^2_V=10.8^2=116.64 \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Comprobación por la otra vía:<div class="fx">\[ \sigma^2_X=12^2=144 \;\Rightarrow\; \sigma^2_V=.81\times 144=116.64 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val"><span class="g-term" data-g="r_xx">r<sub>xx</sub></span> = <b>0,81</b> · σV = <b>10,8</b> · σ²V = <b>116,64</b> · (σ²E = 27,36 → σE = 5,2307)</div></div>
-      <div class="note note--key"><b>Ojo:</b> 0,90 es el índice, no el coeficiente. Si lo usas como coeficiente, todo lo demás sale mal.</div>
+      <div class="note note--key"><b>Ojo:</b> 0,90 es el índice, no el coeficiente. Si lo usas como coeficiente, todo lo demás sale mal. <a class="note__link" href="teoria.html#t1">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -137,14 +137,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">La varianza observada es la suma de las dos partes.<div class="fx">\[ \sigma^2_X=\sigma^2_V+\sigma^2_E \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye el denominador y divide.<div class="fx">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_V+\sigma^2_E} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_V+\sigma^2_E} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq2">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq2">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Primero reconstruye la varianza observada:<div class="fx">\[ \sigma^2_X=\sigma^2_V+\sigma^2_E=51+9=60 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Coeficiente:<div class="fx">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_X}=\dfrac{51}{60}=.85 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Índice:<div class="fx">\[ r_{XV}=\sqrt{.85}=.9220 \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Razón entre desviaciones:<div class="fx">\[ \dfrac{\sigma_E}{\sigma_X}=\sqrt{\dfrac{9}{60}}=\sqrt{.15}=.3873 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val"><span class="g-term" data-g="r_xx">r<sub>xx</sub></span> = <b>0,85</b> · índice = <b>0,9220</b> · σE/σX = <b>0,3873</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> σE/σX es exactamente r(X,E), la correlación entre observadas y error.</div>
+      <div class="note note--key"><b>Ojo:</b> σE/σX es exactamente r(X,E), la correlación entre observadas y error. <a class="note__link" href="teoria.html#t1">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -169,14 +169,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide los dos miembros entre la raíz.<div class="fx">\[ \dfrac{\sigma_E}{\sqrt{1-r_{xx}}}=\sigma_X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Ordena la expresión.<div class="fx">\[ \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq5">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq5">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja σX de \( \sigma_E=\sigma_X\sqrt{1-r_{xx}} \):<div class="fx">\[ \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}}=\dfrac{4.2}{\sqrt{.36}}=\dfrac{4.2}{.60}=7 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">La desviación verdadera sale del índice:<div class="fx">\[ \sigma_V=\sqrt{r_{xx}}\;\sigma_X=.80\times 7=5.6 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Comprobación:<div class="fx">\[ \sigma^2_X=49 \quad \sigma^2_V=31.36 \quad \sigma^2_E=17.64 \;\Rightarrow\; \sqrt{17.64}=4.2 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">σX = <b>7</b> · σV = <b>5,6</b> · σ²X = <b>49</b> · σ²V = <b>31,36</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> cuando te dan σE, la raíz de (1 − r) va en el denominador: se divide, no se multiplica.</div>
+      <div class="note note--key"><b>Ojo:</b> cuando te dan σE, la raíz de (1 − r) va en el denominador: se divide, no se multiplica. <a class="note__link" href="teoria.html#t1">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -212,14 +212,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Aísla el término que lleva X.<div class="fx">\[ \hat{V}-\mu_X(1-r_{xx})=r_{xx}X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre r.<div class="fx">\[ X=\dfrac{\hat{V}-\mu_X(1-r_{xx})}{r_{xx}} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ X=\dfrac{\hat{V}-\mu_X(1-r_{xx})}{r_{xx}} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq7">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq7">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Parte de la ecuación de pronóstico y sustituye:<div class="fx">\[ 26=20(1-.80)+.80\,X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Calcula el término de la media y despeja X:<div class="fx">\[ 26=4+.80X \;\Rightarrow\; 22=.80X \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Divide:<div class="fx">\[ X=\dfrac{22}{.80}=27.5 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">X = <b>27,5</b> puntos</div></div>
-      <div class="note note--key"><b>Ojo:</b> la estimación siempre cae entre X y la media: 26 está entre 27,5 y 20.</div>
+      <div class="note note--key"><b>Ojo:</b> la estimación siempre cae entre X y la media: 26 está entre 27,5 y 20. <a class="note__link" href="teoria.html#t2">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -244,14 +244,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Resta la media en los dos miembros.<div class="fx">\[ \hat{V}-\mu_X=r_{xx}(X-\mu_X) \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre la distancia a la media.<div class="fx">\[ r_{xx}=\dfrac{\hat{V}-\mu_X}{X-\mu_X} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r_{xx}=\dfrac{\hat{V}-\mu_X}{X-\mu_X} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq7">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq7">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">De \( \hat{V}-\mu=r_{xx}(X-\mu) \) despeja r:<div class="fx">\[ r_{xx}=\dfrac{\hat{V}-\mu}{X-\mu}=\dfrac{37-25}{40-25}=\dfrac{12}{15}=.80 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Comprueba el resultado:<div class="fx">\[ 25+.80(40-25)=25+12=37\;\checkmark \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val"><span class="g-term" data-g="r_xx">r<sub>xx</sub></span> = <b>0,80</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> si la estimación se acercara más a la media, el coeficiente sería menor.</div>
+      <div class="note note--key"><b>Ojo:</b> si la estimación se acercara más a la media, el coeficiente sería menor. <a class="note__link" href="teoria.html#t2">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -276,14 +276,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Suma los dos límites: el término zσE se cancela.<div class="fx">\[ L+U=2X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Resta los dos límites: queda el doble de la semiamplitud.<div class="fx">\[ U-L=2z\,\sigma_E \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Despeja cada incógnita.<div class="fx">\[ X=\dfrac{L+U}{2}\qquad \sigma_E=\dfrac{U-L}{2z} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ X=\dfrac{L+U}{2}\qquad \sigma_E=\dfrac{U-L}{2z} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq10">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq10">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">El intervalo es simétrico alrededor de X:<div class="fx">\[ X=\dfrac{24+40}{2}=32 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">La semiamplitud es \( z\,\sigma_E \):<div class="fx">\[ 8=2.58\,\sigma_E \;\Rightarrow\; \sigma_E=\dfrac{8}{2.58}=3.1008 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Despeja r de \( \sigma_E=\sigma_X\sqrt{1-r} \):<div class="fx">\[ \sqrt{1-r}=\dfrac{3.1008}{9}=.3445 \;\Rightarrow\; 1-r=.1187 \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Por tanto:<div class="fx">\[ r_{xx}=.8813 \qquad r_{XV}=\sqrt{.8813}=.9388 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">X = <b>32</b> · σE = <b>3,1008</b> · <span class="g-term" data-g="r_xx">r<sub>xx</sub></span> = <b>0,8813</b> · índice = 0,9388</div></div>
-      <div class="note note--key"><b>Ojo:</b> primero divide la amplitud entre 2 y entre z; solo después eleva al cuadrado.</div>
+      <div class="note note--key"><b>Ojo:</b> primero divide la amplitud entre 2 y entre z; solo después eleva al cuadrado. <a class="note__link" href="teoria.html#t2">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -308,14 +308,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide entre σX.<div class="fx">\[ \dfrac{\sigma_E}{\sigma_X}=\sqrt{1-r_{xx}} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Eleva al cuadrado los dos miembros.<div class="fx">\[ \left(\dfrac{\sigma_E}{\sigma_X}\right)^2=1-r_{xx} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Pasa el cuadrado restando.<div class="fx">\[ r_{xx}=1-\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r_{xx}=1-\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq5">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq5">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja r de la fórmula del error típico:<div class="fx">\[ \sqrt{1-r_{xx}}=\dfrac{2.5}{10}=.25 \;\Rightarrow\; 1-r_{xx}=.0625 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Coeficiente e índice:<div class="fx">\[ r_{xx}=.9375 \qquad r_{XV}=\sqrt{.9375}=.9682 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Intervalo (alrededor de X):<div class="fx">\[ 55\pm 2.58(2.5)=55\pm 6.45 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val"><span class="g-term" data-g="r_xx">r<sub>xx</sub></span> = <b>0,9375</b> · índice = <b>0,9682</b> · IC = <b>[48,55 ; 61,45]</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> el error típico es pequeño porque la fiabilidad es alta: 2,5 puntos sobre una σ de 10.</div>
+      <div class="note note--key"><b>Ojo:</b> el error típico es pequeño porque la fiabilidad es alta: 2,5 puntos sobre una σ de 10. <a class="note__link" href="teoria.html#t2">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -351,14 +351,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left[1+(k-1)r\right]=kr \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla el paréntesis.<div class="fx">\[ R+R(k-1)r=kr \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Agrupa los términos con r.<div class="fx">\[ R=r\left[k-R(k-1)\right] \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Divide.<div class="fx">\[ r=\dfrac{R}{k-(k-1)R} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r=\dfrac{R}{k-(k-1)R} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Calcula k (razón de longitudes):<div class="fx">\[ k=\dfrac{n_F}{n_I}=\dfrac{60}{40}=1.5 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Despeja r de la ecuación de Spearman-Brown:<div class="fx">\[ r=\dfrac{R}{k-(k-1)R} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Sustituye:<div class="fx">\[ r=\dfrac{.75}{1.5-.5(.75)}=\dfrac{.75}{1.125}=.6667 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">r_original = <b>0,6667</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> comprueba: 1,5(0,6667) / [1 + 0,5(0,6667)] = 0,75 ✓</div>
+      <div class="note note--key"><b>Ojo:</b> comprueba: 1,5(0,6667) / [1 + 0,5(0,6667)] = 0,75 ✓ <a class="note__link" href="teoria.html#t3">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -383,14 +383,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left[1+(k-1)r\right]=kr \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla y lleva los términos con k a un lado.<div class="fx">\[ R-Rr=kr-Rrk \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Saca factor común k.<div class="fx">\[ R(1-r)=kr(1-R) \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Divide.<div class="fx">\[ k=\dfrac{R(1-r)}{r(1-R)} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ k=\dfrac{R(1-r)}{r(1-R)} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja k:<div class="fx">\[ k=\dfrac{R(1-r)}{r(1-R)}=\dfrac{.80(.50)}{.50(.20)}=\dfrac{.40}{.10}=4 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Longitud final:<div class="fx">\[ n_F=k\,n_I=4\times 25=100 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Ítems que se añaden:<div class="fx">\[ 100-25=75 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">k = <b>4</b> · 100 ítems en total · hay que añadir <b>75</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> pasar de .50 a .80 obliga a cuadruplicar la longitud: los dos últimos tramos de fiabilidad son los más caros.</div>
+      <div class="note note--key"><b>Ojo:</b> pasar de .50 a .80 obliga a cuadruplicar la longitud: los dos últimos tramos de fiabilidad son los más caros. <a class="note__link" href="teoria.html#t3">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -415,14 +415,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Calcula k como razón de longitudes.<div class="fx">\[ k=\dfrac{n_F}{n_I} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye k y r en la ecuación de Spearman-Brown.<div class="fx">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Calcula k:<div class="fx">\[ k=\dfrac{20}{80}=.25 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Aplica Spearman-Brown:<div class="fx">\[ R=\dfrac{(.25)(.70)}{1+(-.75)(.70)}=\dfrac{.175}{.475}=.3684 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Índice:<div class="fx">\[ r_{XV}=\sqrt{.3684}=.6069 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">R = <b>0,3684</b> · índice = <b>0,6069</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> al acortar, k < 1 y el denominador se hace más pequeño que 1: el coeficiente cae en picado.</div>
+      <div class="note note--key"><b>Ojo:</b> al acortar, k < 1 y el denominador se hace más pequeño que 1: el coeficiente cae en picado. <a class="note__link" href="teoria.html#t3">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -447,14 +447,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left[1+(k-1)r\right]=kr \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla el paréntesis.<div class="fx">\[ R+R(k-1)r=kr \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Agrupa los términos con r.<div class="fx">\[ R=r\left[k-R(k-1)\right] \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Divide.<div class="fx">\[ r=\dfrac{R}{k-(k-1)R} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r=\dfrac{R}{k-(k-1)R} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">El dato es el índice: conviértelo en coeficiente.<div class="fx">\[ r_{xx}=r_{XV}^2=.80^2=.64 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Despeja k:<div class="fx">\[ k=\dfrac{R(1-r)}{r(1-R)}=\dfrac{.80(.36)}{.64(.20)}=\dfrac{.288}{.128}=2.25 \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Longitud final (redondeando al alza):<div class="fx">\[ n_F=30\times 2.25=67.5 \;\Rightarrow\; 68 \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Ítems que se añaden:<div class="fx">\[ 68-30=38 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">hay que añadir <b>38 ítems</b> (68 en total)</div></div>
-      <div class="note note--key"><b>Ojo:</b> si usas .80 como si fuera el coeficiente, k sale distinto y el resultado es incorrecto.</div>
+      <div class="note note--key"><b>Ojo:</b> si usas .80 como si fuera el coeficiente, k sale distinto y el resultado es incorrecto. <a class="note__link" href="teoria.html#t3">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -490,14 +490,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Pasa la fiabilidad del grupo 2.<div class="fx">\[ 1-r_2=(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Invierte la fracción.<div class="fx">\[ \dfrac{1}{1-r_2}=\dfrac{\sigma^2_2}{(1-r_1)\sigma^2_1} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por (1−r₁)σ²₁.<div class="fx">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a> · <a href="teoria.html#t4">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Comprueba que el error absoluto no cambia:<div class="fx">\[ \sigma^2_E=(1-.82)\,25=4.5 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Despeja σ²₂ de la fórmula de cambio de grupo:<div class="fx">\[ \sigma^2_2=\dfrac{(1-r_1)\sigma^2_1}{1-r_2}=\dfrac{4.5}{.09} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Divide:<div class="fx">\[ \sigma^2_2=50 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">σ²₂ = <b>50</b> (el doble que el grupo original)</div></div>
-      <div class="note note--key"><b>Ojo:</b> el error sigue siendo 4,5; lo que cambia es que ahora representa el 9 % en vez del 18 %.</div>
+      <div class="note note--key"><b>Ojo:</b> el error sigue siendo 4,5; lo que cambia es que ahora representa el 9 % en vez del 18 %. <a class="note__link" href="teoria.html#t4">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -522,14 +522,14 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">No hay que despejar nada: r₂ ya está aislada.<div class="fx">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Solo hay que poner la razón de varianzas.<div class="fx">\[ \dfrac{\sigma^2_1}{\sigma^2_2}=\dfrac{1}{4}\;\text{(por ejemplo)} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a> · <a href="teoria.html#t4">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Sustituye en la fórmula:<div class="fx">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2}=1-.30\times\dfrac{16}{64} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ r_2=1-.30(.25)=1-.075=.925 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">r₂ = <b>0,925</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> cuadruplicar la varianza reduce el peso del error a la cuarta parte.</div>
+      <div class="note note--key"><b>Ojo:</b> cuadruplicar la varianza reduce el peso del error a la cuarta parte. <a class="note__link" href="teoria.html#t4">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
@@ -554,17 +554,30 @@
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Pasa la fiabilidad del grupo 2.<div class="fx">\[ 1-r_2=(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Invierte la fracción.<div class="fx">\[ \dfrac{1}{1-r_2}=\dfrac{\sigma^2_2}{(1-r_1)\sigma^2_1} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por (1−r₁)σ²₁.<div class="fx">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div></div></li></ol>
     <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
     <div class="fx fx--amber">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div>
-    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a></div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a> · <a href="teoria.html#t4">explicación en la teoría →</a></div>
   </div>
 </details>
     <div class="sol">
       <div class="sol__head">Desarrollo</div>
       <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la varianza del segundo grupo:<div class="fx">\[ \sigma^2_2=\dfrac{(1-r_1)\sigma^2_1}{1-r_2}=\dfrac{(.25)(20)}{.10} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ \sigma^2_2=\dfrac{5}{.10}=50 \]</div></div></li></ol>
       <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">σ²₂ = <b>50</b></div></div>
-      <div class="note note--key"><b>Ojo:</b> con menos varianza que 50 no se alcanza .90, por muy grande que sea la muestra.</div>
+      <div class="note note--key"><b>Ojo:</b> con menos varianza que 50 no se alcanza .90, por muy grande que sea la muestra. <a class="note__link" href="teoria.html#t4">Ver en la teoría →</a></div>
     </div>
   </div>
 </article>
+</section>
+<section class="act" id="tarea">
+  <div class="act__head">
+    <div class="act__badge" style="background:linear-gradient(160deg,rgba(251,146,60,.22),rgba(251,146,60,.05));border-color:rgba(251,146,60,.4);color:var(--orange-l)">✦</div>
+    <div>
+      <h2 class="act__title">Tarea recomendada</h2>
+      <p class="act__sub">Para consolidar: no basta con leer la solución, hay que reproducirla con datos propios.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:14px">
+    <ul class="list" style="gap:9px"><li><b>Replica los 15 ejercicios cambiando solo los datos.</b> Toma cada enunciado, sustituye dos o tres números (por ejemplo r = 0,72 en vez de 0,80) y vuelve a calcular sin mirar la respuesta. Comprueba al final con la fórmula del formulario.</li><li>Si el resultado no cuadra, identifica en qué paso se rompió: casi siempre es un despeje (dividir donde había que multiplicar) o una raíz aplicada a la varianza equivocada.</li><li>Cronométralos: 6-8 minutos por ejercicio es un buen ritmo para un examen.</li><li><b>Resuelve los despejes a mano</b>, en papel, y solo después abre “Ver fórmula y despeje paso a paso” para comparar.</li><li>Cierra el círculo con la <a href="autoevaluacion.html">autoevaluación</a>: si aciertas menos de 15/20, vuelve a la teoría del bloque fallado.</li></ul>
+    <div class="note note--key" style="margin-top:12px"><b>Entregable sugerido:</b> una hoja por actividad con el enunciado reescrito, los datos cambiados, el desarrollo y la comprobación.</div>
+  </div>
 </section>
 <div class="foot">
   <span>Cuaderno de ejercicios · Seminario 2 · Fiabilidad (I)</span>

@@ -38,8 +38,33 @@
     apply();
   }
 
-  /* ---------- Índice activo al hacer scroll ---------- */
-  function initScrollSpy() {
+  /* ---------- Recordar la posición de lectura ---------- */
+  function initScrollMemory() {
+    const key = 'scroll:' + location.pathname;
+    // Si venimos de un enlace con ancla, manda el ancla
+    if (!location.hash) {
+      let y = null;
+      try { y = sessionStorage.getItem(key); } catch (_) { /* noop */ }
+      if (y !== null && !isNaN(+y)) {
+        requestAnimationFrame(() => window.scrollTo(0, +y));
+        setTimeout(() => window.scrollTo(0, +y), 120);
+      }
+    }
+    let timer = null;
+    const save = () => {
+      try { sessionStorage.setItem(key, String(Math.round(window.scrollY))); } catch (_) { /* noop */ }
+    };
+    window.addEventListener('scroll', () => {
+      clearTimeout(timer);
+      timer = setTimeout(save, 180);
+    }, { passive: true });
+    window.addEventListener('pagehide', save);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') save();
+    });
+  }
+
+  /* ---------- Índice activo al hacer scroll ---------- */  function initScrollSpy() {
     const links = [...document.querySelectorAll('.toc a[href^="#"]')];
     if (!links.length || !('IntersectionObserver' in window)) return;
     const map = new Map();
@@ -63,6 +88,7 @@
     typeset();
     initToggle();
     initScrollSpy();
+    initScrollMemory();
   }
 
   if (document.readyState === 'loading') {
