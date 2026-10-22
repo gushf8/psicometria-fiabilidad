@@ -69,10 +69,10 @@
     <div class="deriv__name">Coeficiente de fiabilidad a partir del error</div>
     <div class="fx fx--violet">\[ r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \]</div>
     <div class="deriv__syms"><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente de fiabilidad</span><span><b>σ²E</b> varianza del error</span><span><b>σ²X</b> varianza observada</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Parte de la fiabilidad expresada con el error.<div class="fx">\[ r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Pasa la fiabilidad al otro miembro.<div class="fx">\[ 1-r_{xx}=\dfrac{\sigma^2_E}{\sigma^2_X} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Invierte los dos lados de la igualdad.<div class="fx">\[ \dfrac{\sigma^2_X}{\sigma^2_E}=\dfrac{1}{1-r_{xx}} \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Multiplica por σ²E.<div class="fx">\[ \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq3">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -95,16 +95,16 @@
     <div class="ex__data">\(r_{XV}=0{,}90 \qquad \sigma_X=12\)</div>
     
 <details class="deriv">
-  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y sustitución de datos</summary>
   <div class="deriv__body">
     <div class="deriv__lbl">Fórmula de partida</div>
     <div class="deriv__name">Índice de fiabilidad</div>
     <div class="fx fx--violet">\[ r_{XV}=\dfrac{\sigma_V}{\sigma_X}=\sqrt{r_{xx}} \]</div>
     <div class="deriv__syms"><span><b><span class="g-term" data-g="r_XV">r<sub>XV</sub></span></b> índice de fiabilidad</span><span><b>σV</b> desviación verdadera</span><span><b>σX</b> desviación observada</span><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente</span></div>
-    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <div class="deriv__direct">No requiere despeje: la incógnita ya está aislada. Solo hay que reemplazar cada símbolo por su dato.</div>
+    <div class="deriv__lbl" style="margin-top:12px">Sustitución de los datos</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">El coeficiente es el índice al cuadrado.<div class="fx">\[ r_{xx}=r_{XV}^{\,2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Y el índice se recupera con una raíz.<div class="fx">\[ r_{XV}=\sqrt{r_{xx}} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">De la definición del índice, multiplica por σX.<div class="fx">\[ \sigma_V=r_{XV}\,\sigma_X \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r_{xx}=r_{XV}^{\,2}\qquad \sigma_V=r_{XV}\,\sigma_X \]</div>
+    
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq4">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -127,16 +127,16 @@
     <div class="ex__data">\(\sigma^2_V=51 \qquad \sigma^2_E=9\)</div>
     
 <details class="deriv">
-  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y sustitución de datos</summary>
   <div class="deriv__body">
     <div class="deriv__lbl">Fórmula de partida</div>
     <div class="deriv__name">Coeficiente de fiabilidad (por varianzas)</div>
     <div class="fx fx--violet">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_X} \]</div>
     <div class="deriv__syms"><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente de fiabilidad</span><span><b>σ²V</b> varianza verdadera</span><span><b>σ²X</b> varianza observada</span></div>
-    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <div class="deriv__direct">No requiere despeje: la incógnita ya está aislada. Solo hay que reemplazar cada símbolo por su dato.</div>
+    <div class="deriv__lbl" style="margin-top:12px">Sustitución de los datos</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">La varianza observada es la suma de las dos partes.<div class="fx">\[ \sigma^2_X=\sigma^2_V+\sigma^2_E \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye el denominador y divide.<div class="fx">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_V+\sigma^2_E} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_V+\sigma^2_E} \]</div>
+    
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq2">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -165,10 +165,10 @@
     <div class="deriv__name">Error típico de medida</div>
     <div class="fx fx--violet">\[ \sigma_E=\sigma_X\sqrt{1-r_{xx}} \]</div>
     <div class="deriv__syms"><span><b>σE</b> error típico de medida</span><span><b>σX</b> desviación observada</span><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente de fiabilidad</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide los dos miembros entre la raíz.<div class="fx">\[ \dfrac{\sigma_E}{\sqrt{1-r_{xx}}}=\sigma_X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Ordena la expresión.<div class="fx">\[ \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq5">formulario despejado →</a> · <a href="teoria.html#t1">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -208,10 +208,10 @@
     <div class="deriv__name">Ecuación de pronóstico (puntuaciones directas)</div>
     <div class="fx fx--violet">\[ \hat{V}=\mu_X(1-r_{xx})+r_{xx}X \]</div>
     <div class="deriv__syms"><span><b>V̂</b> puntuación verdadera estimada</span><span><b>μX</b> media del grupo</span><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente</span><span><b>X</b> puntuación observada</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Aísla el término que lleva X.<div class="fx">\[ \hat{V}-\mu_X(1-r_{xx})=r_{xx}X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre r.<div class="fx">\[ X=\dfrac{\hat{V}-\mu_X(1-r_{xx})}{r_{xx}} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ X=\dfrac{\hat{V}-\mu_X(1-r_{xx})}{r_{xx}} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ X=\dfrac{\hat{V}-\mu_X(1-r_{xx})}{r_{xx}} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq7">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -240,10 +240,10 @@
     <div class="deriv__name">Ecuación de pronóstico (despeje de r)</div>
     <div class="fx fx--violet">\[ \hat{V}=\mu_X+r_{xx}(X-\mu_X) \]</div>
     <div class="deriv__syms"><span><b>V̂</b> estimada</span><span><b>μX</b> media</span><span><b>X</b> observada</span><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Resta la media en los dos miembros.<div class="fx">\[ \hat{V}-\mu_X=r_{xx}(X-\mu_X) \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre la distancia a la media.<div class="fx">\[ r_{xx}=\dfrac{\hat{V}-\mu_X}{X-\mu_X} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r_{xx}=\dfrac{\hat{V}-\mu_X}{X-\mu_X} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ r_{xx}=\dfrac{\hat{V}-\mu_X}{X-\mu_X} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq7">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -272,10 +272,10 @@
     <div class="deriv__name">Intervalo de confianza (puntuaciones directas)</div>
     <div class="fx fx--violet">\[ L=X-z\,\sigma_E\qquad U=X+z\,\sigma_E \]</div>
     <div class="deriv__syms"><span><b>L</b> límite inferior</span><span><b>U</b> límite superior</span><span><b>X</b> puntuación observada</span><span><b>z</b> valor crítico (1,96 · 2,58)</span><span><b>σE</b> error típico</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Suma los dos límites: el término zσE se cancela.<div class="fx">\[ L+U=2X \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Resta los dos límites: queda el doble de la semiamplitud.<div class="fx">\[ U-L=2z\,\sigma_E \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Despeja cada incógnita.<div class="fx">\[ X=\dfrac{L+U}{2}\qquad \sigma_E=\dfrac{U-L}{2z} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ X=\dfrac{L+U}{2}\qquad \sigma_E=\dfrac{U-L}{2z} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ X=\dfrac{L+U}{2}\qquad \sigma_E=\dfrac{U-L}{2z} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq10">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -304,10 +304,10 @@
     <div class="deriv__name">Error típico de medida (despeje de r)</div>
     <div class="fx fx--violet">\[ \sigma_E=\sigma_X\sqrt{1-r_{xx}} \]</div>
     <div class="deriv__syms"><span><b>σE</b> error típico</span><span><b>σX</b> desviación observada</span><span><b><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></b> coeficiente</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide entre σX.<div class="fx">\[ \dfrac{\sigma_E}{\sigma_X}=\sqrt{1-r_{xx}} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Eleva al cuadrado los dos miembros.<div class="fx">\[ \left(\dfrac{\sigma_E}{\sigma_X}\right)^2=1-r_{xx} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Pasa el cuadrado restando.<div class="fx">\[ r_{xx}=1-\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r_{xx}=1-\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ r_{xx}=1-\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq5">formulario despejado →</a> · <a href="teoria.html#t2">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -347,10 +347,10 @@
     <div class="deriv__name">Spearman-Brown (despeje de la fiabilidad inicial)</div>
     <div class="fx fx--violet">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
     <div class="deriv__syms"><span><b>R</b> fiabilidad final</span><span><b>k</b> razón de longitud</span><span><b>r</b> fiabilidad inicial</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left[1+(k-1)r\right]=kr \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla el paréntesis.<div class="fx">\[ R+R(k-1)r=kr \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Agrupa los términos con r.<div class="fx">\[ R=r\left[k-R(k-1)\right] \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Divide.<div class="fx">\[ r=\dfrac{R}{k-(k-1)R} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r=\dfrac{R}{k-(k-1)R} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ r=\dfrac{R}{k-(k-1)R} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -379,10 +379,10 @@
     <div class="deriv__name">Spearman-Brown (despeje de k)</div>
     <div class="fx fx--violet">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
     <div class="deriv__syms"><span><b>k</b> razón de longitud</span><span><b>R</b> fiabilidad final</span><span><b>r</b> fiabilidad inicial</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left[1+(k-1)r\right]=kr \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla y lleva los términos con k a un lado.<div class="fx">\[ R-Rr=kr-Rrk \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Saca factor común k.<div class="fx">\[ R(1-r)=kr(1-R) \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Divide.<div class="fx">\[ k=\dfrac{R(1-r)}{r(1-R)} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ k=\dfrac{R(1-r)}{r(1-R)} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ k=\dfrac{R(1-r)}{r(1-R)} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -405,16 +405,16 @@
     <div class="ex__data">\(n_I=80 \qquad n_F=20 \qquad r=0{,}70\)</div>
     
 <details class="deriv">
-  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y sustitución de datos</summary>
   <div class="deriv__body">
     <div class="deriv__lbl">Fórmula de partida</div>
     <div class="deriv__name">Ecuación de Spearman-Brown</div>
     <div class="fx fx--violet">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
     <div class="deriv__syms"><span><b>R</b> fiabilidad corregida</span><span><b>k</b> razón de longitud</span><span><b>r</b> fiabilidad inicial</span></div>
-    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <div class="deriv__direct">No requiere despeje: la incógnita ya está aislada. Solo hay que reemplazar cada símbolo por su dato.</div>
+    <div class="deriv__lbl" style="margin-top:12px">Sustitución de los datos</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Calcula k como razón de longitudes.<div class="fx">\[ k=\dfrac{n_F}{n_I} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye k y r en la ecuación de Spearman-Brown.<div class="fx">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
+    
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -443,10 +443,10 @@
     <div class="deriv__name">Spearman-Brown (despeje de la fiabilidad inicial)</div>
     <div class="fx fx--violet">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
     <div class="deriv__syms"><span><b>R</b> fiabilidad final</span><span><b>k</b> razón de longitud</span><span><b>r</b> fiabilidad inicial</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left[1+(k-1)r\right]=kr \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla el paréntesis.<div class="fx">\[ R+R(k-1)r=kr \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Agrupa los términos con r.<div class="fx">\[ R=r\left[k-R(k-1)\right] \]</div></div></li><li class="step"><span class="step__n">4</span><div class="step__tx">Divide.<div class="fx">\[ r=\dfrac{R}{k-(k-1)R} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r=\dfrac{R}{k-(k-1)R} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ r=\dfrac{R}{k-(k-1)R} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq12">formulario despejado →</a> · <a href="teoria.html#t3">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -486,10 +486,10 @@
     <div class="deriv__name">Fiabilidad en otro grupo (corrección por variabilidad)</div>
     <div class="fx fx--violet">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div>
     <div class="deriv__syms"><span><b>r₂</b> fiabilidad en el grupo 2</span><span><b>r₁</b> fiabilidad en el grupo 1</span><span><b>σ²₂</b> varianza del grupo 2</span><span><b>σ²₁</b> varianza del grupo 1</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Pasa la fiabilidad del grupo 2.<div class="fx">\[ 1-r_2=(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Invierte la fracción.<div class="fx">\[ \dfrac{1}{1-r_2}=\dfrac{\sigma^2_2}{(1-r_1)\sigma^2_1} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por (1−r₁)σ²₁.<div class="fx">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a> · <a href="teoria.html#t4">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -512,16 +512,16 @@
     <div class="ex__data">\(r_1=0{,}70 \quad \sigma^2_1=16 \quad \sigma^2_2=64\)</div>
     
 <details class="deriv">
-  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y sustitución de datos</summary>
   <div class="deriv__body">
     <div class="deriv__lbl">Fórmula de partida</div>
     <div class="deriv__name">Fiabilidad en otro grupo (corrección por variabilidad)</div>
     <div class="fx fx--violet">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div>
     <div class="deriv__syms"><span><b>r₂</b> fiabilidad en el grupo 2</span><span><b>r₁</b> fiabilidad en el grupo 1</span><span><b>σ²₁</b> varianza del grupo 1</span><span><b>σ²₂</b> varianza del grupo 2</span></div>
-    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <div class="deriv__direct">No requiere despeje: la incógnita ya está aislada. Solo hay que reemplazar cada símbolo por su dato.</div>
+    <div class="deriv__lbl" style="margin-top:12px">Sustitución de los datos</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">No hay que despejar nada: r₂ ya está aislada.<div class="fx">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Solo hay que poner la razón de varianzas.<div class="fx">\[ \dfrac{\sigma^2_1}{\sigma^2_2}=\dfrac{1}{4}\;\text{(por ejemplo)} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div>
+    
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a> · <a href="teoria.html#t4">explicación en la teoría →</a></div>
   </div>
 </details>
@@ -550,10 +550,10 @@
     <div class="deriv__name">Fiabilidad en otro grupo (corrección por variabilidad)</div>
     <div class="fx fx--violet">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div>
     <div class="deriv__syms"><span><b>r₂</b> fiabilidad en el grupo 2</span><span><b>r₁</b> fiabilidad en el grupo 1</span><span><b>σ²₂</b> varianza del grupo 2</span><span><b>σ²₁</b> varianza del grupo 1</span></div>
+    
     <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
     <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Pasa la fiabilidad del grupo 2.<div class="fx">\[ 1-r_2=(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Invierte la fracción.<div class="fx">\[ \dfrac{1}{1-r_2}=\dfrac{\sigma^2_2}{(1-r_1)\sigma^2_1} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por (1−r₁)σ²₁.<div class="fx">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div></div></li></ol>
-    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
-    <div class="fx fx--amber">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div><div class="fx fx--amber">\[ \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \]</div>
     <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq14">formulario despejado →</a> · <a href="teoria.html#t4">explicación en la teoría →</a></div>
   </div>
 </details>
