@@ -1,0 +1,30 @@
+PSICOMETRIA · FIABILIDAD (Seminarios 2 y 3)
+==========================================
+
+CONTENIDO
+  index.html            Portada general
+  presentacion/         Presentación de clase (47 diapositivas)
+  ejercicios/           Cuaderno de ejercicios, teoría, formulario,
+                        nomenclatura y autoevaluación
+
+CÓMO SUBIRLO
+  1. Sube TODO el contenido de esta carpeta a la raíz de tu hosting
+     (o a una subcarpeta; no cambies la estructura interna).
+  2. La página de inicio es index.html.
+  3. No necesita PHP, base de datos ni conexión: es HTML/CSS/JS estático.
+
+SI USAS NETLIFY / VERCEL / GITHUB PAGES
+  - Arrastra la carpeta completa o sube el ZIP.
+  - No hay que configurar nada: el index.html de la raíz es la portada.
+
+SI USAS CPANEL / FTP
+  - Sube el ZIP y descomprímelo en public_html/ (o en la carpeta que quieras).
+  - Comprueba que quede /public_html/index.html (no dentro de una subcarpeta).
+
+NOTAS
+  - Rutas relativas: puedes mover la carpeta completa sin romper enlaces.
+  - Funciona sin internet (KaTeX, tipografías y gráficos están incluidos).
+  - Para actualizar, reemplaza la carpeta por la nueva versión.
+
+Créditos: material didáctico basado en los ejercicios de clase de
+Fiabilidad (I) y (II) · Prof.ª María José Quevedo Rodríguez.

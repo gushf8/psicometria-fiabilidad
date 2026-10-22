@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b16">
+<title>Autoevaluación · Fiabilidad</title>
+<meta name="description" content="Test interactivo de fiabilidad: teoría y ejercicios de los Seminarios 2 y 3 con corrección inmediata.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/ejercicios.css">
+<link rel="stylesheet" href="assets/css/glosario.css">
+<link rel="stylesheet" href="assets/css/buscador.css">
+<style>
+  .quiz-top{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+  .quiz-score{
+    display:flex;align-items:baseline;gap:8px;
+    padding:10px 16px;border-radius:12px;
+    background:rgba(45,212,191,.08);border:1px solid rgba(45,212,191,.28);
+  }
+  .quiz-score b{font-family:var(--font-display);font-size:22px;color:var(--teal-l)}
+  .quiz-score span{font-size:11px;color:var(--muted)}
+  .quiz-progress{flex:1;min-width:180px;height:8px;border-radius:99px;background:rgba(148,163,184,.14);overflow:hidden}
+  .quiz-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--teal),#5eead4);transition:width .3s ease}
+  .q{
+    margin-top:16px;padding:18px 20px;border-radius:14px;
+    border:1px solid var(--line);background:var(--card);
+  }
+  .q__head{display:flex;gap:10px;align-items:flex-start}
+  .q__n{
+    flex:0 0 auto;display:grid;place-items:center;width:26px;height:26px;border-radius:8px;
+    background:rgba(45,212,191,.12);border:1px solid rgba(45,212,191,.35);
+    color:var(--teal-l);font-size:11.5px;font-weight:700;
+  }
+  .q__t{font-size:14.5px;line-height:1.55;color:#e6eefb;font-weight:500}
+  .q__opts{display:grid;gap:8px;margin-top:13px}
+  .opt{
+    display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;
+    padding:10px 13px;border-radius:10px;cursor:pointer;
+    border:1px solid var(--line);background:rgba(148,163,184,.04);
+    color:#c6d4e6;font-family:inherit;font-size:13px;line-height:1.45;
+    transition:.14s ease;
+  }
+  .opt:hover:not(.is-done){background:rgba(148,163,184,.1);border-color:var(--line-strong)}
+  .opt__k{
+    flex:0 0 auto;display:grid;place-items:center;width:20px;height:20px;border-radius:6px;
+    background:rgba(148,163,184,.14);font-size:10.5px;font-weight:700;color:#9db0c8;
+  }
+  .opt.is-ok{border-color:rgba(45,212,191,.55);background:rgba(45,212,191,.12);color:#d8fff8}
+  .opt.is-ok .opt__k{background:rgba(45,212,191,.25);color:#5eead4}
+  .opt.is-ko{border-color:rgba(251,113,133,.5);background:rgba(251,113,133,.09);color:#ffd9df}
+  .opt.is-ko .opt__k{background:rgba(251,113,133,.22);color:#fda4af}
+  .q__fb{
+    display:none;margin-top:12px;padding:11px 14px;border-radius:10px;
+    font-size:12.5px;line-height:1.55;
+    background:rgba(45,212,191,.06);border:1px solid rgba(45,212,191,.25);color:#bfe9e2;
+  }
+  .q__fb.is-on{display:block}
+  .q__fb b{color:#eaf7f5}
+  .q__fb .why{color:#9fb6cc;display:block;margin-top:4px}
+  .quiz-end{
+    display:none;margin-top:22px;padding:22px;border-radius:16px;
+    border:1px solid rgba(45,212,191,.35);
+    background:linear-gradient(160deg,rgba(45,212,191,.12),rgba(10,19,34,.75));
+  }
+  .quiz-end.is-on{display:block}
+  .quiz-end h2{font-size:24px;margin-bottom:6px}
+  .quiz-end p{font-size:13.5px;color:var(--muted)}
+  .quiz-end b{color:var(--teal-l)}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    padding:10px 16px;border-radius:11px;cursor:pointer;font-family:inherit;
+    font-size:12.5px;font-weight:600;
+    border:1px solid var(--line-strong);background:rgba(148,163,184,.08);color:#dbe6f6;
+  }
+  .btn-ghost:hover{background:rgba(148,163,184,.14)}
+</style>
+</head>
+<body class="ejercicios">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand__mark">Ψ</span><b>Psicometría</b> <span>· Fiabilidad</span></a>
+  <nav class="topnav" aria-label="Secciones">
+    <a href="index.html">Inicio</a>
+    <a href="teoria.html">Teoría</a>
+    <a href="formulario.html">Formulario despejado</a>
+    <a href="nomenclatura.html">Nomenclatura</a>
+    <a href="autoevaluacion.html" class="is-active">Autoevaluación</a>
+    <a href="seminario2.html">Seminario 2</a>
+    <a href="seminario3.html">Seminario 3</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="eyebrow">Autoevaluación</div>
+    <h1>Ponte a prueba:<br><span class="thin">teoría y ejercicios</span></h1>
+    <p class="lead">20 preguntas de los dos seminarios. Cada respuesta se corrige al instante y te explica <b>por qué</b> es correcta o incorrecta. No hay límite de tiempo: puedes repetirlo tantas veces como quieras.</p>
+    <div class="quiz-top">
+      <div class="quiz-score"><b id="score">0</b><span>/ 20 aciertos</span></div>
+      <div class="quiz-progress"><i id="bar"></i></div>
+      <button class="btn-ghost" id="restart" type="button">Reiniciar</button>
+    </div>
+  </section>
+
+  <section id="quiz" aria-label="Preguntas"></section>
+
+  <div class="quiz-end" id="end">
+    <h2 id="endTitle">¡Terminado!</h2>
+    <p id="endText"></p>
+    <div class="tools" style="margin-top:14px">
+      <button class="btn-ghost" id="again" type="button">Volver a intentarlo</button>
+      <a class="btn-ghost" href="teoria.html">Repasar la teoría</a>
+      <a class="btn-ghost" href="seminario2.html">Ir a los ejercicios</a>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Autoevaluación · Fiabilidad · Seminarios 2 y 3</span>
+    <span>Corrección automática · sin conexión</span>
+  </div>
+</main>
+
+<script>
+const Q = [
+  {
+    t: 'En el modelo clásico de test, la ecuación X = V + E significa que…',
+    o: ['La puntuación observada es la verdadera más el error de medida.',
+        'La puntuación verdadera es la observada menos la fiabilidad.',
+        'El error siempre es positivo y se suma a la media.'],
+    ok: 0,
+    why: 'Lo que vemos (X) es el nivel real del rasgo (V) más el ruido de la medición (E). La fiabilidad es la proporción de X que corresponde a V.'
+  },
+  {
+    t: 'Si el coeficiente de fiabilidad es 0,90, la proporción de varianza de error es…',
+    o: ['0,90', '0,10', '0,95', '0,3162'],
+    ok: 1,
+    why: 'σ²E/σ²X = 1 − r = 1 − 0,90 = 0,10. El 0,3162 es la razón de desviaciones (√0,10), no la de varianzas.'
+  },
+  {
+    t: 'Un test con r_xx = 0,81 tiene un índice de fiabilidad de…',
+    o: ['0,81', '0,90', '0,6561', '0,95'],
+    ok: 1,
+    why: 'El índice es la raíz del coeficiente: r_XV = √0,81 = 0,90. El coeficiente es el índice al cuadrado.'
+  },
+  {
+    t: 'La correlación entre las puntuaciones observadas y el error…',
+    o: ['Vale 0, porque el error es aleatorio.', 'Vale σE/σX, porque el error forma parte de X.', 'Vale 1, porque el error siempre acompaña a la medida.'],
+    ok: 1,
+    why: 'r(X,E) = σE/σX = √(1−r). No es 0: el error está dentro de X. Lo que vale 0 es r(V,E), por el supuesto del modelo.'
+  },
+  {
+    t: 'Una persona con X = 30, en un test con μ = 20 y r = 0,82, tiene una puntuación verdadera estimada de…',
+    o: ['30', '28,2', '24,6', '20'],
+    ok: 1,
+    why: 'V̂ = μ(1−r) + rX = 20(0,18) + 0,82·30 = 3,6 + 24,6 = 28,2. La estimación se acerca a la media (regresión a la media).'
+  },
+  {
+    t: 'El intervalo de confianza al 99 % de la puntuación verdadera se construye…',
+    o: ['Alrededor de la puntuación observada.', 'Alrededor de la media del grupo.', 'Entre 0 y la puntuación máxima del test.'],
+    ok: 0,
+    why: 'El formulario lo centra en X: IC = X ± z·σE, con z = 2,58 para el 99 %.'
+  },
+  {
+    t: 'El error típico de medida se calcula como…',
+    o: ['σX · √(1 − r_xx)', 'σX / √r_xx', 'σ²X − σ²V', '√r_xx'],
+    ok: 0,
+    why: 'σE es la desviación típica de los errores: σE = σX·√(1−r). En típicas vale √(1−r).'
+  },
+  {
+    t: 'Al añadir ítems paralelos a un test, la fiabilidad…',
+    o: ['Aumenta, pero cada vez menos (rendimientos decrecientes).', 'Se duplica exactamente.', 'No cambia, porque el test es el mismo.', 'Disminuye.'],
+    ok: 0,
+    why: 'Spearman-Brown: R = kr/[1+(k−1)r]. La curva se aplana: cada ítem extra aporta menos que el anterior.'
+  },
+  {
+    t: 'Un test de 25 ítems con r = 0,50 se amplía a 100 ítems. La nueva fiabilidad es…',
+    o: ['0,50', '0,80', '0,90', '0,67'],
+    ok: 1,
+    why: 'k = 100/25 = 4 → R = 4·0,50/[1+3·0,50] = 2/2,5 = 0,80.'
+  },
+  {
+    t: 'Si el mismo test se aplica a un grupo con el doble de varianza, la fiabilidad…',
+    o: ['Sube, porque el error pesa menos.', 'Baja, porque hay más dispersión.', 'No cambia: la fiabilidad es fija.', 'Se duplica.'],
+    ok: 0,
+    why: 'r = 1 − σ²E/σ²X. El error absoluto se mantiene, pero su peso relativo baja: es la restricción del rango.'
+  },
+  {
+    t: 'El método de formas paralelas evalúa…',
+    o: ['La estabilidad temporal de la medida.', 'La equivalencia entre dos versiones del test.', 'La consistencia entre los ítems.', 'La validez de contenido.'],
+    ok: 1,
+    why: 'Dos versiones distintas del mismo constructo, aplicadas a las mismas personas: se evalúa si son equivalentes.'
+  },
+  {
+    t: 'El test-retest exige, entre otras cosas, que…',
+    o: ['Los errores de las dos aplicaciones sean independientes.', 'Los ítems sean dicotómicos.', 'Haya al menos 100 personas.', 'La media sea 0.'],
+    ok: 0,
+    why: 'Cov(E1,E2) = 0: lo que falla un día no debe fallar igual el otro. Además, T1 = T2 y misma varianza de error.'
+  },
+  {
+    t: 'En formas estrictamente paralelas se cumple que…',
+    o: ['T_A = T_B y Var(E_A) = Var(E_B).', 'Solo comparten el contenido.', 'T_A = T_B + c, con c distinta de 0.', 'Las medias son distintas.'],
+    ok: 0,
+    why: 'Misma puntuación verdadera y misma varianza de error (y, como consecuencia, misma media y varianza observada).'
+  },
+  {
+    t: 'Al usar el método de dos mitades, después de correlacionarlas hay que…',
+    o: ['Corregir la longitud con Spearman-Brown.', 'Dividir el resultado entre 2.', 'Aplicar KR-20.', 'No hacer nada más.'],
+    ok: 0,
+    why: 'La correlación entre mitades describe un test a la mitad; R = 2r/(1+r) la refiere al test completo.'
+  },
+  {
+    t: 'La fórmula de Rulon estima la fiabilidad a partir de…',
+    o: ['La varianza de las diferencias entre las dos mitades.', 'La media de los ítems.', 'La suma de p·q.', 'La covarianza entre formas.'],
+    ok: 0,
+    why: 'R = 1 − s²d/s²X, donde s²d es la varianza de (V1 − V2) en cada persona.'
+  },
+  {
+    t: 'Con k = 4, Σs²i = 3,28 y s²X = 11,84, el alfa de Cronbach vale…',
+    o: ['0,964', '0,723', '0,850', '0,681'],
+    ok: 0,
+    why: 'α = (4/3)·[1 − 3,28/11,84] = 1,333·0,723 = 0,964.'
+  },
+  {
+    t: 'La diferencia entre KR-20 y KR-21 es que…',
+    o: ['KR-21 asume ítems de dificultad similar (una p común).', 'KR-20 es para ítems continuos.', 'KR-21 mide estabilidad temporal.', 'KR-20 necesita dos aplicaciones.'],
+    ok: 0,
+    why: 'KR-20 usa Σp·q (distinta dificultad); KR-21 usa la media y asume dificultad similar, por lo que suele ser una cota inferior.'
+  },
+  {
+    t: 'Omega de McDonald (ω) se recomienda hoy porque…',
+    o: ['No exige que todos los ítems pesen igual (tau-equivalencia).', 'No necesita muestra.', 'Mide estabilidad temporal.', 'Siempre es más baja que alfa.'],
+    ok: 0,
+    why: 'ω parte de un modelo congenérico (análisis factorial): admite pesos distintos y es menos sensible al número de ítems.'
+  },
+  {
+    t: '¿Qué método de fiabilidad requiere una sola aplicación del test?',
+    o: ['Test-retest.', 'Formas paralelas.', 'Alfa de Cronbach.', 'Ninguno.'],
+    ok: 2,
+    why: 'α (y ω, KR-20, KR-21, dos mitades, Rulon, Guttman) usan una sola aplicación: miden consistencia interna.'
+  },
+  {
+    t: 'La fiabilidad de un test…',
+    o: ['Es una propiedad de las puntuaciones en una muestra concreta.', 'Es una propiedad fija e inmutable del test.', 'No depende de la varianza del grupo.', 'Es lo mismo que la validez.'],
+    ok: 0,
+    why: 'Cambia con la muestra (restricción del rango) y con el método. La validez es otra cosa: si mide lo que dice medir.'
+  }
+];
+
+const $ = (s) => document.querySelector(s);
+const quiz = $('#quiz');
+let answered = 0, score = 0;
+
+function build() {
+  quiz.innerHTML = '';
+  answered = 0; score = 0;
+  $('#score').textContent = '0';
+  $('#bar').style.width = '0%';
+  $('#end').classList.remove('is-on');
+
+  Q.forEach((q, i) => {
+    const el = document.createElement('article');
+    el.className = 'q';
+    el.innerHTML = `
+      <div class="q__head"><span class="q__n">${String(i + 1).padStart(2, '0')}</span>
+        <div class="q__t">${q.t}</div></div>
+      <div class="q__opts">${q.o.map((o, j) =>
+        `<button class="opt" type="button" data-q="${i}" data-o="${j}">
+           <span class="opt__k">${'ABCD'[j]}</span><span>${o}</span>
+         </button>`).join('')}</div>
+      <div class="q__fb"></div>`;
+    quiz.appendChild(el);
+  });
+
+  quiz.querySelectorAll('.opt').forEach((b) => b.addEventListener('click', pick));
+}
+
+function pick(e) {
+  const btn = e.currentTarget;
+  const qi = Number(btn.dataset.q);
+  const oi = Number(btn.dataset.o);
+  const q = Q[qi];
+  const card = btn.closest('.q');
+  if (card.dataset.done) return;
+  card.dataset.done = '1';
+  answered++;
+
+  const opts = card.querySelectorAll('.opt');
+  opts.forEach((o) => o.classList.add('is-done'));
+  opts[q.ok].classList.add('is-ok');
+  if (oi !== q.ok) btn.classList.add('is-ko');
+  else score++;
+
+  const fb = card.querySelector('.q__fb');
+  const good = oi === q.ok;
+  fb.innerHTML = `${good ? '<b>Correcto.</b>' : '<b>No exactamente.</b>'} ${q.why}`;
+  fb.classList.add('is-on');
+
+  $('#score').textContent = String(score);
+  $('#bar').style.width = (answered / Q.length) * 100 + '%';
+
+  if (answered === Q.length) finish();
+}
+
+function finish() {
+  const pct = Math.round((score / Q.length) * 100);
+  const end = $('#end');
+  let msg;
+  if (pct >= 90) msg = 'Dominas la fiabilidad: puedes explicar y calcular cada coeficiente.';
+  else if (pct >= 70) msg = 'Buen nivel. Repasa los fallos y vuelve a intentarlo.';
+  else if (pct >= 50) msg = 'Vas por el camino: refuerza la teoría y los despejes.';
+  else msg = 'Conviene repasar la teoría y el formulario antes de repetir.';
+  $('#endTitle').textContent = `${score} de ${Q.length} · ${pct} %`;
+  $('#endText').textContent = msg;
+  end.classList.add('is-on');
+  end.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+$('#restart').addEventListener('click', build);
+$('#again').addEventListener('click', () => { build(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+build();
+</script>
+
+<script src="assets/js/indice.js"></script>
+<script src="assets/js/glosario.js"></script>
+<script src="assets/js/buscador.js"></script>
+</body>
+</html>

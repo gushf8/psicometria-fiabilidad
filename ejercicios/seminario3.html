@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b16">
+<title>Ejercicios · Seminario 3 · Fiabilidad</title>
+<meta name="description" content="18 ejercicios inversos de fiabilidad (Seminario 3): formas paralelas, test-retest y consistencia interna.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/ejercicios.css">
+<link rel="stylesheet" href="assets/css/glosario.css">
+<link rel="stylesheet" href="assets/css/buscador.css">
+</head>
+<body class="ejercicios">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand__mark">Ψ</span><b>Psicometría</b> <span>· Fiabilidad</span></a>
+  <nav class="topnav" aria-label="Secciones">
+    <a href="index.html">Inicio</a>
+    <a href="teoria.html">Teoría</a>
+    <a href="formulario.html">Formulario despejado</a>
+    <a href="nomenclatura.html">Nomenclatura</a>
+    <a href="autoevaluacion.html">Autoevaluación</a>
+    <a href="seminario2.html">Seminario 2</a>
+    <a href="seminario3.html" class="is-active">Seminario 3</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<section>
+  <div class="eyebrow eyebrow--violet">Seminario 3 · Fiabilidad (II)</div>
+  <h1>Ejercicios para pensar:<br><span class="thin">del coeficiente a la pieza que falta</span></h1>
+  <p class="lead">Igual que en el Seminario 2, pero con los métodos de una y dos aplicaciones. Cada ejercicio te da <b>el resultado</b> (una correlación, un alfa, un KR-20) y te pide <b>una varianza, una covarianza o una longitud</b>: hay que despejar.</p>
+  <div class="tools">
+    <button class="btn" id="toggleSol" type="button">Ocultar soluciones</button>
+    <a class="btn btn--ghost" href="formulario.html">Ver todos los despejes</a>
+    <span class="chip">19 ejercicios</span>
+    <span class="chip">6 métodos</span>
+  </div>
+  <nav class="toc" aria-label="Índice"><a href="#a1"><div class="toc__n">Actividad 01</div><div class="toc__t">Formas paralelas</div><div class="toc__d">r, cov y σ</div></a><a href="#a2"><div class="toc__n">Actividad 02</div><div class="toc__t">Test-retest</div><div class="toc__d">estabilidad</div></a><a href="#a3"><div class="toc__n">Actividad 03</div><div class="toc__t">Consistencia interna</div><div class="toc__d">mitades · Rulon · α · KR-20</div></a></nav>
+</section>
+
+<section class="act" id="a1">
+  <div class="act__head">
+    <div class="act__badge">01</div>
+    <div>
+      <h2 class="act__title">Formas paralelas</h2>
+      <p class="act__sub">Con dos medidas de las mismas personas, la fiabilidad es una correlación. Aquí falta la covarianza, una desviación o la propia correlación.</p>
+    </div>
+    <div class="act__eq">\( r=\dfrac{\sigma_{AB}}{\sigma_A\sigma_B} \)</div>
+  </div>
+  
+<article class="ex" id="e1-1">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 1.1</span>
+    <span class="ex__kind">Correlación de Pearson</span>
+    <span class="ex__desp">Despeja r</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Dos formas paralelas se aplican a 10 alumnos. La desviación típica de la forma A es <b>6</b>, la de la B es <b>5</b> y la covarianza entre ambas es <b>24</b>. Calcula el coeficiente de fiabilidad.</p>
+    <div class="ex__data">\(\sigma_A=6 \quad \sigma_B=5 \quad \sigma_{AB}=24\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Coeficiente de correlación de Pearson</div>
+    <div class="fx fx--violet">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__syms"><span><b>r</b> coeficiente de correlación</span><span><b>σ_AB</b> covarianza</span><span><b>σ_A</b> desviación de A</span><span><b>σ_B</b> desviación de B</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Si hace falta, calcula antes la covarianza.<div class="fx">\[ \sigma_{AB}=\dfrac{\sum a\,b}{N} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre el producto de las desviaciones típicas.<div class="fx">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq20">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Sustituye en la fórmula de Pearson:<div class="fx">\[ r_{AB}=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B}=\dfrac{24}{6\times5} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ r_{AB}=\dfrac{24}{30}=.80 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">r = <b>0,80</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> si las formas son paralelas, esta correlación <b>es</b> el coeficiente de fiabilidad: no hay que corregir nada.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e1-2">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 1.2</span>
+    <span class="ex__kind">Despejar σ de una forma</span>
+    <span class="ex__desp">Despeja σB</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">La correlación entre dos formas paralelas es <b>0,80</b>. La forma A tiene σ = <b>5</b> y la covarianza entre formas es <b>21</b>. ¿Cuál es la desviación típica de la forma B?</p>
+    <div class="ex__data">\(r=0{,}80 \quad \sigma_A=5 \quad \sigma_{AB}=21\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Coeficiente de correlación de Pearson (despeje de σB)</div>
+    <div class="fx fx--violet">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__syms"><span><b>r</b> correlación</span><span><b>σ_AB</b> covarianza</span><span><b>σ_A</b> desviación de A</span><span><b>σ_B</b> desviación de B</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica los dos miembros por σAσB.<div class="fx">\[ r\,\sigma_A\,\sigma_B=\sigma_{AB} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre r y σA.<div class="fx">\[ \sigma_B=\dfrac{\sigma_{AB}}{r\,\sigma_A} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ \sigma_B=\dfrac{\sigma_{AB}}{r\,\sigma_A} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq20">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja σB de \( r=\sigma_{AB}/(\sigma_A\sigma_B) \):<div class="fx">\[ \sigma_B=\dfrac{\sigma_{AB}}{r\,\sigma_A}=\dfrac{21}{.80\times5} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ \sigma_B=\dfrac{21}{4}=5.25 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">σB = <b>5,25</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> comprobación: 21 / (5 × 5,25) = 0,80 ✓</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e1-3">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 1.3</span>
+    <span class="ex__kind">Desde sumas de productos</span>
+    <span class="ex__desp">Despeja r</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Con <b>12 sujetos</b>, la suma de productos de las puntuaciones diferenciales de dos formas paralelas es <b>240</b>, y sus varianzas son <b>25</b> (A) y <b>20</b> (B). Calcula la fiabilidad.</p>
+    <div class="ex__data">\(\sum a\,b=240 \quad N=12 \quad s^2_A=25 \quad s^2_B=20\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Coeficiente de correlación de Pearson</div>
+    <div class="fx fx--violet">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__syms"><span><b>r</b> coeficiente de correlación</span><span><b>σ_AB</b> covarianza</span><span><b>σ_A</b> desviación de A</span><span><b>σ_B</b> desviación de B</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Si hace falta, calcula antes la covarianza.<div class="fx">\[ \sigma_{AB}=\dfrac{\sum a\,b}{N} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre el producto de las desviaciones típicas.<div class="fx">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq20">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Covarianza (dividiendo entre N):<div class="fx">\[ \sigma_{AB}=\dfrac{\sum a\,b}{N}=\dfrac{240}{12}=20 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Correlación:<div class="fx">\[ r=\dfrac{20}{\sqrt{25\times20}}=\dfrac{20}{22.3607}=.8944 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">r = <b>0,8944</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> la varianza es la covarianza de una variable consigo misma: por eso el denominador es √(s²A·s²B).</div>
+    </div>
+  </div>
+</article>
+</section>
+<section class="act" id="2">
+  <div class="act__head">
+    <div class="act__badge act__badge--violet">02</div>
+    <div>
+      <h2 class="act__title">Test-retest</h2>
+      <p class="act__sub">Mismo test, dos momentos. Lo que suele faltar es la covarianza o la desviación de la segunda aplicación.</p>
+    </div>
+    <div class="act__eq">\( r_{12}=\dfrac{\sigma_{12}}{\sigma_1\sigma_2} \)</div>
+  </div>
+  
+<article class="ex" id="e2-1">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 2.1</span>
+    <span class="ex__kind">Despejar la covarianza</span>
+    <span class="ex__desp">Despeja σ₁₂</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">En un test-retest, las desviaciones típicas son <b>8</b> y <b>7</b> y la fiabilidad es <b>0,70</b>. ¿Cuánto vale la covarianza entre las dos aplicaciones?</p>
+    <div class="ex__data">\(\sigma_1=8 \quad \sigma_2=7 \quad r=0{,}70\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Covarianza a partir de la correlación</div>
+    <div class="fx fx--violet">\[ r=\dfrac{\sigma_{12}}{\sigma_1\,\sigma_2} \]</div>
+    <div class="deriv__syms"><span><b>σ₁₂</b> covarianza</span><span><b>r</b> correlación</span><span><b>σ₁</b> desviación 1</span><span><b>σ₂</b> desviación 2</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica por el denominador.<div class="fx">\[ r\,\sigma_1\,\sigma_2=\sigma_{12} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Ordena.<div class="fx">\[ \sigma_{12}=r\,\sigma_1\,\sigma_2 \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ \sigma_{12}=r\,\sigma_1\,\sigma_2 \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq20">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la covarianza:<div class="fx">\[ \sigma_{12}=r\,\sigma_1\,\sigma_2=.70\times8\times7 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ \sigma_{12}=.70\times56=39.2 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">cov = <b>39,2</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> la covarianza se mide en las unidades del producto de las dos variables; no la interpretes sola.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e2-2">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 2.2</span>
+    <span class="ex__kind">Despejar r</span>
+    <span class="ex__desp">Despeja r</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Dos aplicaciones del mismo test, separadas dos semanas: cov = <b>30</b>, σ₁ = <b>6</b> y σ₂ = <b>7</b>. Calcula la fiabilidad test-retest.</p>
+    <div class="ex__data">\(\sigma_{12}=30 \quad \sigma_1=6 \quad \sigma_2=7\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Coeficiente de correlación de Pearson</div>
+    <div class="fx fx--violet">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__syms"><span><b>r</b> coeficiente de correlación</span><span><b>σ_AB</b> covarianza</span><span><b>σ_A</b> desviación de A</span><span><b>σ_B</b> desviación de B</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Si hace falta, calcula antes la covarianza.<div class="fx">\[ \sigma_{AB}=\dfrac{\sum a\,b}{N} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre el producto de las desviaciones típicas.<div class="fx">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq20">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Sustituye:<div class="fx">\[ r_{12}=\dfrac{30}{6\times7}=\dfrac{30}{42} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide:<div class="fx">\[ r_{12}=.7143 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">r = <b>0,7143</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> un valor así indica estabilidad aceptable, pero depende del intervalo entre aplicaciones.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e2-3">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 2.3</span>
+    <span class="ex__kind">Despejar σ₂</span>
+    <span class="ex__desp">Despeja σ₂</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">La fiabilidad test-retest es <b>0,60</b>, la primera aplicación tiene σ₁ = <b>5</b> y la covarianza es <b>18</b>. ¿Cuál es la desviación típica de la segunda aplicación?</p>
+    <div class="ex__data">\(r=0{,}60 \quad \sigma_1=5 \quad \sigma_{12}=18\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Coeficiente de correlación de Pearson (despeje de σB)</div>
+    <div class="fx fx--violet">\[ r=\dfrac{\sigma_{AB}}{\sigma_A\,\sigma_B} \]</div>
+    <div class="deriv__syms"><span><b>r</b> correlación</span><span><b>σ_AB</b> covarianza</span><span><b>σ_A</b> desviación de A</span><span><b>σ_B</b> desviación de B</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica los dos miembros por σAσB.<div class="fx">\[ r\,\sigma_A\,\sigma_B=\sigma_{AB} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide entre r y σA.<div class="fx">\[ \sigma_B=\dfrac{\sigma_{AB}}{r\,\sigma_A} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ \sigma_B=\dfrac{\sigma_{AB}}{r\,\sigma_A} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq20">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja σ₂:<div class="fx">\[ \sigma_2=\dfrac{\sigma_{12}}{r\,\sigma_1}=\dfrac{18}{.60\times5} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ \sigma_2=\dfrac{18}{3}=6 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">σ₂ = <b>6</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> si σ₂ saliera muy distinta de σ₁, el supuesto de paralelismo quedaría en entredicho.</div>
+    </div>
+  </div>
+</article>
+</section>
+<section class="act" id="3">
+  <div class="act__head">
+    <div class="act__badge act__badge--violet">03</div>
+    <div>
+      <h2 class="act__title">Consistencia interna: una sola aplicación</h2>
+      <p class="act__sub">Cuatro métodos, cuatro formas de despejar. Cada ejercicio te da el coeficiente final y pide una pieza interna.</p>
+    </div>
+    <div class="act__eq">\( \text{mitades · Rulon · }\alpha\text{ · }KR_{20} \)</div>
+  </div>
+  
+<article class="ex" id="e3-1-1">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.1.1</span>
+    <span class="ex__kind">Dos mitades</span>
+    <span class="ex__desp">Despeja R</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un test de 10 ítems se divide en dos mitades que correlacionan <b>0,40</b>. ¿Cuál es la fiabilidad del test completo?</p>
+    <div class="ex__data">\(r_{1,2}=0{,}40\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Dos mitades (Spearman-Brown)</div>
+    <div class="fx fx--violet">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad del test completo</span><span><b>r₁,₂</b> correlación entre mitades</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Es el caso k = 2 de Spearman-Brown.<div class="fx">\[ R=\dfrac{2\,r_{1,2}}{1+(2-1)r_{1,2}} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye la correlación entre mitades.<div class="fx">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq15">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Aplica la corrección de Spearman-Brown para dos mitades:<div class="fx">\[ R=\dfrac{2\,r_{1,2}}{1+r_{1,2}}=\dfrac{2(.40)}{1.40} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide:<div class="fx">\[ R=\dfrac{.80}{1.40}=.5714 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">R = <b>0,5714</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> sin corregir, la fiabilidad de la mitad sería solo 0,40: el test completo es el doble de largo.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-1-2">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.1.2</span>
+    <span class="ex__kind">Dos mitades (inverso)</span>
+    <span class="ex__desp">Despeja r entre mitades</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Se quiere que la fiabilidad del test completo (dos mitades) sea <b>0,70</b>. ¿Qué correlación deben tener las dos mitades?</p>
+    <div class="ex__data">\(R=0{,}70\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Dos mitades (Spearman-Brown): despeje de r</div>
+    <div class="fx fx--violet">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad del test completo</span><span><b>r₁,₂</b> correlación entre mitades</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left(1+r_{1,2}\right)=2r_{1,2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla y agrupa.<div class="fx">\[ R=r_{1,2}(2-R) \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Divide.<div class="fx">\[ r_{1,2}=\dfrac{R}{2-R} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ r_{1,2}=\dfrac{R}{2-R} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq15">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja r de \( R=2r/(1+r) \):<div class="fx">\[ r_{1,2}=\dfrac{R}{2-R}=\dfrac{.70}{1.30} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Divide:<div class="fx">\[ r_{1,2}=.5385 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">r entre mitades = <b>0,5385</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> fórmula inversa útil: r = R / (2 − R). No la confundas con la de Spearman-Brown general.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-1-3">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.1.3</span>
+    <span class="ex__kind">Dos preguntas en una</span>
+    <span class="ex__desp">Despeja R y r</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">En un test, las dos mitades correlacionan <b>0,30</b>. (a) ¿Qué fiabilidad tendrá el test completo? (b) Si se quisiera una fiabilidad de <b>0,60</b>, ¿qué correlación deberían tener las mitades?</p>
+    <div class="ex__data">\(r_{1,2}=0{,}30 \qquad R_{objetivo}=0{,}60\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Dos mitades (Spearman-Brown): despeje de r</div>
+    <div class="fx fx--violet">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad del test completo</span><span><b>r₁,₂</b> correlación entre mitades</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Multiplica en cruz.<div class="fx">\[ R\left(1+r_{1,2}\right)=2r_{1,2} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Desarrolla y agrupa.<div class="fx">\[ R=r_{1,2}(2-R) \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Divide.<div class="fx">\[ r_{1,2}=\dfrac{R}{2-R} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ r_{1,2}=\dfrac{R}{2-R} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq15">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">(a) Fiabilidad del test completo:<div class="fx">\[ R=\dfrac{2(.30)}{1.30}=.4615 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">(b) Correlación necesaria entre mitades:<div class="fx">\[ r=\dfrac{.60}{2-.60}=\dfrac{.60}{1.40}=.4286 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">(a) R = <b>0,4615</b> · (b) r = <b>0,4286</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> Spearman-Brown siempre sube: R > r entre mitades.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-2-1">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.2.1</span>
+    <span class="ex__kind">Rulon</span>
+    <span class="ex__desp">Despeja s²d</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">La fiabilidad de un test es <b>0,80</b> y la varianza de las puntuaciones totales es <b>50</b>. ¿Cuál es la varianza de las diferencias entre mitades (Rulon)?</p>
+    <div class="ex__data">\(R=0{,}80 \quad s^2_X=50\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Fórmula de Rulon (despeje de s²d)</div>
+    <div class="fx fx--violet">\[ R=1-\dfrac{s^2_d}{s^2_X} \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad</span><span><b>s²d</b> varianza de las diferencias</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Pasa la fiabilidad al otro miembro.<div class="fx">\[ 1-R=\dfrac{s^2_d}{s^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Multiplica por la varianza total.<div class="fx">\[ s^2_d=(1-R)\,s^2_X \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ s^2_d=(1-R)\,s^2_X \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq16">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja s²d de \( R=1-s^2_d/s^2_X \):<div class="fx">\[ s^2_d=(1-R)\,s^2_X=(.20)(50) \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ s^2_d=10 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">s²d = <b>10</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> cuanto más pequeña es s²d, más coinciden las mitades y más alta es la fiabilidad.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-2-2">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.2.2</span>
+    <span class="ex__kind">Rulon (inverso)</span>
+    <span class="ex__desp">Despeja R</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">En un test, la varianza de las diferencias entre las dos mitades es <b>8</b> y la varianza total es <b>40</b>. Calcula la fiabilidad por Rulon.</p>
+    <div class="ex__data">\(s^2_d=8 \quad s^2_X=40\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Fórmula de Rulon</div>
+    <div class="fx fx--violet">\[ R=1-\dfrac{s^2_d}{s^2_X} \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad</span><span><b>s²d</b> varianza de las diferencias</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Calcula la varianza de las diferencias.<div class="fx">\[ d=V_1-V_2\quad\Rightarrow\quad s^2_d \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye en la fórmula de Rulon.<div class="fx">\[ R=1-\dfrac{s^2_d}{s^2_X} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ R=1-\dfrac{s^2_d}{s^2_X} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq16">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Sustituye en la fórmula:<div class="fx">\[ R=1-\dfrac{s^2_d}{s^2_X}=1-\dfrac{8}{40} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ R=1-.20=.80 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">R = <b>0,80</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> fijate en que s²d siempre es menor que s²X: si no, el resultado sería negativo.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-2-3">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.2.3</span>
+    <span class="ex__kind">Guttman-Flanagan</span>
+    <span class="ex__desp">Despeja R</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Las varianzas de las dos mitades son <b>6,8</b> y <b>14,8</b>, y la varianza total es <b>33,2</b>. Calcula la fiabilidad por Guttman-Flanagan y compruébala con Rulon sabiendo que s²d = <b>10</b>.</p>
+    <div class="ex__data">\(s^2_1=6{,}8 \quad s^2_2=14{,}8 \quad s^2_X=33{,}2 \quad s^2_d=10\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Fórmula de Guttman-Flanagan</div>
+    <div class="fx fx--violet">\[ R=2\left[1-\dfrac{s^2_1+s^2_2}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad</span><span><b>s²₁</b> varianza mitad 1</span><span><b>s²₂</b> varianza mitad 2</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide entre 2.<div class="fx">\[ \dfrac{R}{2}=1-\dfrac{s^2_1+s^2_2}{s^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Pasa el cociente al otro lado.<div class="fx">\[ \dfrac{s^2_1+s^2_2}{s^2_X}=1-\dfrac{R}{2}=\dfrac{2-R}{2} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por la varianza total.<div class="fx">\[ s^2_1+s^2_2=\dfrac{s^2_X(2-R)}{2} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ s^2_1+s^2_2=\dfrac{s^2_X(2-R)}{2} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq17">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Guttman-Flanagan:<div class="fx">\[ R=2\left[1-\dfrac{6.8+14.8}{33.2}\right]=2(1-.6506)=.6988 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Rulon:<div class="fx">\[ R=1-\dfrac{10}{33.2}=1-.3012=.6988 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">R = <b>0,6988</b> por los dos métodos</div></div>
+      <div class="note note--key"><b>Ojo:</b> coinciden porque s²d = s²1 + s²2 − 2s12: son dos formas de escribir lo mismo.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-2-4">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.2.4</span>
+    <span class="ex__kind">Guttman (inverso)</span>
+    <span class="ex__desp">Despeja s²₂</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un test dividido en dos mitades da una fiabilidad (Guttman) de <b>0,70</b>. La varianza total es <b>60</b> y la de la primera mitad <b>12</b>. ¿Cuál es la varianza de la segunda mitad?</p>
+    <div class="ex__data">\(R=0{,}70 \quad s^2_X=60 \quad s^2_1=12\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Fórmula de Guttman-Flanagan</div>
+    <div class="fx fx--violet">\[ R=2\left[1-\dfrac{s^2_1+s^2_2}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>R</b> fiabilidad</span><span><b>s²₁</b> varianza mitad 1</span><span><b>s²₂</b> varianza mitad 2</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide entre 2.<div class="fx">\[ \dfrac{R}{2}=1-\dfrac{s^2_1+s^2_2}{s^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Pasa el cociente al otro lado.<div class="fx">\[ \dfrac{s^2_1+s^2_2}{s^2_X}=1-\dfrac{R}{2}=\dfrac{2-R}{2} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por la varianza total.<div class="fx">\[ s^2_1+s^2_2=\dfrac{s^2_X(2-R)}{2} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ s^2_1+s^2_2=\dfrac{s^2_X(2-R)}{2} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq17">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la suma de varianzas:<div class="fx">\[ s^2_1+s^2_2=\dfrac{s^2_X(2-R)}{2}=\dfrac{60(1.30)}{2}=39 \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Resta la primera mitad:<div class="fx">\[ s^2_2=39-12=27 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">s²₂ = <b>27</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> las mitades muy desiguales en varianza son una señal de que el corte no es equivalente.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-3-1">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.3.1</span>
+    <span class="ex__kind">Alfa de Cronbach</span>
+    <span class="ex__desp">Despeja Σs²i</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un cuestionario de <b>6 ítems</b> tiene un alfa de <b>0,85</b> y la varianza de las puntuaciones totales es <b>40</b>. ¿Cuánto suman las varianzas de los ítems?</p>
+    <div class="ex__data">\(\alpha=0{,}85 \quad k=6 \quad s^2_X=40\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Alfa de Cronbach (despeje de Σs²i)</div>
+    <div class="fx fx--violet">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>α</b> alfa de Cronbach</span><span><b>k</b> nº de ítems</span><span><b>Σs²i</b> suma de varianzas de ítem</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide entre k/(k−1).<div class="fx">\[ \dfrac{\alpha(k-1)}{k}=1-\dfrac{\sum s^2_i}{s^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Pasa el cociente al otro lado.<div class="fx">\[ \dfrac{\sum s^2_i}{s^2_X}=1-\alpha\dfrac{k-1}{k} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por la varianza total.<div class="fx">\[ \sum s^2_i=s^2_X\left[1-\alpha\dfrac{k-1}{k}\right] \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ \sum s^2_i=s^2_X\left[1-\alpha\dfrac{k-1}{k}\right] \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq18">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la suma de varianzas de ítem:<div class="fx">\[ \sum s^2_i=s^2_X\left[1-\alpha\dfrac{k-1}{k}\right] \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye:<div class="fx">\[ =40\left[1-.85\times\dfrac{5}{6}\right]=40(1-.7083) \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Opera:<div class="fx">\[ =40(.2917)=11.67 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">Σs²i = <b>11,67</b> (varianza “verdadera” ≈ 28,33)</div></div>
+      <div class="note note--key"><b>Ojo:</b> el cociente (k − 1)/k es 5/6 aquí: no olvides ese factor.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-3-2">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.3.2</span>
+    <span class="ex__kind">Alfa (directo)</span>
+    <span class="ex__desp">Despeja α</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un test de <b>5 ítems</b> tiene una suma de varianzas de ítem de <b>12</b> y una varianza total de <b>50</b>. Calcula el alfa de Cronbach.</p>
+    <div class="ex__data">\(k=5 \quad \sum s^2_i=12 \quad s^2_X=50\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Alfa de Cronbach</div>
+    <div class="fx fx--violet">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>α</b> alfa de Cronbach</span><span><b>k</b> nº de ítems</span><span><b>Σs²i</b> suma de varianzas de ítem</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Cuenta los ítems (k) y suma sus varianzas.<div class="fx">\[ k \qquad \sum s^2_i \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Calcula la varianza del total.<div class="fx">\[ s^2_X \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Sustituye en la fórmula.<div class="fx">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq18">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Sustituye en la fórmula:<div class="fx">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right]=\dfrac{5}{4}\left[1-\dfrac{12}{50}\right] \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ =\dfrac{5}{4}(.76)=.95 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">α = <b>0,95</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> un alfa tan alto con 5 ítems sugiere ítems muy redundantes.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-3-3">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.3.3</span>
+    <span class="ex__kind">Alfa (inverso)</span>
+    <span class="ex__desp">Despeja s²X</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un test de <b>8 ítems</b> con alfa <b>0,90</b> tiene una suma de varianzas de ítem de <b>9</b>. ¿Cuál es la varianza de las puntuaciones totales?</p>
+    <div class="ex__data">\(\alpha=0{,}90 \quad k=8 \quad \sum s^2_i=9\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">Alfa de Cronbach (despeje de s²X)</div>
+    <div class="fx fx--violet">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>α</b> alfa</span><span><b>k</b> nº de ítems</span><span><b>Σs²i</b> suma de varianzas</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Aísla el cociente de varianzas.<div class="fx">\[ \dfrac{\sum s^2_i}{s^2_X}=1-\alpha\dfrac{k-1}{k} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Invierte y multiplica.<div class="fx">\[ s^2_X=\dfrac{\sum s^2_i}{1-\alpha\frac{k-1}{k}} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ s^2_X=\dfrac{\sum s^2_i}{1-\alpha\frac{k-1}{k}} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq18">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la varianza total:<div class="fx">\[ s^2_X=\dfrac{\sum s^2_i}{1-\alpha\frac{k-1}{k}} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye:<div class="fx">\[ =\dfrac{9}{1-.90\times\frac{7}{8}}=\dfrac{9}{1-.7875} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Divide:<div class="fx">\[ =\dfrac{9}{.2125}=42.35 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">s²X = <b>42,35</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> resuelve primero α(k−1)/k, después resta y por último divide.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-4-1">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.4.1</span>
+    <span class="ex__kind">KR-20</span>
+    <span class="ex__desp">Despeja Σpq</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Una escala de <b>10 ítems dicotómicos</b> tiene un KR-20 de <b>0,70</b> y una varianza total de <b>25</b>. ¿Cuánto suma Σp·q?</p>
+    <div class="ex__data">\(KR_{20}=0{,}70 \quad k=10 \quad s^2_X=25\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">KR-20 (despeje de Σpq)</div>
+    <div class="fx fx--violet">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>KR₂₀</b> Kuder-Richardson 20</span><span><b>k</b> nº de ítems</span><span><b>Σpq</b> suma de p·q</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Divide entre k/(k−1).<div class="fx">\[ \dfrac{KR(k-1)}{k}=1-\dfrac{\sum p_iq_i}{s^2_X} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Pasa el cociente al otro lado.<div class="fx">\[ \dfrac{\sum p_iq_i}{s^2_X}=1-KR\dfrac{k-1}{k} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Multiplica por la varianza total.<div class="fx">\[ \sum p_iq_i=s^2_X\left[1-KR\dfrac{k-1}{k}\right] \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ \sum p_iq_i=s^2_X\left[1-KR\dfrac{k-1}{k}\right] \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq19">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la suma de varianzas dicotómicas:<div class="fx">\[ \sum p_iq_i=s^2_X\left[1-KR\dfrac{k-1}{k}\right] \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye:<div class="fx">\[ =25\left[1-.70\times\dfrac{9}{10}\right]=25(1-.63) \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Opera:<div class="fx">\[ =25(.37)=9.25 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">Σpq = <b>9,25</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> en ítems 0/1 la varianza de cada ítem es p·q, no hace falta calcularla con desviaciones.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-4-2">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.4.2</span>
+    <span class="ex__kind">KR-20 (directo)</span>
+    <span class="ex__desp">Despeja KR</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un test de <b>6 ítems dicotómicos</b> tiene Σpq = <b>1,28</b> y una varianza total de <b>2,96</b>. Calcula el KR-20.</p>
+    <div class="ex__data">\(k=6 \quad \sum p_iq_i=1.28 \quad s^2_X=2.96\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">KR-20 (Kuder-Richardson)</div>
+    <div class="fx fx--violet">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>KR₂₀</b> coeficiente</span><span><b>k</b> nº de ítems</span><span><b>Σpq</b> suma de p·q</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Calcula p = aciertos/N y q = 1 − p de cada ítem.<div class="fx">\[ p_iq_i \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Suma todas las varianzas dicotómicas.<div class="fx">\[ \sum p_iq_i \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Sustituye en la fórmula.<div class="fx">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq19">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Sustituye:<div class="fx">\[ KR_{20}=\dfrac{6}{5}\left[1-\dfrac{1.28}{2.96}\right]=1.2(1-.4324) \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Opera:<div class="fx">\[ =1.2(.5676)=.6811 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">KR-20 = <b>0,6811</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> es el mismo ejercicio de clase, pero resuelto en un solo paso.</div>
+    </div>
+  </div>
+</article>
+<article class="ex" id="e3-4-3">
+  <header class="ex__head">
+    <span class="ex__num">Ej. 3.4.3</span>
+    <span class="ex__kind">KR-20 (inverso)</span>
+    <span class="ex__desp">Despeja s²X</span>
+  </header>
+  <div class="ex__body">
+    <p class="ex__q">Un test de <b>12 ítems dicotómicos</b> con KR-20 = <b>0,80</b> tiene Σpq = <b>6</b>. ¿Cuál es la varianza de las puntuaciones totales?</p>
+    <div class="ex__data">\(KR_{20}=0{,}80 \quad k=12 \quad \sum p_iq_i=6\)</div>
+    
+<details class="deriv">
+  <summary><span class="deriv__ico">ƒ</span> Ver fórmula y despeje paso a paso</summary>
+  <div class="deriv__body">
+    <div class="deriv__lbl">Fórmula de partida</div>
+    <div class="deriv__name">KR-20 (despeje de s²X)</div>
+    <div class="fx fx--violet">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div>
+    <div class="deriv__syms"><span><b>KR₂₀</b> Kuder-Richardson 20</span><span><b>k</b> nº de ítems</span><span><b>Σpq</b> suma de p·q</span><span><b>s²X</b> varianza total</span></div>
+    <div class="deriv__lbl" style="margin-top:12px">Despeje de la incógnita</div>
+    <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Aísla el cociente.<div class="fx">\[ \dfrac{\sum p_iq_i}{s^2_X}=1-KR\dfrac{k-1}{k} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Invierte y multiplica.<div class="fx">\[ s^2_X=\dfrac{\sum p_iq_i}{1-KR\frac{k-1}{k}} \]</div></div></li></ol>
+    <div class="deriv__lbl" style="margin-top:12px">Fórmula aplicada</div>
+    <div class="fx fx--amber">\[ s^2_X=\dfrac{\sum p_iq_i}{1-KR\frac{k-1}{k}} \]</div>
+    <div class="deriv__foot">Esta ecuación está desarrollada en el <a href="formulario.html#eq19">formulario despejado →</a></div>
+  </div>
+</details>
+    <div class="sol">
+      <div class="sol__head">Desarrollo</div>
+      <ol class="steps"><li class="step"><span class="step__n">1</span><div class="step__tx">Despeja la varianza total:<div class="fx">\[ s^2_X=\dfrac{\sum p_iq_i}{1-KR\frac{k-1}{k}} \]</div></div></li><li class="step"><span class="step__n">2</span><div class="step__tx">Sustituye:<div class="fx">\[ =\dfrac{6}{1-.80\times\frac{11}{12}}=\dfrac{6}{1-.7333} \]</div></div></li><li class="step"><span class="step__n">3</span><div class="step__tx">Divide:<div class="fx">\[ =\dfrac{6}{.2667}=22.5 \]</div></div></li></ol>
+      <div class="ans"><span class="ans__lbl">Respuesta</span><div class="ans__val">s²X = <b>22,5</b></div></div>
+      <div class="note note--key"><b>Ojo:</b> cuanto más se acerque el denominador a cero, mayor varianza total exige el coeficiente.</div>
+    </div>
+  </div>
+</article>
+</section>
+<div class="foot">
+  <span>Cuaderno de ejercicios · Seminario 3 · Fiabilidad (II)</span>
+  <span><a href="seminario2.html">← Volver al Seminario 2</a></span>
+</div>
+
+</main>
+
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/vendor/katex/auto-render.min.js"></script>
+<script src="assets/js/ejercicios.js"></script>
+<script src="assets/js/indice.js"></script>
+<script src="assets/js/glosario.js"></script>
+<script src="assets/js/buscador.js"></script>
+</body>
+</html>

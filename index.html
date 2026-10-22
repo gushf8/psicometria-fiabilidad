@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b16">
+<title>Fiabilidad · Psicometría (Seminarios 2 y 3)</title>
+<meta name="description" content="Presentación, cuaderno de ejercicios, formulario, nomenclatura y autoevaluación de Fiabilidad (Psicometría).">
+<link rel="icon" type="image/svg+xml" href="ejercicios/assets/favicon.svg">
+<style>
+  @font-face{font-family:'Inter';src:url('ejercicios/assets/fonts/inter-400.woff2') format('woff2');font-weight:400;font-display:swap}
+  @font-face{font-family:'Inter';src:url('ejercicios/assets/fonts/inter-600.woff2') format('woff2');font-weight:600;font-display:swap}
+  @font-face{font-family:'Inter';src:url('ejercicios/assets/fonts/inter-700.woff2') format('woff2');font-weight:700;font-display:swap}
+  @font-face{font-family:'Sora';src:url('ejercicios/assets/fonts/sora-600.woff2') format('woff2');font-weight:600;font-display:swap}
+  :root{
+    --bg:#060b16;--ink:#eaf1ff;--muted:#94a6bf;--muted2:#6f829e;
+    --teal:#2dd4bf;--teal-l:#5eead4;--violet:#a78bfa;--violet-l:#c4b5fd;
+    --amber:#fbbf24;--orange:#fb923c;--orange-l:#fdba74;
+    --line:rgba(148,163,184,.16);--card:rgba(15,26,45,.72);
+    --fb:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --fd:'Sora','Inter',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.6;
+    background:
+      radial-gradient(900px 420px at 12% -8%,rgba(45,212,191,.12),transparent 60%),
+      radial-gradient(800px 380px at 92% 4%,rgba(167,139,250,.10),transparent 60%),
+      var(--bg);
+  }
+  .wrap{max-width:1100px;margin:0 auto;padding:clamp(28px,6vw,70px) clamp(18px,4vw,40px) 60px}
+  .eyebrow{display:flex;align-items:center;gap:10px;font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--teal)}
+  .eyebrow::before{content:"";width:22px;height:1px;background:currentColor;opacity:.8}
+  h1{font-family:var(--fd);font-weight:600;font-size:clamp(34px,5.4vw,58px);line-height:1.02;letter-spacing:-.035em;margin:14px 0 0}
+  h1 span{color:var(--muted);font-weight:400}
+  .lead{color:var(--muted);font-size:16px;line-height:1.65;max-width:720px;margin-top:16px}
+  .lead b{color:#dbe6f6;font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+  .card{
+    display:block;padding:24px 24px 20px;border-radius:18px;text-decoration:none;color:inherit;
+    border:1px solid var(--line);background:var(--card);
+    transition:.18s ease;
+  }
+  .card:hover{transform:translateY(-3px);border-color:rgba(45,212,191,.4);background:rgba(20,33,55,.9)}
+  .card--violet:hover{border-color:rgba(167,139,250,.45)}
+  .card__n{font-family:var(--fd);font-size:11px;letter-spacing:.18em;color:var(--teal);font-weight:600;text-transform:uppercase}
+  .card--violet .card__n{color:var(--violet-l)}
+  .card__t{font-family:var(--fd);font-size:24px;font-weight:600;line-height:1.15;margin-top:6px;letter-spacing:-.02em}
+  .card__d{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.55}
+  .card__f{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+  .chip{font-size:10.5px;color:var(--muted);padding:4px 9px;border-radius:99px;border:1px solid var(--line)}
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:16px}
+  .link{
+    display:flex;align-items:center;gap:10px;padding:12px 15px;border-radius:12px;text-decoration:none;color:inherit;
+    border:1px solid var(--line);background:rgba(15,26,45,.5);font-size:13px;transition:.16s ease;
+  }
+  .link:hover{background:rgba(148,163,184,.1);border-color:var(--line-strong)}
+  .link b{font-weight:600;color:#eaf2ff}
+  .link small{display:block;color:var(--muted2);font-size:11px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex:0 0 auto}
+  .dot--v{background:var(--violet)}
+  .dot--o{background:var(--orange)}
+  footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--muted2)}
+  @media(max-width:780px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow">Psicometría · Grado en Psicología</div>
+  <h1>Fiabilidad<br><span>Seminarios 2 y 3</span></h1>
+  <p class="lead">
+    Todo el material del curso en un solo lugar: la <b>presentación de clase</b> con los enunciados y sus soluciones,
+    el <b>cuaderno de ejercicios inversos</b>, el <b>formulario despejado</b>, la <b>nomenclatura</b> y una
+    <b>autoevaluación</b> de 20 preguntas.
+  </p>
+
+  <div class="grid">
+    <a class="card" href="presentacion/index.html">
+      <div class="card__n">01 · Presentación</div>
+      <div class="card__t">De la teoría al ejercicio resuelto</div>
+      <div class="card__d">
+        47 diapositivas con la teoría previa de cada actividad, los enunciados literales del seminario,
+        cada respuesta numerada (1.a, 2.b, 3.1.a…) en naranja y las hojas de respuestas.
+      </div>
+      <div class="card__f"><span class="chip">Seminario 2</span><span class="chip">Seminario 3</span><span class="chip">Fórmulas con tooltip</span><span class="chip">Buscador</span></div>
+    </a>
+
+    <a class="card card--violet" href="ejercicios/index.html">
+      <div class="card__n">02 · Cuaderno de ejercicios</div>
+      <div class="card__t">Ejercicios para pensar</div>
+      <div class="card__d">
+        34 problemas inversos: te dan el resultado y hay que despejar la incógnita. Cada uno con su fórmula,
+        el despeje paso a paso, el desarrollo numérico y la respuesta.
+      </div>
+      <div class="card__f"><span class="chip">15 de S2</span><span class="chip">19 de S3</span><span class="chip">Despejes</span><span class="chip">Soluciones ocultables</span></div>
+    </a>
+  </div>
+
+  <div class="links">
+    <a class="link" href="ejercicios/teoria.html"><span class="dot"></span><span><b>Teoría mínima</b><small>6 bloques con sus ideas clave</small></span></a>
+    <a class="link" href="ejercicios/formulario.html"><span class="dot"></span><span><b>Formulario despejado</b><small>22 ecuaciones · todas las letras</small></span></a>
+    <a class="link" href="ejercicios/nomenclatura.html"><span class="dot dot--o"></span><span><b>Nomenclatura</b><small>qué es cada símbolo · numerador y denominador</small></span></a>
+    <a class="link" href="ejercicios/autoevaluacion.html"><span class="dot dot--v"></span><span><b>Autoevaluación</b><small>20 preguntas con corrección inmediata</small></span></a>
+  </div>
+
+  <footer>
+    <span>Material didáctico basado en los ejercicios de clase de Fiabilidad (I) y (II) · Prof.ª María José Quesada Rodríguez.</span>
+    <span>Funciona sin conexión · KaTeX · Chart.js · GSAP</span>
+  </footer>
+</main>
+</body>
+</html>

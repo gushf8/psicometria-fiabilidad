@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b16">
+<title>Formulario despejado · Fiabilidad</title>
+<meta name="description" content="Todas las ecuaciones de fiabilidad con cada letra despejada: coeficiente, índice, error típico, intervalos, Spearman-Brown, Rulon, Guttman, alfa y KR-20.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/ejercicios.css">
+<link rel="stylesheet" href="assets/css/glosario.css">
+<link rel="stylesheet" href="assets/css/buscador.css">
+</head>
+<body class="ejercicios">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand__mark">Ψ</span><b>Psicometría</b> <span>· Fiabilidad</span></a>
+  <nav class="topnav" aria-label="Secciones">
+    <a href="index.html">Inicio</a>
+    <a href="teoria.html">Teoría</a>
+    <a href="formulario.html" class="is-active">Formulario despejado</a>
+    <a href="nomenclatura.html">Nomenclatura</a>
+    <a href="autoevaluacion.html">Autoevaluación</a>
+    <a href="seminario2.html">Seminario 2</a>
+    <a href="seminario3.html">Seminario 3</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<section>
+  <div class="eyebrow">Formulario · todas las ecuaciones</div>
+  <h1>Despejado por letras:<br><span class="thin">la misma fórmula, todas sus versiones</span></h1>
+  <p class="lead">Cada ecuación aparece en su forma original y, al desplegarla, con <b>todas las letras despejadas</b>. Es el material con el que se resuelven los ejercicios inversos: busca la incógnita que te piden y usa su fila.</p>
+  <div class="tools">
+    <a class="btn btn--ghost" href="seminario2.html">Ejercicios del Seminario 2</a>
+    <a class="btn btn--ghost" href="seminario3.html">Ejercicios del Seminario 3</a>
+    <span class="chip">22 ecuaciones</span>
+    <span class="chip">todas las incógnitas</span>
+  </div>
+  <nav class="toc" aria-label="Índice"><a href="#eq0"><div class="toc__n">Marco</div><div class="toc__t">Modelo clásico</div><div class="toc__d">X = V + E</div></a><a href="#eq3"><div class="toc__n">Fiabilidad</div><div class="toc__t">Coeficiente e índice</div><div class="toc__d">r, σ²V, σ²X, <span class="g-term" data-g="r_XV">r<sub>XV</sub></span></div></a><a href="#eq5"><div class="toc__n">Error</div><div class="toc__t">Error típico</div><div class="toc__d">σE, σX, r</div></a><a href="#eq7"><div class="toc__n">Estimación</div><div class="toc__t">Puntuación verdadera</div><div class="toc__d">V̂, X, r, z</div></a><a href="#eq10"><div class="toc__n">Intervalos</div><div class="toc__t">IC en directa y típica</div><div class="toc__d">L, U, X, σE</div></a><a href="#eq12"><div class="toc__n">Longitud</div><div class="toc__t">Spearman-Brown</div><div class="toc__d">R, k, r</div></a><a href="#eq14"><div class="toc__n">Muestra</div><div class="toc__t">Cambio de grupo</div><div class="toc__d">r₂, σ²</div></a><a href="#eq15"><div class="toc__n">Mitades</div><div class="toc__t">Dos mitades, Rulon, Guttman</div><div class="toc__d">R, r₁₂, s²d</div></a><a href="#eq18"><div class="toc__n">Ítems</div><div class="toc__t">Alfa y KR-20</div><div class="toc__d">α, Σs²i, s²X</div></a><a href="#eq20"><div class="toc__n">Correlación</div><div class="toc__t">Pearson y covarianza</div><div class="toc__d">r, cov, σ</div></a></nav>
+</section>
+
+<article class="eq" id="eq0">
+  <div class="eq__top">
+    <span class="eq__n">4.1–4.2</span>
+    <span class="eq__name">Modelo clásico</span>
+    <span class="eq__where">Formulario 3.1</span>
+  </div>
+  <div class="eq__main">\[ X=V+E \]</div>
+  <div class="eq__use">Separa lo observado en verdadero + error.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>X</td><td>\( X=V+E \)</td></tr><tr><td>V</td><td>\( V=X-E \)</td></tr><tr><td>E</td><td>\( E=X-V \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> El error de una persona no se puede conocer: solo se estima en un grupo.</div>
+  </details>
+</article>
+<article class="eq" id="eq1">
+  <div class="eq__top">
+    <span class="eq__n">4.2</span>
+    <span class="eq__name">Varianza observada</span>
+    <span class="eq__where">Deducción 5</span>
+  </div>
+  <div class="eq__main" data-gbox="σ²X">\[ \sigma^2_X=\sigma^2_V+\sigma^2_E \]</div>
+  <div class="eq__use">Las varianzas sí se suman (las desviaciones no).</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>σ²X</td><td>\( \sigma^2_X=\sigma^2_V+\sigma^2_E \)</td></tr><tr><td>σ²V</td><td>\( \sigma^2_V=\sigma^2_X-\sigma^2_E \)</td></tr><tr><td>σ²E</td><td>\( \sigma^2_E=\sigma^2_X-\sigma^2_V \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Las desviaciones se obtienen con raíz cuadrada al final, nunca antes.</div>
+  </details>
+</article>
+<article class="eq" id="eq2">
+  <div class="eq__top">
+    <span class="eq__n">4.2</span>
+    <span class="eq__name">Coeficiente de fiabilidad</span>
+    <span class="eq__where">Formulario 4.2</span>
+  </div>
+  <div class="eq__main" data-gbox="σ²V/σ²X">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_X} \]</div>
+  <div class="eq__use">Proporción de varianza observada que es verdadera.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_X} \)</td></tr><tr><td>σ²V</td><td>\( \sigma^2_V=r_{xx}\,\sigma^2_X \)</td></tr><tr><td>σ²X</td><td>\( \sigma^2_X=\dfrac{\sigma^2_V}{r_{xx}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Si te dan r y σ²V, la varianza observada se obtiene <b>dividiendo</b>.</div>
+  </details>
+</article>
+<article class="eq" id="eq3">
+  <div class="eq__top">
+    <span class="eq__n">4.2</span>
+    <span class="eq__name">Coeficiente a partir del error</span>
+    <span class="eq__where">Formulario 4.2</span>
+  </div>
+  <div class="eq__main" data-gbox="σ²E/σ²X">\[ r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \]</div>
+  <div class="eq__use">La otra cara de la misma proporción.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \)</td></tr><tr><td>σ²E</td><td>\( \sigma^2_E=(1-r_{xx})\,\sigma^2_X \)</td></tr><tr><td>σ²X</td><td>\( \sigma^2_X=\dfrac{\sigma^2_E}{1-r_{xx}} \)</td></tr><tr><td>1−r</td><td>\( 1-r_{xx}=\dfrac{\sigma^2_E}{\sigma^2_X} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Es la fórmula que más se usa al revés: con σ²E y r se llega a σ²X.</div>
+  </details>
+</article>
+<article class="eq" id="eq4">
+  <div class="eq__top">
+    <span class="eq__n">4.3</span>
+    <span class="eq__name">Índice de fiabilidad</span>
+    <span class="eq__where">Formulario 4.3</span>
+  </div>
+  <div class="eq__main" data-gbox="σV/σX">\[ r_{XV}=\dfrac{\sigma_V}{\sigma_X}=\sqrt{r_{xx}} \]</div>
+  <div class="eq__use">Correlación entre lo observado y lo verdadero.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td><span class="g-term" data-g="r_XV">r<sub>XV</sub></span></td><td>\( r_{XV}=\dfrac{\sigma_V}{\sigma_X}=\sqrt{r_{xx}} \)</td></tr><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=r_{XV}^2 \)</td></tr><tr><td>σV</td><td>\( \sigma_V=r_{XV}\,\sigma_X \)</td></tr><tr><td>σX</td><td>\( \sigma_X=\dfrac{\sigma_V}{r_{XV}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Coeficiente = índice². Confundirlos es el error más caro.</div>
+  </details>
+</article>
+<article class="eq" id="eq5">
+  <div class="eq__top">
+    <span class="eq__n">5.3.1</span>
+    <span class="eq__name">Error típico (directa)</span>
+    <span class="eq__where">Formulario 5.3.1</span>
+  </div>
+  <div class="eq__main" data-gbox="σE">\[ \sigma_E=\sigma_X\sqrt{1-r_{xx}} \]</div>
+  <div class="eq__use">Desviación típica de los errores, en puntos del test.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>σE</td><td>\( \sigma_E=\sigma_X\sqrt{1-r_{xx}} \)</td></tr><tr><td>σX</td><td>\( \sigma_X=\dfrac{\sigma_E}{\sqrt{1-r_{xx}}} \)</td></tr><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=1-\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \)</td></tr><tr><td>1−r</td><td>\( 1-r_{xx}=\left(\dfrac{\sigma_E}{\sigma_X}\right)^2 \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Cuando el dato es σE, la raíz va en el <b>denominador</b>.</div>
+  </details>
+</article>
+<article class="eq" id="eq6">
+  <div class="eq__top">
+    <span class="eq__n">5.3.3</span>
+    <span class="eq__name">Error típico (típicas)</span>
+    <span class="eq__where">Formulario 5.3.3</span>
+  </div>
+  <div class="eq__main">\[ \sigma_{ze}=\sqrt{1-r_{xx}} \]</div>
+  <div class="eq__use">El mismo error, medido en unidades z.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>σze</td><td>\( \sigma_{ze}=\sqrt{1-r_{xx}} \)</td></tr><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=1-\sigma^2_{ze} \)</td></tr><tr><td>1−r</td><td>\( 1-r_{xx}=\sigma^2_{ze} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> En diferencial el error es el mismo que en directa (σe = σE).</div>
+  </details>
+</article>
+<article class="eq" id="eq7">
+  <div class="eq__top">
+    <span class="eq__n">5.2.1</span>
+    <span class="eq__name">Estimación en directa</span>
+    <span class="eq__where">Formulario 5.2.1</span>
+  </div>
+  <div class="eq__main">\[ \hat{V}=\mu_X(1-r_{xx})+r_{xx}X \]</div>
+  <div class="eq__use">Regresión a la media: la estimación se acerca a μ.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>V̂</td><td>\( \hat{V}=\mu_X(1-r_{xx})+r_{xx}X \)</td></tr><tr><td>X</td><td>\( X=\dfrac{\hat{V}-\mu_X(1-r_{xx})}{r_{xx}} \)</td></tr><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=\dfrac{\hat{V}-\mu_X}{X-\mu_X} \)</td></tr><tr><td>μX</td><td>\( \mu_X=\dfrac{\hat{V}-r_{xx}X}{1-r_{xx}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> La versión despejada de X es la que permite reconstruir la puntuación observada.</div>
+  </details>
+</article>
+<article class="eq" id="eq8">
+  <div class="eq__top">
+    <span class="eq__n">5.2.2</span>
+    <span class="eq__name">Estimación en diferencial</span>
+    <span class="eq__where">Formulario 5.2.2</span>
+  </div>
+  <div class="eq__main">\[ \hat{v}=r_{xx}\,x \]</div>
+  <div class="eq__use">En puntuaciones diferenciales (x = X − μ).</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>v̂</td><td>\( \hat{v}=r_{xx}\,x \)</td></tr><tr><td><span class="g-term" data-g="r_xx">r<sub>xx</sub></span></td><td>\( r_{xx}=\dfrac{\hat{v}}{x} \)</td></tr><tr><td>x</td><td>\( x=\dfrac{\hat{v}}{r_{xx}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Ojo: aquí el multiplicador es el coeficiente, no el índice.</div>
+  </details>
+</article>
+<article class="eq" id="eq9">
+  <div class="eq__top">
+    <span class="eq__n">5.2.3</span>
+    <span class="eq__name">Estimación en típicas</span>
+    <span class="eq__where">Formulario 5.2.3</span>
+  </div>
+  <div class="eq__main">\[ z_{\hat{V}}=r_{XV}\,z_X \]</div>
+  <div class="eq__use">En unidades z se usa el índice de fiabilidad.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>z_V̂</td><td>\( z_{\hat{V}}=r_{XV}\,z_X \)</td></tr><tr><td><span class="g-term" data-g="r_XV">r<sub>XV</sub></span></td><td>\( r_{XV}=\dfrac{z_{\hat{V}}}{z_X} \)</td></tr><tr><td>z_X</td><td>\( z_X=\dfrac{z_{\hat{V}}}{r_{XV}} \)</td></tr><tr><td>z_X</td><td>\( z_X=\dfrac{X-\mu_X}{\sigma_X} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Es la fuente de la discrepancia 1,1319 vs 1,025: el formulario estandariza con el índice.</div>
+  </details>
+</article>
+<article class="eq" id="eq10">
+  <div class="eq__top">
+    <span class="eq__n">5.4.1</span>
+    <span class="eq__name">Intervalo de confianza (directa)</span>
+    <span class="eq__where">Formulario 5.4.1</span>
+  </div>
+  <div class="eq__main">\[ IC=X\pm z_{1-\alpha/2}\,\sigma_E \]</div>
+  <div class="eq__use">El intervalo se construye alrededor de la puntuación observada.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>Límites</td><td>\( L=X-z\,\sigma_E \qquad U=X+z\,\sigma_E \)</td></tr><tr><td>X</td><td>\( X=\dfrac{L+U}{2} \)</td></tr><tr><td>σE</td><td>\( \sigma_E=\dfrac{U-L}{2z} \)</td></tr><tr><td>z</td><td>\( z=\dfrac{U-L}{2\,\sigma_E} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Con [L ; U] ya puedes recuperar X, σE e incluso el nivel de confianza.</div>
+  </details>
+</article>
+<article class="eq" id="eq11">
+  <div class="eq__top">
+    <span class="eq__n">5.4.3</span>
+    <span class="eq__name">Intervalo de confianza (típica)</span>
+    <span class="eq__where">Formulario 5.4.3</span>
+  </div>
+  <div class="eq__main">\[ IC=z_X\pm z\,\sigma_{ze} \]</div>
+  <div class="eq__use">Mismo esquema, en unidades z.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>Límites</td><td>\( L=z_X-z\,\sigma_{ze} \qquad U=z_X+z\,\sigma_{ze} \)</td></tr><tr><td>z_X</td><td>\( z_X=\dfrac{L+U}{2} \)</td></tr><tr><td>σze</td><td>\( \sigma_{ze}=\dfrac{U-L}{2z} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> z = 2,58 para el 99 %; z = 1,96 para el 95 %.</div>
+  </details>
+</article>
+<article class="eq" id="eq12">
+  <div class="eq__top">
+    <span class="eq__n">6.1</span>
+    <span class="eq__name">Spearman-Brown</span>
+    <span class="eq__where">Formulario 6.1</span>
+  </div>
+  <div class="eq__main">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
+  <div class="eq__use">Fiabilidad al alargar o acortar el test.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>R</td><td>\( R=\dfrac{k\,r}{1+(k-1)r} \)</td></tr><tr><td>k</td><td>\( k=\dfrac{R(1-r)}{r(1-R)} \)</td></tr><tr><td>r</td><td>\( r=\dfrac{R}{k-(k-1)R} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> k &gt; 1 alarga; k &lt; 1 acorta. No es el número de ítems añadidos.</div>
+  </details>
+</article>
+<article class="eq" id="eq13">
+  <div class="eq__top">
+    <span class="eq__n">6.1</span>
+    <span class="eq__name">Longitud del test</span>
+    <span class="eq__where">Formulario 6.1</span>
+  </div>
+  <div class="eq__main">\[ k=\dfrac{n_F}{n_I} \]</div>
+  <div class="eq__use">Razón entre la longitud final y la inicial.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>k</td><td>\( k=\dfrac{n_F}{n_I} \)</td></tr><tr><td>nF</td><td>\( n_F=k\,n_I \)</td></tr><tr><td>nI</td><td>\( n_I=\dfrac{n_F}{k} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Ítems añadidos = nF − nI. Redondea siempre hacia arriba.</div>
+  </details>
+</article>
+<article class="eq" id="eq14">
+  <div class="eq__top">
+    <span class="eq__n">6.2</span>
+    <span class="eq__name">Cambio de muestra</span>
+    <span class="eq__where">Formulario 6.2</span>
+  </div>
+  <div class="eq__main">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div>
+  <div class="eq__use">El error absoluto no cambia; cambia su peso.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>r₂</td><td>\( r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \)</td></tr><tr><td>σ²₂</td><td>\( \sigma^2_2=\dfrac{(1-r_1)\,\sigma^2_1}{1-r_2} \)</td></tr><tr><td>r₁</td><td>\( r_1=1-(1-r_2)\dfrac{\sigma^2_2}{\sigma^2_1} \)</td></tr><tr><td>σ²₁</td><td>\( \sigma^2_1=\dfrac{(1-r_2)\,\sigma^2_2}{1-r_1} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Si σ² aumenta, r sube; si σ² disminuye, r baja.</div>
+  </details>
+</article>
+<article class="eq" id="eq15">
+  <div class="eq__top">
+    <span class="eq__n">8.1.1</span>
+    <span class="eq__name">Dos mitades (Spearman-Brown)</span>
+    <span class="eq__where">Formulario 8.1.1</span>
+  </div>
+  <div class="eq__main">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \]</div>
+  <div class="eq__use">Corrige la fiabilidad de una mitad al test completo.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>R</td><td>\( R=\dfrac{2r_{1,2}}{1+r_{1,2}} \)</td></tr><tr><td>r₁₂</td><td>\( r_{1,2}=\dfrac{R}{2-R} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Con k = 2 en la fórmula general se obtiene esta versión.</div>
+  </details>
+</article>
+<article class="eq" id="eq16">
+  <div class="eq__top">
+    <span class="eq__n">8.1.2</span>
+    <span class="eq__name">Rulon</span>
+    <span class="eq__where">Formulario 8.1.2</span>
+  </div>
+  <div class="eq__main" data-gbox="s²d">\[ R=1-\dfrac{s^2_d}{s^2_X} \]</div>
+  <div class="eq__use">Usa la varianza de las diferencias entre mitades.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>R</td><td>\( R=1-\dfrac{s^2_d}{s^2_X} \)</td></tr><tr><td>s²d</td><td>\( s^2_d=(1-R)\,s^2_X \)</td></tr><tr><td>s²X</td><td>\( s^2_X=\dfrac{s^2_d}{1-R} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Si s²d &gt; s²X el resultado sería negativo: algo va mal.</div>
+  </details>
+</article>
+<article class="eq" id="eq17">
+  <div class="eq__top">
+    <span class="eq__n">8.1.3</span>
+    <span class="eq__name">Guttman-Flanagan</span>
+    <span class="eq__where">Formulario 8.1.3</span>
+  </div>
+  <div class="eq__main">\[ R=2\left[1-\dfrac{s^2_1+s^2_2}{s^2_X}\right] \]</div>
+  <div class="eq__use">Usa la varianza de cada mitad.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>R</td><td>\( R=2\left[1-\dfrac{s^2_1+s^2_2}{s^2_X}\right] \)</td></tr><tr><td>s²X</td><td>\( s^2_X=\dfrac{2(s^2_1+s^2_2)}{2-R} \)</td></tr><tr><td>s²1+s²2</td><td>\( s^2_1+s^2_2=\dfrac{s^2_X(2-R)}{2} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Equivale a Rulon cuando se usan las mismas mitades.</div>
+  </details>
+</article>
+<article class="eq" id="eq18">
+  <div class="eq__top">
+    <span class="eq__n">8.2.1</span>
+    <span class="eq__name">Alfa de Cronbach</span>
+    <span class="eq__where">Formulario 8.2.1</span>
+  </div>
+  <div class="eq__main" data-gbox="Σs²i">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \]</div>
+  <div class="eq__use">Consistencia interna con ítems de cualquier tipo.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>α</td><td>\( \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \)</td></tr><tr><td>Σs²i</td><td>\( \sum s^2_i=s^2_X\left[1-\alpha\dfrac{k-1}{k}\right] \)</td></tr><tr><td>s²X</td><td>\( s^2_X=\dfrac{\sum s^2_i}{1-\alpha\frac{k-1}{k}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> El factor (k − 1)/k hay que aplicarlo antes de restar.</div>
+  </details>
+</article>
+<article class="eq" id="eq19">
+  <div class="eq__top">
+    <span class="eq__n">8.2.2</span>
+    <span class="eq__name">KR-20</span>
+    <span class="eq__where">Formulario 8.2.2</span>
+  </div>
+  <div class="eq__main" data-gbox="Σpq">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div>
+  <div class="eq__use">Alfa para ítems dicotómicos (0/1).</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>KR-20</td><td>\( KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \)</td></tr><tr><td>Σpq</td><td>\( \sum p_iq_i=s^2_X\left[1-KR\dfrac{k-1}{k}\right] \)</td></tr><tr><td>s²X</td><td>\( s^2_X=\dfrac{\sum p_iq_i}{1-KR\frac{k-1}{k}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> La varianza de un ítem 0/1 es p·q, con q = 1 − p.</div>
+  </details>
+</article>
+<article class="eq" id="eq20">
+  <div class="eq__top">
+    <span class="eq__n">7.1</span>
+    <span class="eq__name">Correlación de Pearson</span>
+    <span class="eq__where">Formulario 7.1.1</span>
+  </div>
+  <div class="eq__main">\[ r=\dfrac{\sigma_{XY}}{\sigma_X\,\sigma_Y} \]</div>
+  <div class="eq__use">Base de las formas paralelas y del test-retest.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>r</td><td>\( r=\dfrac{\sigma_{XY}}{\sigma_X\,\sigma_Y} \)</td></tr><tr><td>cov</td><td>\( \sigma_{XY}=r\,\sigma_X\,\sigma_Y \)</td></tr><tr><td>σY</td><td>\( \sigma_Y=\dfrac{\sigma_{XY}}{r\,\sigma_X} \)</td></tr><tr><td>σX</td><td>\( \sigma_X=\dfrac{\sigma_{XY}}{r\,\sigma_Y} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Se usa igual en formas paralelas (A,B) y en test-retest (1,2).</div>
+  </details>
+</article>
+<article class="eq" id="eq21">
+  <div class="eq__top">
+    <span class="eq__n">7.1</span>
+    <span class="eq__name">Covarianza</span>
+    <span class="eq__where">Formulario 7.1.1</span>
+  </div>
+  <div class="eq__main">\[ \sigma_{XY}=\dfrac{\sum x\,y}{N} \]</div>
+  <div class="eq__use">Producto medio de las puntuaciones diferenciales.</div>
+  <details open>
+    <summary>Despejes de todas las letras</summary>
+    <div class="table-wrap">
+      <table class="table--vars">
+        <thead><tr><th>Incógnita</th><th>Expresión despejada</th></tr></thead>
+        <tbody><tr><td>cov</td><td>\( \sigma_{XY}=\dfrac{\sum x\,y}{N} \)</td></tr><tr><td>Σxy</td><td>\( \sum x\,y=\sigma_{XY}\,N \)</td></tr><tr><td>N</td><td>\( N=\dfrac{\sum x\,y}{\sigma_{XY}} \)</td></tr></tbody>
+      </table>
+    </div>
+    <div class="note note--key"><b>Para resolver:</b> Con varianzas y correlación puedes reconstruir la covarianza y la σ que falte.</div>
+  </details>
+</article>
+<div class="foot">
+  <span>Formulario despejado · Fiabilidad</span>
+  <span>Basado en el Formulario de la asignatura (Prof.ª M.ª José Quesada Rodríguez)</span>
+</div>
+
+</main>
+
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/vendor/katex/auto-render.min.js"></script>
+<script src="assets/js/ejercicios.js"></script>
+<script src="assets/js/indice.js"></script>
+<script src="assets/js/glosario.js"></script>
+<script src="assets/js/buscador.js"></script>
+</body>
+</html>

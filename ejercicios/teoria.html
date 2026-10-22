@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b16">
+<title>Teoría · Fiabilidad</title>
+<meta name="description" content="Teoría mínima de fiabilidad (Seminarios 2 y 3): modelo clásico, estimación, longitud, variabilidad y consistencia interna.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/ejercicios.css">
+<link rel="stylesheet" href="assets/css/glosario.css">
+</head>
+<body class="ejercicios">
+
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand__mark">Ψ</span><b>Psicometría</b> <span>· Fiabilidad</span></a>
+  <nav class="topnav" aria-label="Secciones">
+    <a href="index.html">Inicio</a>
+    <a href="teoria.html" class="is-active">Teoría</a>
+    <a href="formulario.html">Formulario despejado</a>
+    <a href="nomenclatura.html">Nomenclatura</a>
+    <a href="seminario2.html">Seminario 2</a>
+    <a href="seminario3.html">Seminario 3</a>
+  </nav>
+</header>
+
+<main class="wrap">
+
+<section>
+  <div class="eyebrow">Teoría</div>
+  <h1>La teoría mínima<br><span class="thin">para resolver los ejercicios</span></h1>
+  <p class="lead">Seis bloques, uno por cada tipo de problema. Cada uno explica <b>qué se está midiendo</b>, <b>qué fórmula se usa</b> y <b>qué pregunta responde</b>, con el enlace al formulario y a los ejercicios correspondientes. Es la misma teoría de la presentación de clase, en formato de lectura.</p>
+  <div class="tools">
+    <a class="btn btn--ghost" href="formulario.html">Formulario despejado</a>
+    <a class="btn btn--ghost" href="nomenclatura.html">Nomenclatura</a>
+    <a class="btn btn--ghost" href="seminario2.html">Ejercicios S2</a>
+    <a class="btn btn--ghost" href="seminario3.html">Ejercicios S3</a>
+  </div>
+  <nav class="toc" aria-label="Índice de teoría"><a href="#t1"><div class="toc__n">01</div><div class="toc__t">El modelo clásico</div><div class="toc__d">X = V + E · varianza · fiabilidad · índice</div></a><a href="#t2"><div class="toc__n">02</div><div class="toc__t">Estimar la puntuación verdadera</div><div class="toc__d">regresión · escalas · error típico · IC</div></a><a href="#t3"><div class="toc__n">03</div><div class="toc__t">Longitud del test</div><div class="toc__d">Spearman-Brown · k</div></a><a href="#t4"><div class="toc__n">04</div><div class="toc__t">Variabilidad de la muestra</div><div class="toc__d">restricción del rango</div></a><a href="#t5"><div class="toc__n">05</div><div class="toc__t">Dos medidas</div><div class="toc__d">formas paralelas · test-retest</div></a><a href="#t6"><div class="toc__n">06</div><div class="toc__t">Consistencia interna</div><div class="toc__d">mitades · Rulon · Guttman · α · KR-20</div></a></nav>
+</section>
+
+
+<section class="act" id="t1">
+  <div class="act__head">
+    <div class="act__badge">01</div>
+    <div>
+      <h2 class="act__title">El modelo clásico: X = V + E</h2>
+      <p class="act__sub">De dónde sale todo: la puntuación observada se reparte entre lo verdadero y el error.</p>
+    </div>
+  </div>
+  
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Modelo clásico</div>
+  <div class="card__title">Lo observado es lo verdadero más el error</div>
+  <div class="card__text">Toda puntuación <b>X</b> que se obtiene en un test es la suma de la puntuación <b>verdadera V</b> (el nivel real del rasgo) y el <b>error E</b> (factores aleatorios del día, del ítem, del examinador). El modelo supone que el error es aleatorio, que su media es cero y que <b>no correlaciona con V</b>.</div>
+</div><div class="fx">\[ X=V+E \qquad \sigma^2_X=\sigma^2_V+\sigma^2_E \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Fiabilidad</div>
+  <div class="card__title">Una proporción de varianza</div>
+  <div class="card__text">La fiabilidad no es una propiedad mágica del test: es la <b>proporción de varianza observada que es verdadera</b>. Va de 0 a 1 y depende de la muestra (por eso la Actividad 4).</div>
+</div><div class="fx">\[ r_{xx}=\dfrac{\sigma^2_V}{\sigma^2_X}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Coeficiente ≠ índice</div>
+  <div class="card__title">Dos números que se confunden siempre</div>
+  <div class="card__text">El <b>coeficiente</b> r<sub>xx</sub> es la proporción de varianza. El <b>índice</b> r<sub>XV</sub> es la correlación entre lo observado y lo verdadero, y siempre es mayor: es su raíz cuadrada.</div>
+</div><div class="fx">\[ r_{XV}=\dfrac{\sigma_V}{\sigma_X}=\sqrt{r_{xx}} \qquad r_{xx}=r_{XV}^{2} \]</div><div class="note note--key" style="margin-top:12px"><b>Idea clave:</b> el error <b>sí</b> correlaciona con X (r(X,E) = σE/σX = √(1−r)), porque forma parte de X; lo que no correlaciona es con V (r(V,E) = 0, por supuesto).</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Desviaciones</div>
+  <div class="card__title">Las varianzas se suman; las desviaciones, no</div>
+  <div class="card__text">σ²X = σ²V + σ²E es una suma. En desviaciones típicas no hay suma: hay que aplicar raíz cuadrada a las razones. De ahí que √0,90 = 0,9487 y no 0,90.</div>
+</div>
+  <div class="tools" style="margin-top:14px"><a class="chip" href="formulario.html#eq0">Ecuación fundamental</a><a class="chip" href="nomenclatura.html">Qué es cada símbolo</a><a class="chip" href="seminario2.html#a1">Ejercicios 1.x</a></div>
+</section>
+
+
+<section class="act" id="t2">
+  <div class="act__head">
+    <div class="act__badge">02</div>
+    <div>
+      <h2 class="act__title">Estimar la puntuación verdadera</h2>
+      <p class="act__sub">Regresión a la media, las tres escalas, el error típico y el intervalo de confianza.</p>
+    </div>
+  </div>
+  
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Estimación</div>
+  <div class="card__title">La puntuación verdadera no se copia: se estima</div>
+  <div class="card__text">Una persona con X = 30 no tiene necesariamente V = 30. La mejor estimación se obtiene por <b>regresión a la media</b>: cuanto menor es la fiabilidad, más se acerca la estimación a la media del grupo.</div>
+</div><div class="fx">\[ \hat{V}=\mu_X(1-r_{xx})+r_{xx}X \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Las tres escalas</div>
+  <div class="card__title">La misma persona en tres unidades</div>
+  <div class="card__text"><b>Directa:</b> la puntuación del test. <b>Diferencial:</b> distancia a la media (x = X − μ). <b>Típica:</b> distancia medida en desviaciones típicas (z = (X − μ)/σX).</div>
+</div><div class="fx">\[ \hat{v}=r_{xx}\,x \qquad z_{\hat{V}}=r_{XV}\,z_X \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Error típico</div>
+  <div class="card__title">Cuánto se equivoca el test</div>
+  <div class="card__text">Es la desviación típica de los errores, en puntos de la escala. Sirve para construir el intervalo de confianza y para comparar la precisión de dos tests.</div>
+</div><div class="fx">\[ \sigma_E=\sigma_X\sqrt{1-r_{xx}} \qquad \sigma_{ze}=\sqrt{1-r_{xx}} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Intervalo de confianza</div>
+  <div class="card__title">Un rango, no un valor</div>
+  <div class="card__text">El intervalo se construye alrededor de la puntuación observada, con z = 2,58 para el 99 %. Significa que el 99 % de los intervalos así construidos contendrían la puntuación verdadera.</div>
+</div><div class="fx">\[ IC_{99\%}=X\pm 2.58\,\sigma_E \]</div><div class="note note--key" style="margin-top:12px"><b>Idea clave:</b> 2.a pide <b>un valor</b> (la estimación) y 2.b pide <b>un rango</b> (el intervalo): no se responde igual.</div>
+  <div class="tools" style="margin-top:14px"><a class="chip" href="formulario.html#eq7">Ecuación de pronóstico</a><a class="chip" href="formulario.html#eq10">Intervalos de confianza</a><a class="chip" href="seminario2.html#a2">Ejercicios 2.x</a></div>
+</section>
+
+
+<section class="act" id="t3">
+  <div class="act__head">
+    <div class="act__badge">03</div>
+    <div>
+      <h2 class="act__title">La longitud del test</h2>
+      <p class="act__sub">Qué pasa al añadir o quitar ítems, y cómo se despeja k o la fiabilidad inicial.</p>
+    </div>
+  </div>
+  
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Longitud</div>
+  <div class="card__title">Más ítems parecidos, más fiabilidad</div>
+  <div class="card__text">Alargar el test con ítems <b>paralelos</b> reduce el peso relativo del error. Pero cada ítem extra aporta menos que el anterior: la curva se aplana.</div>
+</div><div class="fx">\[ R=\dfrac{k\,r}{1+(k-1)r} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">k</div>
+  <div class="card__title">Una razón, no una cantidad</div>
+  <div class="card__text">k = nF/nI es cuántas veces es de largo el test nuevo. Añadir 35 ítems a 70 no es k = 35, sino k = 105/70 = 1,5. Al acortar, k &lt; 1.</div>
+</div><div class="fx">\[ k=\dfrac{n_F}{n_I} \qquad k=\dfrac{R(1-r)}{r(1-R)} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Dirección inversa</div>
+  <div class="card__title">Despejar la fiabilidad inicial</div>
+  <div class="card__text">Si te dan la fiabilidad final R y la longitud, la incógnita puede ser r (la inicial), k (cuánto alargar) o los ítems que faltan. Es el despeje que más se practica en los ejercicios.</div>
+</div><div class="note note--key" style="margin-top:12px"><b>Idea clave:</b> al acortar, el coeficiente baja mucho más de lo que parece: reducir a un tercio lleva .60 a .33.</div>
+  <div class="tools" style="margin-top:14px"><a class="chip" href="formulario.html#eq12">Spearman-Brown</a><a class="chip" href="seminario2.html#a3">Ejercicios 3.x</a></div>
+</section>
+
+
+<section class="act" id="t4">
+  <div class="act__head">
+    <div class="act__badge">04</div>
+    <div>
+      <h2 class="act__title">La variabilidad de la muestra</h2>
+      <p class="act__sub">Por qué el mismo test da otra fiabilidad en otro grupo.</p>
+    </div>
+  </div>
+  
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Variabilidad</div>
+  <div class="card__title">La fiabilidad depende del grupo</div>
+  <div class="card__text">El error absoluto (σ²E) se mantiene, pero su <b>peso relativo</b> cambia con la varianza del grupo. Si el grupo es más heterogéneo, el error pesa menos y la fiabilidad sube.</div>
+</div><div class="fx">\[ r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Cambio de grupo</div>
+  <div class="card__title">La fórmula para comparar dos muestras</div>
+  <div class="card__text">Con la fiabilidad de un grupo y las varianzas de los dos grupos se obtiene la fiabilidad del otro. Es el efecto de <b>restricción del rango</b>.</div>
+</div><div class="fx">\[ r_2=1-(1-r_1)\dfrac{\sigma^2_1}{\sigma^2_2} \]</div><div class="note note--key" style="margin-top:12px"><b>Idea clave:</b> si σ² se duplica, el error pesa la mitad; si se reduce a la mitad, pesa el doble. No cambia el error: cambia el grupo.</div>
+  <div class="tools" style="margin-top:14px"><a class="chip" href="formulario.html#eq14">Cambio de grupo</a><a class="chip" href="seminario2.html#a4">Ejercicios 4.x</a></div>
+</section>
+
+
+<section class="act" id="t5">
+  <div class="act__head">
+    <div class="act__badge">05</div>
+    <div>
+      <h2 class="act__title">Dos medidas: paralelas y test-retest</h2>
+      <p class="act__sub">Cuando hay dos aplicaciones, la fiabilidad es una correlación.</p>
+    </div>
+  </div>
+  
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Dos medidas</div>
+  <div class="card__title">La fiabilidad es una correlación</div>
+  <div class="card__text">Con dos medidas de las mismas personas (dos formas paralelas o el mismo test dos veces), el coeficiente de fiabilidad es directamente la <b>correlación de Pearson</b> entre ambas.</div>
+</div><div class="fx">\[ r_{XX'}=\dfrac{\sigma_{XX'}}{\sigma_X\,\sigma_{X'}} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Paralelas vs test-retest</div>
+  <div class="card__title">Equivalencia o estabilidad</div>
+  <div class="card__text"><b>Formas paralelas</b> estudia si dos versiones miden lo mismo (equivalencia). <b>Test-retest</b> estudia si el test se mantiene en el tiempo (estabilidad). El test-retest es sensible al intervalo entre aplicaciones.</div>
+</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Supuestos</div>
+  <div class="card__title">Las cuatro condiciones del paralelismo estricto</div>
+  <div class="card__text"><b>1)</b> Igualdad de puntuaciones verdaderas: T<sub>A</sub> = T<sub>B</sub>. <b>2)</b> Igualdad de la varianza del error: Var(E<sub>A</sub>) = Var(E<sub>B</sub>). <b>3)</b> Errores independientes: Cov(E<sub>A</sub>,E<sub>B</sub>) = 0 y Cov(T,E) = 0. <b>4)</b> Igualdad de propiedades: μ<sub>A</sub> = μ<sub>B</sub> y Var(X<sub>A</sub>) = Var(X<sub>B</sub>).</div>
+</div><div class="fx">\[ T_A=T_B \quad \operatorname{Var}(E_A)=\operatorname{Var}(E_B) \quad \mu_A=\mu_B \quad \operatorname{Var}(X_A)=\operatorname{Var}(X_B) \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Niveles</div>
+  <div class="card__title">Estrictas, tau-equivalentes y simplemente similares</div>
+  <div class="card__text"><b>Estrictamente paralelas:</b> T igual y σ²E igual. <b>Esencialmente tau-equivalentes:</b> T<sub>A</sub> = T<sub>B</sub> + c (puede cambiar la media). <b>Simplemente similares:</b> miden el mismo constructo sin garantizar lo anterior; entonces la correlación es una <b>cota inferior</b> de la fiabilidad.</div>
+</div><div class="note note--key" style="margin-top:12px"><b>Idea clave:</b> con los 10 pares de puntuaciones puedes <b>calcular r</b>, pero no <b>demostrar</b> los cuatro supuestos: la equivalencia se justifica por el diseño (contenido, dificultad, formato) y por las propiedades psicométricas de cada forma.</div>
+  <div class="tools" style="margin-top:14px"><a class="chip" href="formulario.html#eq20">Pearson y covarianza</a><a class="chip" href="seminario3.html#a1">Ejercicios S3 1.x y 2.x</a></div>
+</section>
+
+
+<section class="act" id="t6">
+  <div class="act__head">
+    <div class="act__badge">06</div>
+    <div>
+      <h2 class="act__title">Consistencia interna</h2>
+      <p class="act__sub">Una sola aplicación: mitades, Rulon, Guttman, alfa y KR-20.</p>
+    </div>
+  </div>
+  
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Una sola aplicación</div>
+  <div class="card__title">Comparar las partes del test</div>
+  <div class="card__text">Cuando solo hay una aplicación, se compara el test consigo mismo: dos mitades, o todos los ítems entre sí. Evalúa la <b>consistencia interna</b> (homogeneidad).</div>
+</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Dos mitades</div>
+  <div class="card__title">Primero correlaciona, después corrige</div>
+  <div class="card__text">La correlación entre mitades describe el test a la mitad; hay que corregirla con Spearman-Brown para referirla al test completo.</div>
+</div><div class="fx">\[ R=\dfrac{2r_{1,2}}{1+r_{1,2}} \qquad r_{1,2}=\dfrac{R}{2-R} \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Rulon y Guttman-Flanagan</div>
+  <div class="card__title">Dos formas de mirar las varianzas</div>
+  <div class="card__text">Rulon usa la varianza de las <b>diferencias</b> entre mitades; Guttman, la varianza de <b>cada</b> mitad. Algebraicamente son equivalentes con las mismas mitades.</div>
+</div><div class="fx">\[ R=1-\dfrac{s^2_d}{s^2_X} \qquad R=2\left[1-\dfrac{s^2_1+s^2_2}{s^2_X}\right] \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">Alfa y KR-20</div>
+  <div class="card__title">Todos los ítems a la vez</div>
+  <div class="card__text">Alfa compara la suma de varianzas de los ítems con la varianza del total; vale para cualquier tipo de respuesta. KR-20 es el mismo cálculo cuando los ítems son 0/1 (su varianza es p·q).</div>
+</div><div class="fx">\[ \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \qquad KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \]</div>
+<div class="card" style="margin-top:12px">
+  <div class="card__label">KR-20 y KR-21</div>
+  <div class="card__title">Dos versiones para ítems dicotómicos</div>
+  <div class="card__text"><b>KR-20</b> usa la varianza de cada ítem (Σp·q) y sirve cuando los ítems tienen <b>distinta dificultad</b>: es el alfa exacto para 0/1. <b>KR-21</b> asume que todos los ítems tienen <b>dificultad similar</b> (una p común) y usa solo la media: es una simplificación que suele dar una <b>cota inferior</b> de KR-20.</div>
+</div><div class="fx">\[ KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \qquad KR_{21}=\dfrac{k}{k-1}\left[1-\dfrac{\bar{X}(k-\bar{X})}{k\,s^2_X}\right] \]</div><div class="note note--key" style="margin-top:12px"><b>Idea clave:</b> un alfa alto no garantiza que el test mida una sola cosa: puede haber varios factores y seguir siendo consistente.</div>
+  <div class="tools" style="margin-top:14px"><a class="chip" href="formulario.html#eq15">Dos mitades y Rulon</a><a class="chip" href="formulario.html#eq18">Alfa y KR-20</a><a class="chip" href="seminario3.html#a3">Ejercicios S3 3.x</a></div>
+</section>
+
+<div class="foot">
+  <span>Teoría · Fiabilidad · Seminarios 2 y 3</span>
+  <span>Basada en el Formulario de la asignatura · Prof.ª María José Quesada Rodríguez</span>
+</div>
+
+</main>
+
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/vendor/katex/auto-render.min.js"></script>
+<script src="assets/js/ejercicios.js"></script>
+<script src="assets/js/glosario.js"></script>
+</body>
+</html>

@@ -1,0 +1,2843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#060b16">
+<title>Fiabilidad · Seminarios 2 y 3</title>
+<meta name="description" content="Presentación interactiva continua de los Seminarios 2 y 3 de Fiabilidad (Psicometría): ejercicios resueltos, cálculos paso a paso y gráficos.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/deck.css">
+<link rel="stylesheet" href="assets/css/tooltips.css">
+<link rel="stylesheet" href="assets/css/glosario.css">
+<link rel="stylesheet" href="assets/css/buscador.css">
+</head>
+<body data-deck="mix" data-deck-title="Fiabilidad" data-deck-tag="Seminario 02">
+
+<div class="aurora" aria-hidden="true">
+  <div class="aurora__grid"></div>
+  <div class="orb orb--1"></div>
+  <div class="orb orb--2"></div>
+  <div class="orb orb--3"></div>
+</div>
+
+<div class="stage">
+  <main class="slides">
+
+
+    <!-- ==================== 01 · PORTADA ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Portada · Seminario 2" data-section="Inicio">
+      <div class="slide__inner">
+        <div class="cover">
+          <div>
+            <div class="cover__badge" data-anim="fade">Seminario 02 · Fiabilidad (I)</div>
+            <h1 data-anim>Fiabilidad<br><span class="thin">(I)</span></h1>
+            <p class="cover__lead" data-anim>
+              Del modelo clásico de test a la estimación de la puntuación verdadera.
+              Cuatro actividades, cada operación explicada y cada resultado interpretado.
+            </p>
+            <div class="cover__chips" data-anim>
+              <span class="chip chip--accent">Modelo clásico</span>
+              <span class="chip">Error típico</span>
+              <span class="chip">Intervalos de confianza</span>
+              <span class="chip">Spearman-Brown</span>
+            </div>
+            <button class="cover__cta" type="button" data-next data-anim>
+              Empezar recorrido
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+
+          <aside class="cover__side">
+            <div class="cover__num">02</div>
+            <div class="cover__glyph" data-anim="right">
+              <div class="card__label">Ecuación fundamental</div>
+              <div style="font-size:30px;color:#e6fffb">\( X = V + E \)</div>
+              <div class="hr"></div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.55">
+                Puntuación observada = puntuación verdadera + error de medida.
+              </div>
+            </div>
+            <div class="cover__meta" data-anim="right" data-delay=".12">
+              <div class="cover__meta-row"><span>Actividades</span><span>4 ejercicios de clase</span></div>
+              <div class="cover__meta-row"><span>Contenido</span><span>Modelo clásico · regresión · longitud · variabilidad</span></div>
+              <div class="cover__meta-row" style="border:0;padding:0"><span>Curso</span><span>Psicometría · Grado en Psicología</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02 · HOJA DE RUTA ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Hoja de ruta" data-section="Inicio">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Hoja de ruta</div>
+          <h2 class="slide-title" data-anim>Cuatro preguntas, un mismo modelo</h2>
+          <p class="slide-sub" data-anim>Cada actividad añade una pieza: primero descomponemos, después estimamos, luego cambiamos la longitud y, por último, cambiamos la muestra.</p>
+        </div>
+
+        <div class="agenda" style="margin-top:10px">
+          <div class="agenda__item" data-anim>
+            <div class="agenda__n">ACTIVIDAD 01</div>
+            <div class="agenda__t">Descomponer la varianza</div>
+            <div class="agenda__d">Qué parte de lo observado es verdadero y qué parte es error.</div>
+            <div class="agenda__f">\( r_{xx}=.90 \;\; \sigma^2_X=60 \)</div>
+          </div>
+          <div class="agenda__item" data-anim>
+            <div class="agenda__n">ACTIVIDAD 02</div>
+            <div class="agenda__t">Estimar \( V \) e intervalos</div>
+            <div class="agenda__d">Regresión a la media, error típico y confianza del 99 %.</div>
+            <div class="agenda__f">\( X=30 \;\; \mu=20 \;\; r_{xx}=.82 \)</div>
+          </div>
+          <div class="agenda__item" data-anim>
+            <div class="agenda__n">ACTIVIDAD 03</div>
+            <div class="agenda__t">Cambiar la longitud</div>
+            <div class="agenda__d">Qué ocurre al añadir ítems o al reducir el test a un tercio.</div>
+            <div class="agenda__f">\( n=70 \;\; r_{xx}=.60 \)</div>
+          </div>
+          <div class="agenda__item" data-anim>
+            <div class="agenda__n">ACTIVIDAD 04</div>
+            <div class="agenda__t">Cambiar la muestra</div>
+            <div class="agenda__d">La fiabilidad no es fija: depende de la variabilidad del grupo.</div>
+            <div class="agenda__f">\( \sigma_X=2 \;\; \sigma^2_E=.88 \)</div>
+          </div>
+        </div>
+
+        <div class="card card--accent" style="margin-top:4px" data-anim>
+          <div class="flex items-center gap-lg" style="gap:22px">
+            <div style="flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:rgba(45,212,191,.12);border:1px solid var(--accent-line);display:grid;place-items:center;color:var(--accent)">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+            </div>
+            <div style="font-size:12.5px;line-height:1.55;color:#c9d8ea">
+              <b style="color:#eaf5ff">La lógica común:</b> la fiabilidad es la proporción de varianza observada que es varianza verdadera.
+              Todo lo demás —estimar, alargar, comparar grupos— son consecuencias algebraicas de esa idea.
+            </div>
+            <div class="tag-row" style="margin-left:auto;flex:0 0 auto">
+              <span class="chip chip--accent">\( r_{xx} \)</span>
+              <span class="chip">proporción</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid cols-4" data-anim>
+          <div class="card card--tight"><div class="card__label">1 · Teoría previa</div><div class="small muted" style="margin-top:3px">Qué significa cada concepto antes de usarlo.</div></div>
+          <div class="card card--tight"><div class="card__label">2 · Enunciado</div><div class="small muted" style="margin-top:3px">El texto del seminario, tal cual, con sus preguntas.</div></div>
+          <div class="card card--tight"><div class="card__label">3 · Respuestas</div><div class="small muted" style="margin-top:3px">Cada pregunta numerada <span class="qtag qtag--sm">1.a</span> con su resultado <span class="ans">en naranja</span>.</div></div>
+          <div class="card card--tight"><div class="card__label">4 · Hoja de respuestas</div><div class="small muted" style="margin-top:3px">Todos los resultados del seminario juntos, al final.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03 · MARCO TEÓRICO · EJEMPLO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Marco teórico · Un ejemplo sencillo" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Marco teórico · 01</div>
+          <h2 class="slide-title" data-anim>Empezamos con un ejemplo sencillo</h2>
+          <p class="slide-sub" data-anim>Una profesora aplica un test de ansiedad a una estudiante y obtiene <b>30 puntos</b>. ¿Significa eso que su nivel real de ansiedad es exactamente 30? No necesariamente.</p>
+        </div>
+
+        <div class="grid cols-2-1 grow" style="align-items:start">
+          <div class="card" data-anim>
+            <div class="card__label">La idea fundamental · Teoría Clásica de los Tests</div>
+            <div class="formula formula--lg" style="margin:9px 0 12px">\[ X = V + E \]</div>
+
+            <div class="xve">
+              <div class="xve__bar">
+                <div class="xve__seg xve__seg--v" style="flex:0 0 93.33%">V = 28 · puntuación verdadera</div>
+                <div class="xve__seg xve__seg--e" style="flex:1">+2</div>
+              </div>
+              <div class="xve__legend">
+                <div class="xve__item xve__item--v">
+                  <div class="k">X = 30</div>
+                  <div class="t">Puntuación observada</div>
+                  <div class="d">Es la puntuación que realmente vemos en el resultado del test.</div>
+                </div>
+                <div class="xve__item">
+                  <div class="k">V = 28</div>
+                  <div class="t">Puntuación verdadera</div>
+                  <div class="d">El nivel que representa la característica, entendido como el promedio de las puntuaciones al repetir muchas veces la medición.</div>
+                </div>
+                <div class="xve__item xve__item--e">
+                  <div class="k">E = +2</div>
+                  <div class="t">Error de medida</div>
+                  <div class="d">La parte de la puntuación observada atribuible a factores de error.</div>
+                </div>
+              </div>
+              <div class="formula formula--plain" style="font-size:13px">\( 30 = 28 + 2 \quad\Rightarrow\quad \text{observada} = \text{verdadera} + \text{error} \)</div>
+            </div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Por qué puede haber error</div>
+            <div class="card__title">La puntuación no es exacta</div>
+            <ul class="list" style="margin-top:10px">
+              <li>Que la estudiante <b>durmiera mal</b> esa noche.</li>
+              <li>Que estuviera <b>nerviosa</b> el día del examen.</li>
+              <li>Que algunas preguntas fueran <b>difíciles de entender</b>.</li>
+            </ul>
+            <div class="note note--warn" style="margin-top:13px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div><b>Importante:</b> los valores 28 y 2 son <b>ilustrativos</b>. En la práctica no podemos conocer exactamente la puntuación verdadera de una persona ni separar su error individual con certeza.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 04 · MARCO TEÓRICO · FIABILIDAD ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Marco teórico · De la báscula a la fiabilidad" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Marco teórico · 02</div>
+          <h2 class="slide-title" data-anim>¿Y qué tiene que ver esto con la fiabilidad?</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">La comparación que lo explica</div>
+            <div class="card__title">La báscula y el error de calibración</div>
+            <div class="steps" style="margin-top:10px">
+              <div class="step">
+                <div class="step__n">1</div>
+                <div class="step__body">Te pesas en una báscula y marca <b>60 kg</b>. Ese es el valor <b>observado</b>.</div>
+              </div>
+              <div class="step">
+                <div class="step__n">2</div>
+                <div class="step__body">Pero la báscula puede tener un pequeño <b>error de calibración</b>: ahí está el <b>error de medida</b>.</div>
+              </div>
+              <div class="step">
+                <div class="step__n">3</div>
+                <div class="step__body">La diferencia: en Psicología medimos <b>ansiedad, autoestima o inteligencia</b>, que <b>no observamos directamente</b> como el peso.</div>
+              </div>
+            </div>
+            <div class="note note--key" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><b>Lo que hay que llevarse:</b> \( X \) es lo que observamos · \( V \) es la puntuación verdadera teórica · \( E \) es la influencia del error de medida.</div>
+            </div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">El puente hacia el tema del seminario</div>
+            <div class="card__title">Si el error influye poco, el test es fiable</div>
+            <div class="formula formula--lg" style="margin:9px 0 10px">\[ r_{xx}=\frac{\sigma_V^2}{\sigma_X^2} \]</div>
+            <div class="steps" style="margin-top:4px">
+              <div class="step">
+                <div class="step__n">1</div>
+                <div class="step__body">Ejemplo: varianza observada \( 100 \) y varianza verdadera \( 80 \):
+                  <div class="formula">\( r_{xx}=\dfrac{80}{100}=0.80 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">2</div>
+                <div class="step__body">El <b>80 %</b> de la varianza observada se atribuye a diferencias <b>verdaderas</b> entre las personas; el <b>20 %</b>, al error de medida.</div>
+              </div>
+            </div>
+            <div class="note note--warn" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div><b>Ojo:</b> esto habla de <b>varianza en un grupo</b> de personas. No significa que el 80 % de la puntuación de <i>cada</i> persona sea verdadera.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 05 · MODELO CLÁSICO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="El modelo clásico" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Fundamento · 01</div>
+          <h2 class="slide-title" data-anim>Todo empieza en \( X = V + E \)</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Supuestos del modelo clásico</div>
+            <div class="formula formula--lg" style="margin:9px 0 12px">\( X = V + E \)</div>
+            <ul class="list">
+              <li>El <b>error es aleatorio</b>: su media es cero, \( \varepsilon(E)=0 \).</li>
+              <li><b>Error y puntuación verdadera son independientes</b>: \( r_{VE}=0 \).</li>
+              <li>Los errores de dos medidas son independientes: \( r_{E_1E_2}=0 \).</li>
+            </ul>
+            <div class="card__label" style="margin-top:10px">Deducciones que usaremos en los ejercicios</div>
+            <div class="table-wrap" style="margin-top:5px">
+              <table class="table table--dense">
+                <tbody>
+                  <tr><td>Media</td><td>\( \mu_X=\mu_V+\mu_E=\mu_V \)</td></tr>
+                  <tr><td>Varianza</td><td>\( \sigma^2_X=\sigma^2_V+\sigma^2_E \)</td></tr>
+                  <tr class="row-hl"><td>Obs. ↔ error</td><td>\( r_{XE}=\dfrac{\sigma_E}{\sigma_X} \)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+              <div>La fiabilidad <b>no es una propiedad fija del test</b>: describe las puntuaciones de una población concreta.</div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex items-center between" style="margin-bottom:4px">
+              <div class="card__label">Reparto de la varianza observada</div>
+              <span class="chip chip--accent">\( r_{xx}=.90 \)</span>
+            </div>
+            <div class="chart-box chart-box--lg" style="height:210px">
+              <canvas data-chart="s2-var" aria-label="Gráfico de dona: 90 por ciento varianza verdadera y 10 por ciento error"></canvas>
+            </div>
+            <div class="figcap">Ejemplo genérico: una fiabilidad de .90 deja un 10 % de la variabilidad atribuible al error.</div>
+            <div class="grid cols-2" style="gap:7px;margin-top:8px">
+              <div class="kpi kpi--sm"><div class="kpi__value teal">90 %</div><div class="kpi__label">Varianza verdadera</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value rose">10 %</div><div class="kpi__label">Varianza de error</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formula formula--plain" style="font-size:14.5px;text-align:center" data-anim>
+          \[ r_{xx}=\frac{\sigma^2_V}{\sigma^2_X}=\rho^2(X,V)=1-\frac{\sigma^2_E}{\sigma^2_X}
+          \qquad r_{XV}=\frac{\sigma_V}{\sigma_X}=\sqrt{r_{xx}}\;\text{(índice de fiabilidad)} \]
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 05b · NOMENCLATURA ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Nomenclatura · qué significa cada símbolo" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Nomenclatura · 01</div>
+          <h2 class="slide-title" data-anim>Qué es cada símbolo (y qué es el numerador y el denominador)</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Las cuatro razones: numerador y denominador por separado</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense">
+                <thead><tr><th>Razón</th><th>Numerador</th><th>Denominador</th><th>Resultado</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><b>σ²V / σ²X</b></td>
+                    <td class="ta-l">σ²V · varianza <b>verdadera</b></td>
+                    <td class="ta-l">σ²X · varianza <b>observada</b></td>
+                    <td class="ans">r_xx</td>
+                  </tr>
+                  <tr>
+                    <td><b>σ²E / σ²X</b></td>
+                    <td class="ta-l">σ²E · varianza del <b>error</b></td>
+                    <td class="ta-l">σ²X · varianza <b>observada</b></td>
+                    <td class="ans">1 − r_xx</td>
+                  </tr>
+                  <tr>
+                    <td><b>σV / σX</b></td>
+                    <td class="ta-l">σV · desviación <b>verdadera</b></td>
+                    <td class="ta-l">σX · desviación <b>observada</b></td>
+                    <td class="ans">r_XV = √r_xx</td>
+                  </tr>
+                  <tr>
+                    <td><b>σE / σX</b></td>
+                    <td class="ta-l">σE · <b>error típico</b> de medida</td>
+                    <td class="ta-l">σX · desviación <b>observada</b></td>
+                    <td class="ans">r(X,E)</td>
+                  </tr>
+                  <tr>
+                    <td><b>r(X,E)</b></td>
+                    <td class="ta-l">σE · error típico de medida</td>
+                    <td class="ta-l">σX · desviación observada</td>
+                    <td class="ans">0,3162</td>
+                  </tr>
+                  <tr>
+                    <td><b>r(V,E)</b></td>
+                    <td class="ta-l">— (no es una razón)</td>
+                    <td class="ta-l">—</td>
+                    <td class="ans">0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap">La raíz cuadrada se aplica a la varianza, no a la razón: √0,90 = 0,9487 y no 0,90. r(V,E) = 0 es un <b>supuesto</b>, no un cálculo.</div>
+            <div class="hr" style="margin:10px 0"></div>
+            <div class="card__label">Cómo se lee una razón</div>
+            <ul class="list" style="margin-top:6px">
+              <li><b>Denominador</b> → ¿de qué se compara? Es el <b>total</b> (σ²X, σX, nI…).</li>
+              <li><b>Numerador</b> → ¿qué parte es? Es la <b>señal</b>, el <b>error</b> o el <b>cambio</b>.</li>
+              <li>Por eso las razones de <b>varianza</b> suman 1 (.90 + .10) y las de <b>desviación</b> no (.9487 + .3162 = 1,26).</li>
+            </ul>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Los símbolos de las puntuaciones</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense">
+                <thead><tr><th>Símbolo</th><th style="text-align:left">Qué es</th></tr></thead>
+                <tbody>
+                  <tr><td><b>X</b></td><td class="ta-l">Puntuación <b>observada</b>: la que da el test</td></tr>
+                  <tr><td><b>V</b></td><td class="ta-l">Puntuación <b>verdadera</b>: el nivel real del rasgo</td></tr>
+                  <tr><td><b>E</b></td><td class="ta-l"><b>Error</b> de medida: la parte aleatoria</td></tr>
+                  <tr><td><b>σ²X · σ²V · σ²E</b></td><td class="ta-l">Varianzas observada, verdadera y de error</td></tr>
+                  <tr><td><b>σX · σV · σE</b></td><td class="ta-l">Sus raíces: desviaciones típicas (en puntos)</td></tr>
+                  <tr><td><b>r_xx</b></td><td class="ta-l"><b>Coeficiente</b> de fiabilidad (proporción de varianza)</td></tr>
+                  <tr><td><b>r_XV</b></td><td class="ta-l"><b>Índice</b> de fiabilidad = √r_xx</td></tr>
+                  <tr><td><b>V̂</b></td><td class="ta-l">Puntuación verdadera <b>estimada</b></td></tr>
+                  <tr><td><b>k · R</b></td><td class="ta-l">Razón de longitud · fiabilidad corregida</td></tr>
+                  <tr><td><b>μX · μV</b></td><td class="ta-l">Media observada y media verdadera (coinciden)</td></tr>
+                  <tr><td><b>v̂ · z_X</b></td><td class="ta-l">Estimación diferencial · típica observada</td></tr>
+                  <tr><td><b>σze · IC</b></td><td class="ta-l">Error típico en z · intervalo de confianza</td></tr>
+                  <tr><td><b>s²X · s²d · α</b></td><td class="ta-l">Varianza total · varianza de diferencias · alfa</td></tr>
+                  <tr><td><b>Σs²i · Σpq</b></td><td class="ta-l">Suma de varianzas de ítem (alfa · KR-20)</td></tr>
+                  <tr><td><b>KR-20 · p · q</b></td><td class="ta-l">Kuder-Richardson · aciertos · fallos</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note--key" data-anim>
+          <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div><b>Pasa el ratón</b> por cualquier símbolo de la presentación y verás su tarjeta con el significado (y, en las razones, qué es el numerador y qué el denominador). También puedes pulsar el botón <b>Σ Nomenclatura</b> para ver la tabla completa.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03b · TEORÍA PREVIA A1 ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Teoría previa · Actividad 1" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Antes de empezar · Teoría de la Actividad 1</div>
+          <h2 class="slide-title" data-anim>Cuatro ideas que necesitas tener claras</h2>
+          <p class="slide-sub" data-anim>La Actividad 1 no pide calcular nada nuevo: pide <b>traducir</b> una fiabilidad a varianzas, desviaciones y correlaciones.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="grid" style="gap:9px">
+              <div class="ansblock" style="border-left-color:var(--teal);background:linear-gradient(90deg,rgba(45,212,191,.10),rgba(45,212,191,.02))">
+                <div class="card__label" style="color:var(--teal-l)">1 · Coeficiente de fiabilidad</div>
+                <div style="font-size:12.2px;line-height:1.5;color:var(--muted);margin-top:3px">Proporción de la varianza observada que es <b style="color:#eaf2ff">varianza verdadera</b>. Va de 0 a 1. Aquí vale <span class="ans">0,90</span>.</div>
+              </div>
+              <div class="ansblock" style="border-left-color:var(--blue);background:linear-gradient(90deg,rgba(96,165,250,.10),rgba(96,165,250,.02))">
+                <div class="card__label" style="color:var(--blue)">2 · Varianza y desviación típica</div>
+                <div style="font-size:12.2px;line-height:1.5;color:var(--muted);margin-top:3px">La <b style="color:#eaf2ff">varianza</b> mide la dispersión al cuadrado; la <b style="color:#eaf2ff">desviación típica</b> es su raíz: \( \sigma=\sqrt{\sigma^2} \). Por eso las desviaciones <b>no se suman</b>.</div>
+              </div>
+              <div class="ansblock" style="border-left-color:var(--violet);background:linear-gradient(90deg,rgba(167,139,250,.10),rgba(167,139,250,.02))">
+                <div class="card__label" style="color:var(--violet-l)">3 · Correlación</div>
+                <div style="font-size:12.2px;line-height:1.5;color:var(--muted);margin-top:3px">Indica hasta qué punto dos variables <b style="color:#eaf2ff">varían juntas</b> (de −1 a 1). \( r=0 \) significa que no hay relación lineal.</div>
+              </div>
+              <div class="ansblock">
+                <div class="card__label">4 · Coeficiente ≠ índice</div>
+                <div style="font-size:12.2px;line-height:1.5;color:var(--muted);margin-top:3px"><b style="color:#eaf2ff">Coeficiente</b> \( r_{xx} \) = proporción de varianza. <b style="color:#eaf2ff">Índice</b> \( r_{XV}=\sigma_V/\sigma_X=\sqrt{r_{xx}} \) = correlación entre observado y verdadero.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Qué pregunta responde cada razón</div>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table table--dense">
+                <thead><tr><th>Razón</th><th>Pregunta en palabras</th></tr></thead>
+                <tbody>
+                  <tr><td>σ²V / σ²X</td><td>¿Qué parte de la variabilidad es <b>señal</b>?</td></tr>
+                  <tr><td>σ²E / σ²X</td><td>¿Qué parte es <b>ruido</b>?</td></tr>
+                  <tr><td>σV / σX</td><td>¿Cuánta <b>dispersión real</b> sobrevive?</td></tr>
+                  <tr><td>σE / σX</td><td>¿Cuánta dispersión <b>aporta el error</b>?</td></tr>
+                  <tr><td>r(X,E)</td><td>¿El error va <b>con</b> la puntuación observada?</td></tr>
+                  <tr><td>r(V,E)</td><td>¿El error depende del <b>nivel real</b>?</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note note--warn" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div><b>Trampa clásica:</b> creer que \( r(X,E)=0 \). No es así: el error <b>forma parte</b> de \( X \), por eso \( r_{XE}=\sigma_E/\sigma_X \). Lo que vale 0 es \( r(V,E) \).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 04 · A1 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 1 · Enunciado" data-section="Actividad 1">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad práctica 01</div>
+          <h2 class="slide-title" data-anim>Descomponer una fiabilidad de .90</h2>
+        </div>
+
+        <div class="grid cols-2-1 grow" style="align-items:start;margin-top:4px">
+          <div class="enunciado" data-anim>
+            <div class="enunciado__label">Enunciado del seminario · Actividad 1</div>
+            <p>Si el coeficiente de fiabilidad de un test es 0.90 y la varianza de las puntuaciones observadas es de 60, calcula:</p>
+            <ol class="enunciado__tasks enunciado__tasks--coded">
+              <li><span class="qtag">1.a</span><span>La razón entre la varianza verdadera y la varianza observada, la razón entre varianza de error y la varianza observada, la razón entre desviación típica verdadera y la desviación típica observada, la razón entre desviación típica de error y la desviación típica observada. Explica qué información nos aporta cada una de ellas.</span></li>
+              <li><span class="qtag">1.b</span><span>La correlación entre las puntuaciones observadas y las de error, y la correlación entre las puntuaciones verdaderas y las de error.</span></li>
+              <li><span class="qtag">1.c</span><span>La varianza de las puntuaciones verdaderas y la varianza de error.</span></li>
+            </ol>
+            <div class="enunciado__data">\( r_{xx}=.90 \qquad \sigma^2_X=60 \)</div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Antes de calcular</div>
+            <div class="card__title">Traduce cada pregunta a una fórmula</div>
+            <ul class="list" style="margin-top:9px">
+              <li><b>Razón de varianzas</b> → divide varianzas.</li>
+              <li><b>Razón de desviaciones</b> → raíz cuadrada de la razón anterior.</li>
+              <li><b>Correlación con el error</b> → sale de los supuestos, no de los datos.</li>
+              <li><b>Varianzas</b> → multiplica la proporción por 60.</li>
+            </ul>
+            <div class="note note--warn" style="margin-top:12px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>Las <b>desviaciones típicas no se suman</b>: la raíz de .90 no es .90. Es el error más frecuente de este ejercicio.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 05 · A1 RAZONES ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 1 · Respuesta 1.a" data-section="Actividad 1">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 1 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">1.a</span></div>
+          <h2 class="slide-title" data-anim>Cuánta varianza es verdadera y cuánta es error</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Razonamiento</div>
+            <div class="steps" style="margin-top:8px">
+              <div class="step">
+                <div class="step__n">1</div>
+                <div class="step__body">La fiabilidad <b>ya es</b> la razón entre varianza verdadera y observada:
+                  <div class="formula">\( \dfrac{\sigma^2_V}{\sigma^2_X}=r_{xx}=.90 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">2</div>
+                <div class="step__body">Como \( \sigma^2_X=\sigma^2_V+\sigma^2_E \), el resto es error:
+                  <div class="formula">\( \dfrac{\sigma^2_E}{\sigma^2_X}=1-r_{xx}=.10 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">3</div>
+                <div class="step__body">Para pasar a <b>desviaciones típicas</b>, aplica raíz cuadrada:
+                  <div class="formula">\( \dfrac{\sigma_V}{\sigma_X}=\sqrt{.90}=.9487 \qquad \dfrac{\sigma_E}{\sigma_X}=\sqrt{.10}=.3162 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">4</div>
+                <div class="step__body">Y para obtener <b>varianzas</b>, multiplica por \( \sigma^2_X=60 \):
+                  <div class="formula">\( \sigma^2_V=.90\times 60=54 \qquad \sigma^2_E=.10\times 60=6 \)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="card__label">Respuesta 1.a · las cuatro razones</div>
+            <div class="grid cols-2" style="gap:8px;margin-top:8px">
+              <div class="kpi" style="padding:10px;border-radius:10px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.22)">
+                <div class="kpi__value ans" data-count="0.90" data-dec="2">0,90</div>
+                <div class="kpi__label">σ²V / σ²X</div>
+              </div>
+              <div class="kpi" style="padding:10px;border-radius:10px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.22)">
+                <div class="kpi__value ans" data-count="0.10" data-dec="2">0,10</div>
+                <div class="kpi__label">σ²E / σ²X</div>
+              </div>
+              <div class="kpi" style="padding:10px;border-radius:10px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.22)">
+                <div class="kpi__value ans" data-count="0.9487" data-dec="4">0,9487</div>
+                <div class="kpi__label">σV / σX</div>
+              </div>
+              <div class="kpi" style="padding:10px;border-radius:10px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.22)">
+                <div class="kpi__value ans" data-count="0.3162" data-dec="4">0,3162</div>
+                <div class="kpi__label">σE / σX</div>
+              </div>
+            </div>
+
+            <div class="table-wrap" style="margin-top:10px">
+              <table class="table table--dense">
+                <thead><tr><th>Razón</th><th>Respuesta</th><th>Qué información aporta</th></tr></thead>
+                <tbody>
+                  <tr><td>σ²V / σ²X</td><td class="ans">0,90</td><td>Proporción de varianza observada que es <b>verdadera</b> (90 %)</td></tr>
+                  <tr><td>σ²E / σ²X</td><td class="ans">0,10</td><td>Proporción de varianza observada que es <b>error</b> (10 %)</td></tr>
+                  <tr><td>σV / σX</td><td class="ans">0,9487</td><td>Cuánta <b>dispersión verdadera</b> se conserva (94,87 %)</td></tr>
+                  <tr><td>σE / σX</td><td class="ans">0,3162</td><td>Cuánta <b>dispersión aporta el error</b> (31,62 %)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap">Las razones de desviaciones no suman 1 porque la raíz cuadrada no es lineal.</div>
+          </div>
+        </div>
+
+        <div class="note note--key" data-anim>
+          <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div><b>Lectura intuitiva:</b> de cada 100 unidades de diferencia entre personas, 90 reflejan diferencias verdaderas y 10 son ruido de medida. Y de las 60 unidades de varianza observada, 54 son verdad y 6 son error.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 06 · A1 CORRELACIONES ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 1 · Respuestas 1.b y 1.c" data-section="Actividad 1">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 1 · Respuestas <span class="qtag qtag--sm" style="vertical-align:2px">1.b</span> <span class="qtag qtag--sm" style="vertical-align:2px">1.c</span></div>
+          <h2 class="slide-title" data-anim>Correlaciones con el error y varianzas</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">1.b · Correlaciones pedidas</div>
+            <div class="grid cols-2" style="gap:9px;margin-top:9px">
+              <div style="padding:13px;border-radius:11px;border:1px solid rgba(251,146,60,.3);background:rgba(251,146,60,.07)">
+                <div style="font-size:22px;color:var(--orange-l);text-align:center">\( r_{XE}=\dfrac{\sigma_E}{\sigma_X} \)</div>
+                <div class="ans" style="font-size:20px;text-align:center;margin-top:4px">= 0,3162</div>
+                <div class="small muted" style="margin-top:5px;text-align:center">Observadas ↔ error</div>
+              </div>
+              <div style="padding:13px;border-radius:11px;border:1px solid rgba(251,146,60,.3);background:rgba(251,146,60,.07)">
+                <div style="font-size:22px;color:var(--orange-l);text-align:center">\( r_{VE}=0 \)</div>
+                <div class="ans" style="font-size:20px;text-align:center;margin-top:4px">= 0</div>
+                <div class="small muted" style="margin-top:5px;text-align:center">Verdaderas ↔ error</div>
+              </div>
+            </div>
+
+            <div class="steps" style="margin-top:12px">
+              <div class="step">
+                <div class="step__n">1</div>
+                <div class="step__body">\( r_{XE} \): como \( X=V+E \), la parte de error está <b>dentro</b> de la puntuación observada:
+                  <div class="formula">\( r_{XE}=\dfrac{\sigma_E}{\sigma_X}=\dfrac{2.4495}{7.7460}=.3162 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">2</div>
+                <div class="step__body">\( r_{VE} \): es un <b>supuesto</b> del modelo (error aleatorio e independiente de la puntuación verdadera), no se calcula con los datos:
+                  <div class="formula">\( r_{VE}=0 \)</div>
+                </div>
+              </div>
+            </div>
+            <div class="figcap">Ojo: \( r_{XE} \) no es 0 porque el error forma parte de \( X \). Lo que vale 0 es su correlación con \( V \).</div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="card__label">1.c · Varianzas pedidas</div>
+            <div class="grid cols-2" style="gap:9px;margin-top:9px">
+              <div class="kpi" style="padding:12px;border-radius:10px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.22)">
+                <div class="kpi__value ans" data-count="54" data-dec="0">54</div>
+                <div class="kpi__label">σ²V · varianza verdadera</div>
+              </div>
+              <div class="kpi" style="padding:12px;border-radius:10px;background:rgba(251,146,60,.08);border:1px solid rgba(251,146,60,.22)">
+                <div class="kpi__value ans" data-count="6" data-dec="0">6</div>
+                <div class="kpi__label">σ²E · varianza de error</div>
+              </div>
+            </div>
+            <div class="formula" style="margin-top:12px;font-size:13px">
+              \[ \sigma^2_V=r_{xx}\,\sigma^2_X=.90\times 60=54 \]
+            </div>
+            <div class="formula" style="margin-top:7px;font-size:13px">
+              \[ \sigma^2_E=(1-r_{xx})\,\sigma^2_X=.10\times 60=6 \]
+            </div>
+            <div class="note note--key" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Comprobación: \( 54+6=60=\sigma^2_X \). Y de aquí salen las desviaciones: \( \sigma_V=7.3485 \) · \( \sigma_E=2.4495 \).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note note--key" data-anim>
+          <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div><b>Resumen de la Actividad 1:</b> 1.a → .90 / .10 / .9487 / .3162 · 1.b → r(X,E) = .3162 y r(V,E) = 0 · 1.c → σ²V = 54 y σ²E = 6. El índice de fiabilidad es \( r_{XV}=\sqrt{.90}=.9487 \).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 07b · TEORÍA PREVIA A2 ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Teoría previa · Actividad 2" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Antes de empezar · Teoría de la Actividad 2</div>
+          <h2 class="slide-title" data-anim>Las tres escalas, con el mismo ejemplo</h2>
+          <p class="slide-sub" data-anim>Una persona saca <b>30 puntos</b> en un test con media <b>20</b> y desviación típica <b>8</b>. Las tres escalas describen <b>la misma persona</b>: solo cambia la unidad.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="grid" style="gap:8px">
+              <div style="padding:10px 12px;border-radius:11px;border:1px solid rgba(251,146,60,.28);background:rgba(251,146,60,.06)">
+                <div class="card__label" style="color:var(--orange-l)">1 · Puntuación directa</div>
+                <div style="font-size:11.8px;line-height:1.45;color:var(--muted);margin-top:2px">La puntuación que obtienes tal cual en el test, sin transformar.</div>
+                <div class="ans" style="font-size:15px;margin-top:3px">X = 30 puntos</div>
+                <div style="font-size:10.5px;color:var(--muted-2);margin-top:2px;font-style:italic">Piensa: ¿cuántos puntos saqué?</div>
+              </div>
+
+              <div style="padding:10px 12px;border-radius:11px;border:1px solid rgba(251,146,60,.28);background:rgba(251,146,60,.06)">
+                <div class="card__label" style="color:var(--orange-l)">2 · Puntuación diferencial</div>
+                <div style="font-size:11.8px;line-height:1.45;color:var(--muted);margin-top:2px">La puntuación directa menos la media del grupo.</div>
+                <div class="formula" style="margin-top:4px;padding:5px 9px;font-size:12px">\( x=X-\bar{X}=30-20=10 \)</div>
+                <div class="ans" style="font-size:13px;margin-top:3px">+10 puntos respecto a la media</div>
+                <div style="font-size:10.5px;color:var(--muted-2);margin-top:2px;font-style:italic">Piensa: ¿cuánto estoy por encima o por debajo de la media?</div>
+              </div>
+
+              <div style="padding:10px 12px;border-radius:11px;border:1px solid rgba(251,146,60,.28);background:rgba(251,146,60,.06)">
+                <div class="card__label" style="color:var(--orange-l)">3 · Puntuación típica</div>
+                <div style="font-size:11.8px;line-height:1.45;color:var(--muted);margin-top:2px">Cuántas desviaciones típicas estás por encima o por debajo de la media.</div>
+                <div class="formula" style="margin-top:4px;padding:5px 9px;font-size:12px">\( z=\dfrac{X-\bar{X}}{s}=\dfrac{30-20}{8}=1.25 \)</div>
+                <div class="ans" style="font-size:13px;margin-top:3px">z = +1,25</div>
+                <div style="font-size:10.5px;color:var(--muted-2);margin-top:2px;font-style:italic">Piensa: ¿a cuántas desviaciones típicas estoy de la media?</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Las dos herramientas nuevas</div>
+            <div class="card__title" style="font-size:15px">Error típico e intervalo de confianza</div>
+            <div class="formula" style="margin:8px 0 6px;font-size:13px">\( \sigma_E=\sigma_X\sqrt{1-r_{xx}} \)</div>
+            <div style="font-size:11.8px;line-height:1.5;color:var(--muted)">Es la <b style="color:#eaf2ff">desviación típica de los errores</b>: cuánto se equivoca el test, en puntos del test. Es la «regla» con la que se mide el margen de error.</div>
+            <div class="hr" style="margin:9px 0"></div>
+            <div class="formula" style="font-size:13px">\( IC_{99\%}=X\pm z_{.995}\,\sigma_E \qquad z_{.995}=2.58 \)</div>
+            <div style="font-size:11.8px;line-height:1.5;color:var(--muted);margin-top:5px">El intervalo es un <b style="color:#eaf2ff">rango probable</b> donde estará la puntuación verdadera, no un valor único.</div>
+            <div class="note note--warn" style="margin-top:9px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div><b>Fíjate en lo que piden:</b> 2.a es <b>un valor</b> (la estimación) y 2.b es <b>un rango</b> (el intervalo). No se responde igual.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 07 · A2 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 2 · Enunciado" data-section="Actividad 2">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad práctica 02</div>
+          <h2 class="slide-title" data-anim>Estimar la puntuación verdadera de una persona</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="enunciado" data-anim>
+            <div class="enunciado__label">Enunciado del seminario · Actividad 2</div>
+            <p>Una persona ha obtenido en una prueba de Atención una puntuación de 30 puntos. Sabiendo que las características del test son \( \mu_X=20 \), \( \sigma_X=8 \) y el coeficiente de fiabilidad fue de 0.82. Estima:</p>
+            <ol class="enunciado__tasks enunciado__tasks--coded">
+              <li><span class="qtag">2.a</span><span>La puntuación verdadera en escala directa, diferencial y típica de dicha persona.</span></li>
+              <li><span class="qtag">2.b</span><span>El intervalo de confianza (nc: 99%) en que se encontrará la puntuación verdadera de la persona anterior en cada una de las escalas.</span></li>
+            </ol>
+            <div class="enunciado__data">\( X=30 \quad \mu_X=20 \quad \sigma_X=8 \quad r_{xx}=.82 \)</div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Claves para resolverlo</div>
+            <div class="card__title">Estimar no es copiar la puntuación observada</div>
+            <ul class="list" style="margin-top:10px">
+              <li>La estimación se obtiene con la <b>regresión a la media</b>; no se copia \( X \) tal cual.</li>
+              <li>Para el intervalo necesitas el <b>error típico de medida</b>: \( \sigma_E=\sigma_X\sqrt{1-r_{xx}} \).</li>
+              <li>Calcula primero en la escala que te resulte más cómoda y luego <b>cambia de escala</b>.</li>
+            </ul>
+            <div class="note note--warn" style="margin-top:14px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>No confundas <b>estimar la puntuación verdadera</b> (un valor concreto) con <b>el intervalo de confianza</b> (un rango probable). Son dos preguntas distintas.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid cols-3" data-anim>
+          <div class="card card--tight"><div class="card__label">Escala directa</div><div class="small muted" style="margin-top:4px">La puntuación en la métrica original del test.</div></div>
+          <div class="card card--tight"><div class="card__label">Escala diferencial</div><div class="small muted" style="margin-top:4px">Distancia respecto a la media: \( V-\mu \).</div></div>
+          <div class="card card--tight"><div class="card__label">Escala típica</div><div class="small muted" style="margin-top:4px">En unidades de desviación típica: \( z \).</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 08 · A2 REGRESIÓN ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 2 · Respuesta 2.a (directa)" data-section="Actividad 2">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 2 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">2.a</span> · escala directa</div>
+          <h2 class="slide-title" data-anim>¿Por qué 28,2 y no 30?</h2>
+        </div>
+
+        <div class="grid cols-3-1 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">La ecuación de pronóstico (puntuaciones directas)</div>
+            <div class="formula formula--lg" style="margin:9px 0 10px">\( \hat{V}=\mu_X(1-r_{xx})+r_{xx}X=\mu_X+r_{xx}(X-\mu_X) \)</div>
+            <div class="steps">
+              <div class="step">
+                <div class="step__n">1</div>
+                <div class="step__body">Distancia de la persona a la media:
+                  <div class="formula">\( X-\mu_X=30-20=10 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">2</div>
+                <div class="step__body">Solo “compramos” la parte fiable de esa distancia:
+                  <div class="formula">\( r_{xx}(X-\mu_X)=.82\times 10=8.2 \)</div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__n">3</div>
+                <div class="step__body">Volvemos a la escala original sumando la media:
+                  <div class="formula">\( \hat{V}=20+8.2=\mathbf{28.2} \)</div>
+                </div>
+              </div>
+            </div>
+            <div class="note note--key" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>La estimación se <b>acerca 1,8 puntos a la media</b>. Es la <b>regresión a la media</b>: cuanto menor es la fiabilidad, más se encoge la estimación.</div>
+            </div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="flex items-center between">
+              <div class="card__label">Respuesta 2.a · escala directa</div>
+              <span class="chip chip--amber">X = 30</span>
+            </div>
+            <div class="chart-box" style="height:250px;margin-top:4px">
+              <canvas data-chart="s2-reg" aria-label="Diagrama de dispersión con recta de regresión, persona con X igual a 30 y estimación 28,2"></canvas>
+            </div>
+            <div class="figcap">Nube ilustrativa. El punto ámbar es la observación; el punto naranja, la estimación verdadera.</div>
+            <div class="grid cols-2" style="gap:8px;margin-top:7px">
+              <div class="kpi kpi--sm"><div class="kpi__value" style="color:var(--amber-l)">30</div><div class="kpi__label">X observada</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans">28,2</div><div class="kpi__label">V̂ estimada</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 09 · A2 TRES ESCALAS ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 2 · Respuesta 2.a (tres escalas)" data-section="Actividad 2">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 2 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">2.a</span> · las tres escalas</div>
+          <h2 class="slide-title" data-anim>La misma estimación, tres formas de expresarla</h2>
+        </div>
+
+        <div class="grid cols-2-1 grow" style="align-items:stretch">
+          <div class="card" data-anim style="display:flex;flex-direction:column">
+            <div class="table-wrap">
+              <table class="table">
+                <thead><tr><th>Escala</th><th>Cálculo</th><th>Respuesta</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><b>Directa</b><div class="xs muted">métrica del test</div></td>
+                    <td>\( \hat{V}=20+.82(30-20) \)</td>
+                    <td class="ans" style="font-size:15px">28,2</td>
+                  </tr>
+                  <tr>
+                    <td><b>Diferencial</b><div class="xs muted">respecto a μ</div></td>
+                    <td>\( \hat{v}=r_{xx}\,x=.82\times 10 \)</td>
+                    <td class="ans" style="font-size:15px">8,2</td>
+                  </tr>
+                  <tr>
+                    <td><b>Típica</b><div class="xs muted">unidades de σ</div></td>
+                    <td>\( z_X=\dfrac{30-20}{8}=1.25 \)</td>
+                    <td class="col-hl" style="font-size:15px">\( z_X=1.25 \)</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>\( z_{\hat{V}}=r_{XV}\,z_X=\sqrt{.82}\times 1.25 \)</td>
+                    <td class="ans" style="font-size:15px">1,1319</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="note note--key" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>En la escala típica el formulario usa el <b>índice de fiabilidad</b>: \( r_{XV}=\sqrt{r_{xx}}=\sqrt{.82}=.9055 \). Por eso \( .9055\times 1.25=\mathbf{1.1319} \).</div>
+            </div>
+            <div class="card__text" style="margin-top:8px">
+              Comprobación con la estimación directa: \( (28.2-20)/8=1.025 \). Es la misma persona expresada en \( z \); la diferencia (1,1319 vs 1,025) aparece porque el formulario estandariza con el índice y no con el coeficiente.
+            </div>
+          </div>
+
+          <div class="card card--amber ansblock" data-anim="right">
+            <div class="card__label">Error típico de medida · en cada escala</div>
+            <div class="formula formula--amber" style="margin-top:8px;font-size:13.5px">\( \sigma_E=\sigma_X\sqrt{1-r_{xx}} \)</div>
+            <div class="steps" style="margin-top:9px">
+              <div class="step">
+                <div class="step__n">1</div>
+                <div class="step__body">\( 1-r_{xx}=1-.82=.18 \)</div>
+              </div>
+              <div class="step">
+                <div class="step__n">2</div>
+                <div class="step__body">\( \sqrt{.18}=.4243 \)</div>
+              </div>
+              <div class="step">
+                <div class="step__n">3</div>
+                <div class="step__body">\( \sigma_E=8\times .4243=3.3941 \)</div>
+              </div>
+            </div>
+            <div class="hr" style="margin:10px 0"></div>
+            <div class="grid cols-3" style="gap:6px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:18px">3,3941</div><div class="kpi__label">σE · directa</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:18px">3,3941</div><div class="kpi__label">σe · diferencial</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:18px">0,4243</div><div class="kpi__label">σze · típica</div></div>
+            </div>
+            <div class="card__text" style="margin-top:8px">
+              Es la <b>desviación típica del error</b>: \( \sigma_e=\sigma_E \) en diferencial y \( \sigma_{ze}=\sqrt{1-r_{xx}} \) en típica.
+            </div>
+            <div class="hr" style="margin:9px 0"></div>
+            <div class="card__label">Para qué se usa</div>
+            <ul class="list" style="margin-top:5px">
+              <li>Construir el <b>intervalo de confianza</b> de la pregunta 2.b.</li>
+              <li>Comparar la <b>precisión</b> de dos tests: a menor \( \sigma_E \), más preciso.</li>
+              <li>Detectar un <b>cambio significativo</b> entre dos medidas (±\( z\sigma_E \)).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10 · A2 INTERVALOS ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 2 · Respuesta 2.b" data-section="Actividad 2">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 2 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">2.b</span></div>
+          <h2 class="slide-title" data-anim>El intervalo de confianza al 99 %</h2>
+        </div>
+
+        <div class="grid cols-1-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Fórmula y constante (formulario 5.4)</div>
+            <div class="formula formula--lg" style="margin:8px 0 10px">\( IC_{99\%}=X\pm z_{.995}\,\sigma_E \)</div>
+            <div class="table-wrap">
+              <table class="table table--dense">
+                <tbody>
+                  <tr><td>Nivel de confianza</td><td class="strong">99 %</td></tr>
+                  <tr><td>Valor crítico \( z \)</td><td class="ans">2,58</td></tr>
+                  <tr><td>Error típico \( \sigma_E \)</td><td class="ans">3,3941</td></tr>
+                  <tr><td>Semiamplitud \( z\sigma_E \)</td><td class="ans">8,7568</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note note--warn" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>El intervalo se construye <b>alrededor de la puntuación observada</b>. En la escala típica la semiamplitud se divide entre \( \sigma_X \): \( z\sigma_{ze}=2.58\times .4243=1.0947 \).</div>
+            </div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="flex items-center between">
+              <div class="card__label">Respuesta 2.b · intervalos sobre cada escala</div>
+              <span class="chip chip--accent">99 % de confianza</span>
+            </div>
+            <div class="ci-plot" style="margin-top:14px">
+              <div class="ci-row">
+                <span class="ci-label">Directa</span>
+                <div class="ci-track">
+                  <span class="ci-range" style="--a:35.4%;--w:29.2%"></span>
+                  <span class="ci-dot" style="--p:50%"></span>
+                  <span class="ci-val">21,24 – 38,76</span>
+                </div>
+              </div>
+              <div class="ci-row">
+                <span class="ci-label">Diferencial</span>
+                <div class="ci-track">
+                  <span class="ci-range ci-range--amber" style="--a:28.1%;--w:43.8%"></span>
+                  <span class="ci-dot ci-dot--amber" style="--p:50%"></span>
+                  <span class="ci-val">1,24 – 18,76</span>
+                </div>
+              </div>
+              <div class="ci-row">
+                <span class="ci-label">Típica</span>
+                <div class="ci-track">
+                  <span class="ci-range ci-range--violet" style="--a:29%;--w:54.7%"></span>
+                  <span class="ci-dot ci-dot--violet" style="--p:56.2%"></span>
+                  <span class="ci-val">0,16 – 2,34</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="table-wrap" style="margin-top:12px">
+              <table class="table table--dense">
+                <thead><tr><th>Escala</th><th>Cálculo</th><th>IC 99 %</th></tr></thead>
+                <tbody>
+                  <tr><td>Directa</td><td>\( 30\pm 8.7568 \)</td><td class="ans">[21,24 ; 38,76]</td></tr>
+                  <tr><td>Diferencial</td><td>\( 10\pm 8.7568 \)</td><td class="ans">[1,24 ; 18,76]</td></tr>
+                  <tr><td>Típica</td><td>\( 1.25\pm 1.0947 \)</td><td class="ans">[0,16 ; 2,34]</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap">Cada barra representa su propia métrica: no se comparan los anchos entre escalas.</div>
+          </div>
+        </div>
+
+        <div class="note note--key" data-anim>
+          <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <div><b>Variante:</b> si el intervalo se centra en la puntuación verdadera estimada \( \hat{V}=28.2 \), el resultado directo sería \( 28.2\pm 8.7568=[19.44;36.96] \). El procedimiento del formulario usa \( X=30 \). <b>Interpretación:</b> el 99 % de los intervalos así construidos contendrían \( V \); no es la probabilidad de que \( V \) esté en <i>este</i> intervalo.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11b · TEORÍA PREVIA A3 ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Teoría previa · Actividad 3" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Antes de empezar · Teoría de la Actividad 3</div>
+          <h2 class="slide-title" data-anim>La fiabilidad depende de la longitud del test</h2>
+          <p class="slide-sub" data-anim>Añadir ítems <b>parecidos</b> a los que ya hay reduce el peso del error. Pero cada ítem extra aporta <b>menos</b> que el anterior.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Cómo funciona \( k \)</div>
+            <div class="formula formula--lg" style="margin:8px 0 10px">\( k=\dfrac{n_F}{n_I} \)</div>
+            <ul class="list">
+              <li><b>\( n_I \):</b> número de ítems <b>iniciales</b> (el test que ya existe).</li>
+              <li><b>\( n_F \):</b> número de ítems <b>finales</b> (el test nuevo).</li>
+              <li><b>Alargar</b> → \( k>1 \) (ej.: 105/70 = 1,5).</li>
+              <li><b>Acortar</b> → \( k<1 \) (ej.: un tercio → 1/3).</li>
+            </ul>
+            <div class="note note--warn" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>\( k \) <b>no</b> son los ítems añadidos. Añadir 35 a 70 no es \( k=35 \), sino \( k=105/70 \).</div>
+            </div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Las dos direcciones de la fórmula</div>
+            <div class="formula" style="margin:6px 0 8px;font-size:13px">\[ R=\frac{k\,r}{1+(k-1)r} \quad\text{(calcular la nueva fiabilidad)} \]</div>
+            <div class="formula formula--plain" style="font-size:13px">\[ k=\frac{R\,(1-r)}{r\,(1-R)} \quad\text{(cuánto hay que alargar)} \]</div>
+            <div class="hr" style="margin:9px 0"></div>
+            <div class="card__label">Coeficiente o índice: no son lo mismo</div>
+            <div style="font-size:11.8px;line-height:1.5;color:var(--muted);margin-top:4px">
+              <b style="color:#eaf2ff">Coeficiente</b> \( r_{xx} \): proporción de varianza (0 a 1).<br>
+              <b style="color:#eaf2ff">Índice</b> \( r_{XV}=\sqrt{r_{xx}} \): correlación entre observado y verdadero. <b>Es mayor</b> que el coeficiente.
+            </div>
+            <div class="ansblock" style="margin-top:9px">
+              <div style="font-size:11.8px;line-height:1.5;color:var(--muted)">Piensa antes de operar: ¿me piden la fiabilidad \( R \), el <b>índice</b>, los ítems <b>añadidos</b> o el <b>total</b> de ítems? Cada cosa es un número distinto.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11 · A3 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 3 · Enunciado" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad práctica 03</div>
+          <h2 class="slide-title" data-anim>Alargar o acortar un test: Spearman-Brown</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card card--accent" data-anim>
+            <div class="card__label">La fórmula de Spearman-Brown</div>
+            <div class="formula formula--lg" style="margin:8px 0 10px">
+              \[ R=\frac{k\,r}{1+(k-1)r} \]
+            </div>
+            <ul class="list">
+              <li>\( r \): fiabilidad del test <b>original</b> (.60).</li>
+              <li>\( k \): <b>cuántas veces</b> es de largo el nuevo test respecto al original.</li>
+              <li>\( k=\dfrac{n_{\text{nuevo}}}{n_{\text{original}}} \).</li>
+              <li>Supone que los ítems añadidos son <b>paralelos</b> a los existentes.</li>
+            </ul>
+            <div class="note note--warn" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>\( k \) es una <b>razón de longitudes</b>, no el número de ítems añadidos. Añadir 35 a 70 implica \( k=105/70=1.5 \).</div>
+            </div>
+          </div>
+
+          <div class="enunciado" data-anim="right">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 3</div>
+            <p>El test “CARAS” (Thurstone, 1944) evalúa las aptitudes perceptivas y de atención. En la adaptación española (Yela, 1967) se obtuvo un coeficiente de fiabilidad de 0.60. La prueba consta de 70 ítems gráficos. Calcula:</p>
+            <ol class="enunciado__tasks enunciado__tasks--coded">
+              <li><span class="qtag">3.a</span><span>El incremento de la fiabilidad si se añaden al test 35 ítems similares.</span></li>
+              <li><span class="qtag">3.b</span><span>La disminución de la fiabilidad si el test disminuye a un tercio.</span></li>
+              <li><span class="qtag">3.c</span><span>El índice de fiabilidad del test de 70 ítems.</span></li>
+            </ol>
+            <div class="enunciado__data">\( n=70 \quad r_{xx}=.60 \)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12 · A3 SOLUCIÓN ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 3 · Respuestas 3.a, 3.b y 3.c" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 3 · Respuestas <span class="qtag qtag--sm" style="vertical-align:2px">3.a</span> <span class="qtag qtag--sm" style="vertical-align:2px">3.b</span> <span class="qtag qtag--sm" style="vertical-align:2px">3.c</span></div>
+          <h2 class="slide-title" data-anim>Más ítems no duplican la fiabilidad</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label"><span class="qtag qtag--sm">3.a</span> Añadir 35 ítems</div>
+            <div class="steps" style="margin-top:7px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">\( k=\dfrac{70+35}{70}=\dfrac{105}{70}=1.5 \)</div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">\( R=\dfrac{1.5\times .60}{1+(1.5-1)(.60)}=\dfrac{.90}{1.30} \)</div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">\( R=\mathbf{.6923} \) → sube <b>9,23 puntos</b></div></div>
+            </div>
+            <div class="hr" style="margin:9px 0"></div>
+            <div class="card__label"><span class="qtag qtag--sm">3.b</span> Reducir a un tercio</div>
+            <div class="steps" style="margin-top:7px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">\( k=\dfrac{70/3}{70}=\dfrac{1}{3} \)</div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">\( R=\dfrac{(1/3)(.60)}{1+(-2/3)(.60)}=\dfrac{.20}{.60} \)</div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">\( R=\mathbf{.3333} \) → baja <b>26,67 puntos</b></div></div>
+            </div>
+            <div class="ansblock" style="margin-top:9px">
+              <div class="card__label"><span class="qtag qtag--sm">3.c</span> Índice de fiabilidad</div>
+              <div style="font-size:13px;color:var(--muted);margin-top:3px">\( r_{XV}=\sqrt{r_{xx}}=\sqrt{.60}=\mathbf{.7746} \) · es la correlación entre \( X \) y \( V \), no el coeficiente.</div>
+            </div>
+            <div class="table-wrap" style="margin-top:9px">
+              <table class="table table--dense table--center">
+                <thead><tr><th>Escenario</th><th>Ítems</th><th>k</th><th>R</th><th>Cambio</th></tr></thead>
+                <tbody>
+                  <tr><td>Original</td><td>70</td><td>1</td><td>.600</td><td>—</td></tr>
+                  <tr class="row-hl"><td>Añadir 35</td><td>105</td><td>1,5</td><td class="ans">.6923</td><td>+9,23</td></tr>
+                  <tr><td>Un tercio</td><td>23,3</td><td>1/3</td><td class="ans">.3333</td><td>−26,67</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex items-center between">
+              <div class="card__label">Curva de Spearman-Brown</div>
+              <span class="chip chip--accent">r original = .60</span>
+            </div>
+            <div class="chart-box" style="height:265px;margin-top:2px">
+              <canvas data-chart="s2-sb" aria-label="Curva de fiabilidad según número de ítems con tres puntos señalados"></canvas>
+            </div>
+            <div class="figcap">La curva se aplana: cada ítem extra aporta menos que el anterior. Pasar de 70 a 105 solo gana 9 puntos de fiabilidad.</div>
+            <div class="grid cols-3" style="gap:7px;margin-top:5px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans">.3333</div><div class="kpi__label">23,3 ítems</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value" style="color:var(--amber-l)">.6000</div><div class="kpi__label">70 ítems</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans">.6923</div><div class="kpi__label">105 ítems</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 13 · A3 SEGUNDA PARTE · ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 3 · 2.ª parte · Enunciado" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad práctica 03 · Segunda parte</div>
+          <h2 class="slide-title" data-anim>Alargar una prueba de Matemáticas</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:start;margin-top:2px">
+          <div class="enunciado" data-anim>
+            <div class="enunciado__label">Enunciado del seminario · Actividad 3 (2.ª parte)</div>
+            <p>Una universidad encarga a un psicólogo la elaboración de una prueba de rendimiento en Matemáticas. La prueba consta de 65 ítems; se aplica a una muestra de 463 niños obteniéndose que \( \mu_X=30 \) y \( \sigma_X=8 \). El psicólogo ha realizado los análisis pertinentes y ha obtenido que el 80% de la varianza de las puntuaciones verdaderas viene explicada por la varianza de las puntuaciones empíricas. Calcula:</p>
+            <ol class="enunciado__tasks enunciado__tasks--coded">
+              <li><span class="qtag">3.d</span><span>¿Cuántos ítems tendremos que añadir si se quiere alcanzar un coeficiente de fiabilidad de 0.90?</span></li>
+              <li><span class="qtag">3.e</span><span>¿Cuál será el nuevo índice de fiabilidad si se reduce el número de ítems a la cuarta parte?</span></li>
+            </ol>
+            <div class="enunciado__data">\( n_I=65 \quad N=463 \quad \mu_X=30 \quad \sigma_X=8 \quad r_{xx}=.80 \)</div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Cómo se traduce el enunciado</div>
+            <div class="card__title">Tres datos y una frase clave</div>
+            <ul class="list" style="margin-top:10px">
+              <li><b>«La prueba consta de 65 ítems»</b> → \( n_I=65 \), la longitud inicial del test.</li>
+              <li><b>«El 80% de la varianza de las puntuaciones verdaderas viene explicada por la varianza de las puntuaciones empíricas»</b> → eso es \( \rho^2(X,V)=r_{xx}=.80 \). Es el <b>coeficiente</b>, no el índice.</li>
+              <li><b>«coeficiente de fiabilidad de 0.90»</b> → \( R=.90 \), el objetivo que hay que alcanzar.</li>
+            </ul>
+            <div class="note note--warn" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>No hace falta usar \( \mu_X=30 \) ni \( \sigma_X=8 \): son datos de contexto. Para 3.d y 3.e solo se necesitan \( n_I \), \( r \) y \( R \).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid cols-2" data-anim>
+          <div class="card card--tight">
+            <div class="card__label"><span class="qtag qtag--sm">3.d</span> Qué hay que responder exactamente</div>
+            <div class="small muted" style="margin-top:5px">Cuántos ítems <b>hay que añadir</b>: primero \( k \), después la longitud final \( n_F=65k \) y, por último, <b>\( n_F-65 \)</b>. Redondeo al alza.</div>
+          </div>
+          <div class="card card--tight">
+            <div class="card__label"><span class="qtag qtag--sm">3.e</span> Qué hay que responder exactamente</div>
+            <div class="small muted" style="margin-top:5px">El <b>índice de fiabilidad</b> (\( \sqrt{R} \)) del test reducido a la cuarta parte. Hay que <b>decir de qué test</b> se toma esa cuarta parte.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 13b · A3 SEGUNDA PARTE · SOLUCIÓN ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 3 · Respuestas 3.d y 3.e" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 3 · Respuestas <span class="qtag qtag--sm" style="vertical-align:2px">3.d</span> <span class="qtag qtag--sm" style="vertical-align:2px">3.e</span></div>
+          <h2 class="slide-title" data-anim>¿Cuántos ítems faltan para llegar a .90?</h2>
+        </div>
+
+        <div class="grid cols-3-1 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Despejar \( k \) de Spearman-Brown</div>
+            <div class="formula" style="margin:6px 0 8px;font-size:13px">
+              \[ k=\frac{R\,(1-r)}{r\,(1-R)} \qquad R=\frac{k\,r}{1+(k-1)r} \]
+            </div>
+            <div class="grid cols-2" style="gap:12px">
+              <div>
+                <div class="split-line"><span class="qtag qtag--sm">3.d</span> Alcanzar .90</div>
+                <div class="steps" style="margin-top:7px">
+                  <div class="step"><div class="step__n">1</div><div class="step__body">\( k=\dfrac{.90(.20)}{.80(.10)}=\dfrac{.18}{.08}=2.25 \)</div></div>
+                  <div class="step"><div class="step__n">2</div><div class="step__body">\( n'=65\times 2.25=146.25 \)</div></div>
+                  <div class="step"><div class="step__n">3</div><div class="step__body">Se redondea al alza: <b>147 ítems</b> → hay que añadir <b class="ans">82 ítems</b>.</div></div>
+                </div>
+                <div class="result" style="margin-top:6px"><span class="result__eq">R =</span><span class="result__num ans">.90</span></div>
+              </div>
+              <div style="border-left:1px solid var(--line);padding-left:14px">
+                <div class="split-line"><span class="qtag qtag--sm">3.e</span> Reducir a ¼</div>
+                <div style="font-size:11px;color:var(--muted);margin-top:5px"><b style="color:#eaf2ff">Opción A</b> · desde el test ya ampliado (146,25 ítems, r = .90):</div>
+                <div class="steps" style="margin-top:5px">
+                  <div class="step"><div class="step__n">1</div><div class="step__body">\( k=\dfrac{1}{4} \) → \( 36.6 \) ítems</div></div>
+                  <div class="step"><div class="step__n">2</div><div class="step__body">\( R=\dfrac{(.25)(.90)}{1+(-.75)(.90)}=\dfrac{.225}{.325}=.6923 \)</div></div>
+                  <div class="step"><div class="step__n">3</div><div class="step__body">Índice: \( \sqrt{.6923}=\mathbf{.8321} \)</div></div>
+                </div>
+                <div style="font-size:11px;color:var(--muted);margin-top:7px;padding-top:6px;border-top:1px dashed rgba(148,163,184,.2)"><b style="color:#eaf2ff">Opción B</b> · desde el test original (65 ítems, r = .80):</div>
+                <div style="font-size:11.5px;color:var(--muted);margin-top:4px">\( k=\frac14 \) → \( 16.25 \) ítems · \( R=\frac{(.25)(.80)}{1+(-.75)(.80)}=.50 \) · índice \( \sqrt{.50}=\mathbf{.7071} \)</div>
+              </div>
+            </div>
+            <div class="note note--warn" style="margin-top:8px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>No existen fracciones de ítem: se <b>redondea al alza</b> (82 y no 81). Y conviene <b>decir sobre qué test se aplica la cuarta parte</b>: es la única fuente de ambigüedad del apartado 3.e.</div>
+            </div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="card__label">Trayectoria de la fiabilidad</div>
+            <div class="chart-box" style="height:235px;margin-top:2px">
+              <canvas data-chart="s2-sb2" aria-label="Curva de fiabilidad para r igual a 0,80 y puntos en 65, 146,25 y 16,25 ítems"></canvas>
+            </div>
+            <div class="figcap">Con r inicial alto el margen de mejora es pequeño: hay que multiplicar por 2,25 la longitud para ganar 10 puntos.</div>
+            <div class="grid cols-2" style="gap:8px;margin-top:6px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans">146,25</div><div class="kpi__label">ítems teóricos (3.d)</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans">+82</div><div class="kpi__label">ítems a añadir (3.d)</div></div>
+            </div>
+            <div class="grid cols-2" style="gap:8px;margin-top:6px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:19px">.8321</div><div class="kpi__label">índice · opción A</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:19px">.7071</div><div class="kpi__label">índice · opción B</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 14b · TEORÍA PREVIA A4 ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Teoría previa · Actividad 4" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Antes de empezar · Teoría de la Actividad 4</div>
+          <h2 class="slide-title" data-anim>La fiabilidad no es una propiedad fija del test</h2>
+          <p class="slide-sub" data-anim>El mismo test aplicado a grupos distintos da coeficientes distintos. La razón está en la <b>variabilidad de las puntuaciones</b> del grupo.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">La idea en una fórmula</div>
+            <div class="formula formula--lg" style="margin:8px 0 10px">\( r_{xx}=1-\dfrac{\sigma^2_E}{\sigma^2_X} \)</div>
+            <ul class="list">
+              <li>\( \sigma^2_E \) es una propiedad de las <b>puntuaciones</b>: se mantiene aunque cambie la muestra.</li>
+              <li>Si \( \sigma^2_X \) <b>aumenta</b>, el error pesa <b>menos</b> → la fiabilidad <b>sube</b>.</li>
+              <li>Si \( \sigma^2_X \) <b>disminuye</b>, el error pesa <b>más</b> → la fiabilidad <b>baja</b>.</li>
+            </ul>
+            <div class="note note--key" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Se llama <b>restricción del rango</b>: si el grupo es muy homogéneo, cuesta más distinguir a las personas y la fiabilidad cae.</div>
+            </div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">Cambiar de grupo (formulario 6.2)</div>
+            <div class="formula" style="margin:7px 0 9px;font-size:13.5px">\[ r_{22'}=1-\left[(1-r_{11'})\times\dfrac{\sigma^2_1}{\sigma^2_2}\right] \]</div>
+            <table class="table table--dense" style="margin-top:6px">
+              <tbody>
+                <tr><td>Grupo 1</td><td>los datos originales</td></tr>
+                <tr><td>Grupo 2</td><td>el grupo hipotético</td></tr>
+                <tr><td>\( \sigma^2_2/\sigma^2_1 \)</td><td>cuántas veces cambia la varianza</td></tr>
+              </tbody>
+            </table>
+            <div class="ansblock" style="margin-top:9px">
+              <div style="font-size:11.8px;line-height:1.5;color:var(--muted)">Piensa: si la varianza se <b>duplica</b>, la razón es 2 → el error pesa la mitad. Si se <b>reduce a la mitad</b>, la razón es 0,5 → el error pesa el doble.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 14 · A4 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 4 · Enunciado" data-section="Actividad 4">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad práctica 04</div>
+          <h2 class="slide-title" data-anim>La fiabilidad también depende de la muestra</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="card__label">La clave: la varianza de error no cambia</div>
+            <div class="formula formula--lg" style="margin:8px 0 10px">
+              \[ r_{xx}=1-\frac{\sigma^2_E}{\sigma^2_X} \]
+            </div>
+            <ul class="list">
+              <li>\( \sigma^2_E \) es una propiedad de las <b>puntuaciones</b>: se mantiene aunque cambie la muestra.</li>
+              <li>Al aumentar \( \sigma^2_X \), el error pesa <b>menos</b> → sube la fiabilidad.</li>
+              <li>Al reducir \( \sigma^2_X \), el error pesa <b>más</b> → baja la fiabilidad.</li>
+            </ul>
+            <div class="note note--key" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Primero calcula \( \sigma^2_E \) con los datos originales: \( (1-.78)\times 4=.88 \).</div>
+            </div>
+          </div>
+
+          <div class="enunciado" data-anim="right">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 4</div>
+            <p>Un psicólogo está realizando un estudio sobre la atención en niños de 10 años; administra a 120 niños el test “Formas Idénticas” de Thurstone, obteniendo que \( \mu_X=13 \) y \( \sigma_X=2 \). Este test está formado por 20 ítems y el coeficiente de fiabilidad es de 0.78. Calcula:</p>
+            <ol class="enunciado__tasks enunciado__tasks--coded">
+              <li><span class="qtag">4.a</span><span>¿Cuál será el coeficiente de fiabilidad si se hubiera aplicado a otro grupo con varianza doble?</span></li>
+              <li><span class="qtag">4.b</span><span>¿Cuál será el coeficiente de fiabilidad si se hubiera aplicado a un grupo con la mitad de varianza?</span></li>
+            </ol>
+            <div class="enunciado__data">\( \mu_X=13 \quad \sigma_X=2 \quad n=20 \quad r_{xx}=.78 \)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 15 · A4 SOLUCIÓN ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Actividad 4 · Respuestas 4.a y 4.b" data-section="Actividad 4">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Actividad 4 · Respuestas <span class="qtag qtag--sm" style="vertical-align:2px">4.a</span> <span class="qtag qtag--sm" style="vertical-align:2px">4.b</span></div>
+          <h2 class="slide-title" data-anim>Duplicar la varianza sube la fiabilidad a .89</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Paso previo · el error no cambia</div>
+            <div class="formula" style="margin:7px 0 10px">
+              \( \sigma^2_X=(2)^2=4 \quad\Rightarrow\quad \sigma^2_E=(1-.78)\times 4=.88 \)
+            </div>
+            <div class="grid cols-2" style="gap:12px">
+              <div>
+                <div class="split-line"><span class="qtag qtag--sm">4.a</span> varianza doble</div>
+                <div class="steps" style="margin-top:7px">
+                  <div class="step"><div class="step__n">1</div><div class="step__body">\( \sigma^2_X=2\times 4=8 \)</div></div>
+                  <div class="step"><div class="step__n">2</div><div class="step__body">\( r=1-\dfrac{.88}{8}=1-.11 \)</div></div>
+                  <div class="step"><div class="step__n">3</div><div class="step__body"><b class="ans">.89</b> · sube 11 puntos</div></div>
+                </div>
+              </div>
+              <div style="border-left:1px solid var(--line);padding-left:14px">
+                <div class="split-line"><span class="qtag qtag--sm">4.b</span> varianza mitad</div>
+                <div class="steps" style="margin-top:7px">
+                  <div class="step"><div class="step__n">1</div><div class="step__body">\( \sigma^2_X=4/2=2 \)</div></div>
+                  <div class="step"><div class="step__n">2</div><div class="step__body">\( r=1-\dfrac{.88}{2}=1-.44 \)</div></div>
+                  <div class="step"><div class="step__n">3</div><div class="step__body"><b class="ans">.56</b> · baja 22 puntos</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="table-wrap" style="margin-top:12px">
+              <table class="table table--dense">
+                <thead><tr><th>Grupo</th><th>σ²X</th><th>σ²E</th><th>rxx</th></tr></thead>
+                <tbody>
+                  <tr><td>Original</td><td>4</td><td>.88</td><td>.78</td></tr>
+                  <tr class="row-hl"><td>Varianza doble</td><td>8</td><td>.88</td><td class="ans">.89</td></tr>
+                  <tr><td>Varianza mitad</td><td>2</td><td>.88</td><td class="ans">.56</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap">El error absoluto no cambia; cambia su peso relativo.</div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="flex items-center between">
+              <div class="card__label">Fiabilidad según la varianza del grupo</div>
+              <span class="chip chip--accent">σ²E = .88</span>
+            </div>
+            <div class="chart-box" style="height:262px;margin-top:2px">
+              <canvas data-chart="s2-varcurve" aria-label="Curva de fiabilidad en función de la varianza observada con tres puntos"></canvas>
+            </div>
+            <div class="figcap">A mayor variabilidad entre personas, más fácil es distinguirlas y mayor es la fiabilidad. Es el efecto de <b>restricción del rango</b>.</div>
+            <div class="grid cols-3" style="gap:7px;margin-top:5px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:19px">.56</div><div class="kpi__label">σ²X = 2</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value" style="color:var(--amber-l);font-size:19px">.78</div><div class="kpi__label">σ²X = 4 (original)</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans" style="font-size:19px">.89</div><div class="kpi__label">σ²X = 8</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 16b · HOJA DE RESPUESTAS S2 ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Hoja de respuestas · Seminario 2" data-section="Cierre">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Resumen · Seminario 2</div>
+          <h2 class="slide-title" data-anim>Hoja de respuestas: las 12 preguntas</h2>
+          <p class="slide-sub" data-anim>Cada respuesta lleva el número de actividad y la letra de la pregunta del documento del seminario.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:start">
+          <div class="card card--tight" data-anim>
+            <div class="card__label">Actividades 1 y 2</div>
+            <div class="table-wrap" style="margin-top:6px">
+              <table class="table sheet">
+                <thead><tr><th class="q-col">Nº</th><th>Pregunta</th><th>Respuesta</th></tr></thead>
+                <tbody>
+                  <tr><td class="q-cell">1.a</td><td>σ²V / σ²X</td><td class="ans-cell">0,90</td></tr>
+                  <tr><td class="q-cell">1.a</td><td>σ²E / σ²X</td><td class="ans-cell">0,10</td></tr>
+                  <tr><td class="q-cell">1.a</td><td>σV / σX</td><td class="ans-cell">0,9487</td></tr>
+                  <tr><td class="q-cell">1.a</td><td>σE / σX</td><td class="ans-cell">0,3162</td></tr>
+                  <tr><td class="q-cell">1.b</td><td>r (observadas, error)</td><td class="ans-cell">0,3162</td></tr>
+                  <tr><td class="q-cell">1.b</td><td>r (verdaderas, error)</td><td class="ans-cell">0</td></tr>
+                  <tr><td class="q-cell">1.c</td><td>Varianza verdadera</td><td class="ans-cell">54</td></tr>
+                  <tr><td class="q-cell">1.c</td><td>Varianza de error</td><td class="ans-cell">6</td></tr>
+                  <tr><td class="q-cell">2.a</td><td>V̂ · escala directa</td><td class="ans-cell">28,2</td></tr>
+                  <tr><td class="q-cell">2.a</td><td>v̂ · escala diferencial</td><td class="ans-cell">8,2</td></tr>
+                  <tr><td class="q-cell">2.a</td><td>z · escala típica</td><td class="ans-cell">1,1319</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card card--tight" data-anim="right">
+            <div class="card__label">Actividades 2 (cont.), 3 y 4</div>
+            <div class="table-wrap" style="margin-top:6px">
+              <table class="table sheet">
+                <thead><tr><th class="q-col">Nº</th><th>Pregunta</th><th>Respuesta</th></tr></thead>
+                <tbody>
+                  <tr><td class="q-cell">2.b</td><td>IC 99 % · directa</td><td class="ans-cell">[21,24 ; 38,76]</td></tr>
+                  <tr><td class="q-cell">2.b</td><td>IC 99 % · diferencial</td><td class="ans-cell">[1,24 ; 18,76]</td></tr>
+                  <tr><td class="q-cell">2.b</td><td>IC 99 % · típica</td><td class="ans-cell">[0,16 ; 2,34]</td></tr>
+                  <tr><td class="q-cell">3.a</td><td>Con 105 ítems</td><td class="ans-cell">0,6923</td></tr>
+                  <tr><td class="q-cell">3.b</td><td>Un tercio (23,3 ítems)</td><td class="ans-cell">0,3333</td></tr>
+                  <tr><td class="q-cell">3.c</td><td>Índice · 70 ítems</td><td class="ans-cell">0,7746</td></tr>
+                  <tr><td class="q-cell">3.d</td><td>Ítems a añadir</td><td class="ans-cell">82 (147 en total)</td></tr>
+                  <tr><td class="q-cell">3.e</td><td>Índice · ¼ del test</td><td class="ans-cell">0,8321 · 0,7071</td></tr>
+                  <tr><td class="q-cell">4.a</td><td>Varianza doble</td><td class="ans-cell">0,89</td></tr>
+                  <tr><td class="q-cell">4.b</td><td>Varianza mitad</td><td class="ans-cell">0,56</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap" style="margin-top:6px">En 3.e se dan los dos valores posibles: 0,8321 si la cuarta parte se aplica al test ampliado y 0,7071 si se aplica al original.</div>
+          </div>
+        </div>
+
+        <div class="card card--tight" data-anim style="border-color:rgba(251,146,60,.28);background:rgba(251,146,60,.05)">
+          <div class="flex items-center" style="gap:22px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:8px"><span class="qtag">1.a</span><span class="small muted">Número de actividad + letra de la pregunta</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><span class="ans" style="font-size:15px">0,90</span><span class="small muted">Respuesta, siempre en naranja</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><span class="small muted">\( \sigma^2 \) = varianza · \( \sigma \) = desviación típica · \( r_{xx} \) = coeficiente · \( r_{XV} \) = índice</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 16 · CIERRE ==================== -->
+    <section class="slide" data-part="Seminario 02 · Fiabilidad (I)" data-title="Cierre · Seminario 2" data-section="Cierre">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade">Cierre · Seminario 2</div>
+          <h2 class="slide-title" data-anim>Lo esencial, en seis fórmulas</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Chuleta del seminario</div>
+            <div style="display:flex;flex-direction:column;gap:7px;margin-top:9px">
+              <div class="formula formula--plain" style="font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+                <span>Modelo clásico</span><span>\( X=V+E \)</span>
+              </div>
+              <div class="formula formula--plain" style="font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+                <span>Fiabilidad</span><span>\( r_{xx}=\sigma^2_V/\sigma^2_X \)</span>
+              </div>
+              <div class="formula formula--plain" style="font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+                <span>Estimación</span><span>\( \hat{V}=\mu+r_{xx}(X-\mu) \)</span>
+              </div>
+              <div class="formula formula--plain" style="font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+                <span>Error típico</span><span>\( \sigma_E=\sigma_X\sqrt{1-r_{xx}} \)</span>
+              </div>
+              <div class="formula formula--plain" style="font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+                <span>Longitud</span><span>\( R=\dfrac{kr}{1+(k-1)r} \)</span>
+              </div>
+              <div class="formula formula--plain" style="font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:12px">
+                <span>Variabilidad</span><span>\( r=1-\sigma^2_E/\sigma^2_X \)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Tres trampas frecuentes</div>
+            <div class="steps" style="margin-top:9px">
+              <div class="step"><div class="step__n">!</div><div class="step__body"><b>Sumar desviaciones típicas.</b> Las varianzas se suman; las desviaciones, no. \( \sqrt{.90}\neq .90 \).</div></div>
+              <div class="step"><div class="step__n">!</div><div class="step__body"><b>Usar \( k \) como ítems añadidos.</b> \( k \) es la razón entre la longitud nueva y la vieja.</div></div>
+              <div class="step"><div class="step__n">!</div><div class="step__body"><b>Confundir coeficiente e índice.</b> El índice es \( \sqrt{r_{xx}} \); el coeficiente, la proporción de varianza.</div></div>
+              <div class="step"><div class="step__n">!</div><div class="step__body"><b>Leer el IC como probabilidad de \( V \).</b> El 99 % es una garantía del procedimiento, no de este intervalo.</div></div>
+            </div>
+            <div class="hr" style="margin:13px 0"></div>
+            <div class="flex between items-center">
+              <div>
+                <div class="card__label">Siguiente</div>
+                <div class="card__title">Seminario 3 · Fiabilidad (II)</div>
+              </div>
+              <a class="cover__cta" href="#26" data-goto="25" style="margin:0;padding:9px 14px;font-size:11.5px">Continuar
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex between items-center" data-anim>
+          <a class="chip" href="index.html">← Volver al índice</a>
+          <span class="xs muted">Seminario 2 · Fiabilidad (I) · Psicometría</span>
+        </div>
+      </div>
+    </section>
+
+  
+
+
+
+    <!-- ==================== 01 · PORTADA ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Portada · Seminario 3" data-section="Inicio">
+      <div class="slide__inner">
+        <div class="cover">
+          <div>
+            <div class="cover__badge" data-anim="fade">Seminario 03 · Fiabilidad (II)</div>
+            <h1 data-anim>Fiabilidad<br><span class="thin">(II)</span></h1>
+            <p class="cover__lead" data-anim>
+              Formas paralelas, test-retest y métodos de una sola aplicación.
+              Seis coeficientes calculados con datos reales y, sobre todo, interpretados.
+            </p>
+            <div class="cover__chips" data-anim>
+              <span class="chip chip--violet">Formas paralelas</span>
+              <span class="chip">Test-retest</span>
+              <span class="chip">Dos mitades</span>
+              <span class="chip">Rulon · Guttman</span>
+              <span class="chip">α · KR-20</span>
+            </div>
+            <button class="cover__cta" type="button" data-next data-anim style="background:var(--violet);color:#1a1030">
+              Empezar Seminario 3
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+
+          <aside class="cover__side">
+            <div class="cover__num">03</div>
+            <div class="cover__glyph" data-anim="right" style="border-color:rgba(167,139,250,.32)">
+              <div class="card__label">La pregunta de fondo</div>
+              <div style="font-size:20px;color:#f0eaff;line-height:1.35;font-family:var(--font-display);font-weight:500">
+                ¿La medida es estable, equivalente o internamente consistente?
+              </div>
+              <div class="hr"></div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.55">
+                Cada método responde a una pregunta distinta. El coeficiente solo tiene sentido si sabemos qué se está evaluando.
+              </div>
+            </div>
+            <div class="cover__meta" data-anim="right" data-delay=".12">
+              <div class="cover__meta-row"><span>Actividades</span><span>4 ejercicios · 7 coeficientes</span></div>
+              <div class="cover__meta-row"><span>Datos</span><span>Tablas originales de clase</span></div>
+              <div class="cover__meta-row" style="border:0;padding:0"><span>Curso</span><span>Psicometría · Grado en Psicología</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02 · PANORAMA ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Panorama de métodos" data-section="Inicio">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Panorama</div>
+          <h2 class="slide-title" data-anim>Tres familias, tres preguntas distintas</h2>
+          <p class="slide-sub" data-anim>Antes de calcular hay que decidir qué tipo de fiabilidad se puede estimar con el diseño disponible.</p>
+        </div>
+
+        <div class="method-map grow" style="margin-top:6px" data-anim>
+          <div class="method-card" style="border-color:rgba(45,212,191,.25)">
+            <div class="method-card__head"><span class="method-card__dot" style="background:var(--teal)"></span>Formas paralelas</div>
+            <ul>
+              <li>Dos versiones equivalentes del mismo test.</li>
+              <li>Se aplican a las mismas personas.</li>
+              <li>Se correlacionan las puntuaciones.</li>
+            </ul>
+            <div class="method-card__foot">Evalúa · equivalencia</div>
+          </div>
+          <div class="method-card" style="border-color:rgba(251,191,36,.22)">
+            <div class="method-card__head"><span class="method-card__dot" style="background:var(--amber)"></span>Test-retest</div>
+            <ul>
+              <li>El mismo test, dos momentos.</li>
+              <li>Se correlacionan ambas aplicaciones.</li>
+              <li>Sensible al intervalo temporal.</li>
+            </ul>
+            <div class="method-card__foot">Evalúa · estabilidad temporal</div>
+          </div>
+          <div class="method-card" style="border-color:rgba(167,139,250,.3)">
+            <div class="method-card__head"><span class="method-card__dot" style="background:var(--violet)"></span>Una sola aplicación</div>
+            <ul>
+              <li>Dos mitades · Rulon · Guttman.</li>
+              <li>Alfa de Cronbach · KR-20.</li>
+              <li>Estima la consistencia interna.</li>
+            </ul>
+            <div class="method-card__foot">Evalúa · homogeneidad</div>
+          </div>
+        </div>
+
+        <div class="card card--violet" data-anim>
+          <div class="flex items-center" style="gap:24px">
+            <div style="flex:0 0 auto">
+              <div class="card__label">Regla de oro</div>
+              <div style="font-size:13px;color:#e3dcff;font-weight:500;margin-top:3px">El método se elige por el diseño, no por el resultado que se quiere obtener.</div>
+            </div>
+            <div class="hr" style="flex:0 0 1px;width:1px;height:38px;background:var(--line)"></div>
+            <div class="tag-row" style="margin-left:auto">
+              <span class="chip">r &lt; .70 · insuficiente</span>
+              <span class="chip chip--amber">.70 – .89 · aceptable</span>
+              <span class="chip chip--accent">≥ .90 · excelente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02b · S3 FORMAS PARALELAS · SUPUESTOS ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Formas paralelas · qué cambia y qué se mantiene" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Formas paralelas · 01</div>
+          <h2 class="slide-title" data-anim>Dos versiones del mismo test</h2>
+          <p class="slide-sub" data-anim>La forma A y la forma B cambian en las <b>preguntas concretas</b>, pero no en lo que miden. Eso es lo que permite usar su correlación como fiabilidad.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card card--violet" data-anim>
+            <div class="card__label">Los cuatro supuestos del paralelismo estricto</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense">
+                <thead><tr><th>Supuesto</th><th>Qué exige</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><b>1 · Igualdad de V</b></td>
+                    <td class="ta-l">Las dos formas dan la <b>misma puntuación verdadera</b> a la misma persona: \( T_A=T_B \).</td>
+                  </tr>
+                  <tr>
+                    <td><b>2 · Igualdad de σ²E</b></td>
+                    <td class="ta-l">Las dos miden con la <b>misma precisión</b>: \( \operatorname{Var}(E_A)=\operatorname{Var}(E_B) \).</td>
+                  </tr>
+                  <tr>
+                    <td><b>3 · Errores independientes</b></td>
+                    <td class="ta-l">Los errores no van juntos ni con V: \( \operatorname{Cov}(E_A,E_B)=0 \) y \( \operatorname{Cov}(T,E_A)=\operatorname{Cov}(T,E_B)=0 \).</td>
+                  </tr>
+                  <tr>
+                    <td><b>4 · Igualdad de propiedades</b></td>
+                    <td class="ta-l">Misma media y misma varianza observada: \( \mu_A=\mu_B \) y \( \operatorname{Var}(X_A)=\operatorname{Var}(X_B) \).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:9px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Si se cumplen 1 y 2, la correlación entre A y B <b>es</b> el coeficiente de fiabilidad: \( r_{XX'}=\sigma_{XX'}/(\sigma_X\sigma_{X'}) \).</div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">¿Qué cambia y qué se mantiene igual?</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense">
+                <thead><tr><th>Elemento</th><th>¿Cambia o se mantiene?</th></tr></thead>
+                <tbody>
+                  <tr><td class="ta-l">Las preguntas concretas</td><td class="ta-l">Cambian</td></tr>
+                  <tr><td class="ta-l">El contenido específico de los ítems</td><td class="ta-l">Puede cambiar, pero del <b>mismo dominio</b></td></tr>
+                  <tr><td class="ta-l">La dificultad global del test</td><td class="ta-l">Se mantiene <b>equivalente</b></td></tr>
+                  <tr><td class="ta-l">La media de las puntuaciones</td><td class="ta-l">Se mantiene <b>igual</b></td></tr>
+                  <tr><td class="ta-l">La varianza de las puntuaciones</td><td class="ta-l">Se mantiene <b>igual</b></td></tr>
+                  <tr><td class="ta-l">La varianza del error de medida</td><td class="ta-l">Se mantiene <b>igual</b></td></tr>
+                  <tr><td class="ta-l">Lo que se pretende medir</td><td class="ta-l">Se mantiene <b>igual</b></td></tr>
+                  <tr><td class="ta-l">Las personas que responden</td><td class="ta-l">Son <b>las mismas</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap">Si las preguntas fueran exactamente las mismas, no serían dos formas: sería el mismo test (test-retest).</div>
+          </div>
+        </div>
+
+        <div class="grid cols-3" data-anim>
+          <div class="card card--tight" style="border-color:rgba(167,139,250,.3)">
+            <div class="card__label" style="color:var(--violet-l)">Forma A</div>
+            <div class="small" style="margin-top:4px;color:#c9d6e8">Ítems A1, A2, A3… A20</div>
+            <div class="small muted" style="margin-top:2px;font-size:11px">Mide el constructo con una dificultad determinada.</div>
+          </div>
+          <div class="card card--tight" style="border-color:rgba(167,139,250,.3)">
+            <div class="card__label" style="color:var(--violet-l)">Forma B</div>
+            <div class="small" style="margin-top:4px;color:#c9d6e8">Ítems B1, B2, B3… B20</div>
+            <div class="small muted" style="margin-top:2px;font-size:11px">Mismo dominio, dificultad y precisión <b>equivalentes</b>.</div>
+          </div>
+          <div class="card card--tight" style="border-color:rgba(45,212,191,.3)">
+            <div class="card__label" style="color:var(--teal-l)">Misma muestra</div>
+            <div class="small" style="margin-top:4px;color:#c9d6e8">Las mismas personas</div>
+            <div class="small muted" style="margin-top:2px;font-size:11px">Responden a las dos formas; se correlacionan sus puntuaciones.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 02c · S3 FORMAS PARALELAS · NIVELES ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Paralelas, tau-equivalentes y similares" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Formas paralelas · 02</div>
+          <h2 class="slide-title" data-anim>No todo lo que correlaciona es estrictamente paralelo</h2>
+          <p class="slide-sub" data-anim>Hay tres grados de exigencia. Cuanto más estricto es el supuesto, más fuerte es la conclusión que se puede sacar.</p>
+        </div>
+
+        <div class="grid cols-3 grow" style="align-items:stretch">
+          <div class="card card--violet" data-anim>
+            <div class="card__label">Nivel 1 · el más exigente</div>
+            <div class="card__title" style="font-size:15px">Formas estrictamente paralelas</div>
+            <div class="formula" style="margin-top:8px;font-size:12px">\( T_A=T_B \qquad \sigma^2_{E_A}=\sigma^2_{E_B} \)</div>
+            <ul class="list" style="margin-top:8px">
+              <li>Misma puntuación verdadera.</li>
+              <li>Mismo error típico.</li>
+              <li>Misma media y misma varianza.</li>
+            </ul>
+            <div class="figcap" style="margin-top:6px">Su correlación es directamente la fiabilidad.</div>
+          </div>
+
+          <div class="card" data-anim>
+            <div class="card__label">Nivel 2 · intermedio</div>
+            <div class="card__title" style="font-size:15px">Esencialmente tau-equivalentes</div>
+            <div class="formula formula--plain" style="margin-top:8px;font-size:12px">\( T_A=T_B+c \)</div>
+            <ul class="list" style="margin-top:8px">
+              <li>Misma puntuación verdadera <b>salvo una constante</b>.</li>
+              <li>No exige la misma media observada.</li>
+              <li>El error típico puede diferir.</li>
+            </ul>
+            <div class="figcap" style="margin-top:6px">Fiabilidad aceptable, pero la media puede estar desplazada.</div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Nivel 3 · el más laxo</div>
+            <div class="card__title" style="font-size:15px">Simplemente similares (equivalentes)</div>
+            <div class="formula formula--plain" style="margin-top:8px;font-size:12px">\( \text{mismo constructo} \)</div>
+            <ul class="list" style="margin-top:8px">
+              <li>Miden el mismo rasgo.</li>
+              <li>Sin garantizar T, σ²E ni μ iguales.</li>
+              <li>La correlación es una <b>cota inferior</b> de la fiabilidad.</li>
+            </ul>
+            <div class="figcap" style="margin-top:6px">Es lo habitual en la práctica: se justifica por el diseño.</div>
+          </div>
+        </div>
+
+        <div class="grid cols-3" data-anim>
+          <div class="card card--tight">
+            <div class="card__label">Cómo se comprueba</div>
+            <div class="small muted" style="margin-top:4px">Contenido revisado por jueces, dificultad y varianzas comparadas, y consistencia interna de cada forma por separado.</div>
+          </div>
+          <div class="card card--tight" style="border-color:rgba(45,212,191,.28)">
+            <div class="card__label" style="color:var(--teal-l)">Qué asume el ejercicio</div>
+            <div class="small muted" style="margin-top:4px">Paralelismo estricto (\( T_A=T_B \), \( \sigma^2_{E_A}=\sigma^2_{E_B} \)): por eso la correlación entre formas <b>es</b> la fiabilidad.</div>
+          </div>
+          <div class="card card--tight" style="border-color:rgba(251,113,133,.3)">
+            <div class="card__label" style="color:#fda4af">Si no se cumple</div>
+            <div class="small muted" style="margin-top:4px">La correlación solo <b>infravalora</b> la fiabilidad (cota inferior): no se puede leer como el coeficiente exacto.</div>
+          </div>
+        </div>
+
+        <div class="note note--warn" data-anim>
+          <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+          <div><b>Ojo con el ejercicio:</b> con los 10 pares de puntuaciones puedes <b>calcular r</b>, pero <b>no demostrar</b> que se cumplen los cuatro supuestos. La equivalencia de las formas se justifica también por su <b>diseño</b> (contenido, dificultad, formato) y por sus propiedades psicométricas.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 03 · A1 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 1 · Formas paralelas" data-section="Actividad 1">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Actividad práctica 01</div>
+          <h2 class="slide-title" data-anim>Formas paralelas: ¿miden lo mismo?</h2>
+          <div class="enunciado enunciado--compact" data-anim style="margin-top:2px">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 1</div>
+            <p>A una muestra de 10 alumnos le aplicaron la forma A y la forma B (forma paralela) de un cuestionario diseñado para medir Autoconcepto. Los resultados en cada medida aparecen en la siguiente tabla:</p>
+            <div class="enunciado__task" style="display:flex;gap:8px;align-items:flex-start;margin-top:7px"><span class="qtag qtag--sm">1.a</span><span>Calcula el coeficiente de fiabilidad mediante el método de las formas paralelas.</span></div>
+          </div>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="flex between items-center">
+              <div class="card__label">Datos originales</div>
+              <span class="chip chip--violet">N = 10</span>
+            </div>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table table--dense">
+                <thead><tr><th>Persona</th><th>Forma A</th><th>Forma B</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>20</td><td>21</td></tr>
+                  <tr><td>2</td><td>15</td><td>14</td></tr>
+                  <tr><td>3</td><td>18</td><td>16</td></tr>
+                  <tr><td>4</td><td>22</td><td>23</td></tr>
+                  <tr><td>5</td><td>24</td><td>21</td></tr>
+                  <tr><td>6</td><td>9</td><td>7</td></tr>
+                  <tr><td>7</td><td>14</td><td>16</td></tr>
+                  <tr><td>8</td><td>20</td><td>20</td></tr>
+                  <tr><td>9</td><td>17</td><td>18</td></tr>
+                  <tr><td>10</td><td>15</td><td>12</td></tr>
+                </tbody>
+                <tfoot><tr><td>Σ</td><td>174</td><td>168</td></tr></tfoot>
+              </table>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex between items-center">
+              <div class="card__label">La nube de puntos</div>
+              <span class="chip chip--accent">r = ?</span>
+            </div>
+            <div class="chart-box" style="height:250px;margin-top:2px">
+              <canvas data-chart="s3-parallel" aria-label="Dispersión de las puntuaciones de las formas A y B"></canvas>
+            </div>
+            <div class="formula formula--violet" style="margin-top:6px;font-size:13px">
+              \[ r_{AB}=\frac{\operatorname{cov}(A,B)}{s_A\,s_B} \]
+            </div>
+            <div class="card__text" style="margin-top:8px">
+              Si las formas son paralelas, miden el mismo rasgo con el mismo error típico. Su correlación <b>es</b> el coeficiente de fiabilidad.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 04 · A1 CÁLCULO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 1 · Respuesta 1.a" data-section="Actividad 1">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Actividad 1 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">1.a</span></div>
+          <h2 class="slide-title" data-anim>Una correlación de .927 entre formas</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim style="display:flex;flex-direction:column">
+            <div class="card__label">Tabla de trabajo · desviaciones y productos</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense table--center">
+                <thead><tr><th>i</th><th>A</th><th>a = A−17,4</th><th>B</th><th>b = B−16,8</th><th>a·b</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>20</td><td>2,6</td><td>21</td><td>4,2</td><td>10,92</td></tr>
+                  <tr><td>2</td><td>15</td><td>−2,4</td><td>14</td><td>−2,8</td><td>6,72</td></tr>
+                  <tr><td>3</td><td>18</td><td>0,6</td><td>16</td><td>−0,8</td><td>−0,48</td></tr>
+                  <tr><td>4</td><td>22</td><td>4,6</td><td>23</td><td>6,2</td><td>28,52</td></tr>
+                  <tr><td>5</td><td>24</td><td>6,6</td><td>21</td><td>4,2</td><td>27,72</td></tr>
+                  <tr><td>6</td><td>9</td><td>−8,4</td><td>7</td><td>−9,8</td><td>82,32</td></tr>
+                  <tr><td>7</td><td>14</td><td>−3,4</td><td>16</td><td>−0,8</td><td>2,72</td></tr>
+                  <tr><td>8</td><td>20</td><td>2,6</td><td>20</td><td>3,2</td><td>8,32</td></tr>
+                  <tr><td>9</td><td>17</td><td>−0,4</td><td>18</td><td>1,2</td><td>−0,48</td></tr>
+                  <tr><td>10</td><td>15</td><td>−2,4</td><td>12</td><td>−4,8</td><td>11,52</td></tr>
+                </tbody>
+                <tfoot><tr><td></td><td></td><td>Σ = 0</td><td></td><td>Σ = 0</td><td>177,80</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:9px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>La covarianza es positiva: cuando una persona puntúa alto en A, tiende a puntuar alto en B. Esa <b>variación conjunta</b> es la base de la correlación.</div>
+            </div>
+            <div class="figcap">Las desviaciones respecto a la media suman cero: sirven para calcular la covarianza y las varianzas.</div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Paso a paso</div>
+            <div class="steps" style="margin-top:7px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">Medias:
+                <div class="formula" style="font-size:12px">\( \bar{A}=\dfrac{\sum A_i}{N}=\dfrac{174}{10}=17.4 \qquad \bar{B}=\dfrac{\sum B_i}{N}=\dfrac{168}{10}=16.8 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">Covarianza:
+                <div class="formula" style="font-size:12px">\( s_{AB}=\dfrac{\sum (A_i-\bar{A})(B_i-\bar{B})}{N}=\dfrac{\sum a_i b_i}{N}=\dfrac{177.8}{10}=17.78 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">Varianzas:
+                <div class="formula" style="font-size:12px">\( s^2_A=\dfrac{\sum a_i^2}{N}=\dfrac{172.4}{10}=17.24 \qquad s^2_B=\dfrac{\sum b_i^2}{N}=\dfrac{213.6}{10}=21.36 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">4</div><div class="step__body">Desviaciones típicas:
+                <div class="formula" style="font-size:12px">\( s_A=\sqrt{17.24}=4.1521 \qquad s_B=\sqrt{21.36}=4.6217 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">5</div><div class="step__body">Correlación de Pearson:
+                <div class="formula" style="font-size:12px">\( r=\dfrac{s_{AB}}{s_A\,s_B}=\dfrac{17.78}{4.1521\times 4.6217}=\dfrac{17.78}{19.1899}=.9265 \)</div>
+              </div></div>
+            </div>
+            <div class="hr" style="margin:8px 0"></div>
+            <div class="flex between items-center">
+              <div class="kpi"><div class="kpi__value ans">.9265</div><div class="kpi__label">coeficiente de fiabilidad</div></div>
+              <div class="kpi"><div class="kpi__value">85,85 %</div><div class="kpi__label">varianza compartida (r²)</div></div>
+            </div>
+            <div class="note note--key" style="margin-top:9px;background:rgba(167,139,250,.06);border-color:rgba(167,139,250,.22)">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" style="color:var(--violet)"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Fiabilidad <b>excelente</b>: las formas A y B ordenan a las personas casi igual. Son intercambiables para medir autoconcepto en este grupo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 05a · S3 TEST-RETEST · TEORÍA ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Test-retest · estabilidad temporal" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--amber)">Test-retest · 01</div>
+          <h2 class="slide-title" data-anim>La misma báscula, dos semanas después</h2>
+          <p class="slide-sub" data-anim>Se aplica <b>el mismo test a las mismas personas</b> en dos momentos y se correlacionan las dos medidas. Eso es la <b>estabilidad temporal</b>: si el test mide bien, quien puntuó alto seguirá puntuando alto.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card card--amber" data-anim>
+            <div class="card__label">Qué exige el método</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense">
+                <tbody>
+                  <tr><td class="ta-l"><b>1 · Mismo instrumento</b><div class="xs muted">Mismo test, mismo formato y mismas instrucciones en las dos ocasiones.</div></td></tr>
+                  <tr><td class="ta-l"><b>2 · Mismas personas</b><div class="xs muted">Se correlacionan las dos medidas sujeto a sujeto.</div></td></tr>
+                  <tr><td class="ta-l"><b>3 · Intervalo adecuado</b><div class="xs muted">Muy corto → memoria y práctica; muy largo → cambio real del rasgo.</div></td></tr>
+                  <tr><td class="ta-l"><b>4 · Rasgo estable</b><div class="xs muted">Solo tiene sentido con características que no cambian en ese periodo.</div></td></tr>
+                  <tr><td class="ta-l"><b>5 · Errores independientes</b><div class="xs muted">\( \operatorname{Cov}(E_1,E_2)=0 \): lo que falla un día no debe fallar igual el otro.</div></td></tr>
+                  <tr><td class="ta-l"><b>6 · Medidas paralelas en el tiempo</b><div class="xs muted">\( T_1=T_2 \) y \( \operatorname{Var}(E_1)=\operatorname{Var}(E_2) \).</div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card ansblock" data-anim="right">
+            <div class="card__label">La fórmula y su lectura</div>
+            <div class="formula" style="margin-top:8px;font-size:13px">\( r_{12}=\dfrac{\operatorname{cov}(X_1,X_2)}{s_{X_1}\,s_{X_2}}=\dfrac{\sum (X_{1i}-\bar{X}_1)(X_{2i}-\bar{X}_2)/N}{s_{X_1}\,s_{X_2}} \)</div>
+            <div class="note note--key" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><b>En simple:</b> es como pesarse dos veces con la misma báscula. Si el peso cambia, o cambió la persona o la báscula no es estable. La correlación mide si el <b>orden</b> de las personas se mantiene.</div>
+            </div>
+            <div class="hr" style="margin:9px 0"></div>
+            <div class="card__label">Qué NO mide</div>
+            <ul class="list" style="margin-top:5px">
+              <li><b>No</b> mide consistencia interna: un test puede ser homogéneo y cambiar con el tiempo.</li>
+              <li>Es sensible al <b>aprendizaje</b>, la <b>reactividad</b> y la <b>maduración</b>.</li>
+              <li>Un intervalo mal elegido <b>infravalora</b> (cambio real) o <b>sobreestima</b> (memoria) la fiabilidad.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid cols-3" data-anim>
+          <div class="card card--tight" style="border-color:rgba(251,191,36,.3)">
+            <div class="card__label" style="color:var(--amber-l)">En el seminario</div>
+            <div class="small muted" style="margin-top:4px">5 niños, dos semanas: <b class="ans">r = 0,2406</b> → poca estabilidad (ojo con N = 5).</div>
+          </div>
+          <div class="card card--tight">
+            <div class="card__label">Qué intervalo elegir</div>
+            <div class="small muted" style="margin-top:4px">Ni tan corto que se recuerde, ni tan largo que el rasgo cambie. Depende de la estabilidad esperada del constructo.</div>
+          </div>
+          <div class="card card--tight">
+            <div class="card__label">Cómo se lee</div>
+            <div class="small muted" style="margin-top:4px">Alto = el <b>orden</b> de las personas se mantiene. Bajo = la segunda medida no predice la primera.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 05 · A2 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 2 · Test-retest" data-section="Actividad 2">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--amber)">Actividad práctica 02</div>
+          <h2 class="slide-title" data-anim>Test-retest: ¿se mantiene la autoestima?</h2>
+          <div class="enunciado enunciado--compact" data-anim style="margin-top:2px">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 2</div>
+            <p>A una muestra de 5 niños se le aplicó un cuestionario diseñado para medir Autoestima. Dos semanas más tarde, se le volvió a aplicar el mismo test a los mismos niños (repetición de la medida). Los resultados obtenidos en cada aplicación aparecen en la tabla siguiente:</p>
+            <div class="enunciado__task" style="display:flex;gap:8px;align-items:flex-start;margin-top:7px"><span class="qtag qtag--sm">2.a</span><span>Calcula el coeficiente de fiabilidad mediante el método de test-retest.</span></div>
+          </div>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:0">
+          <div class="card" data-anim>
+            <div class="flex between items-center">
+              <div class="card__label">Datos originales</div>
+              <span class="chip chip--amber">N = 5 · 2 semanas</span>
+            </div>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table">
+                <thead><tr><th>Sujeto</th><th>1.ª aplicación</th><th>2.ª aplicación</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>12</td><td>28</td></tr>
+                  <tr><td>2</td><td>10</td><td>14</td></tr>
+                  <tr><td>3</td><td>18</td><td>12</td></tr>
+                  <tr><td>4</td><td>30</td><td>23</td></tr>
+                  <tr><td>5</td><td>24</td><td>23</td></tr>
+                </tbody>
+                <tfoot><tr><td>Σ</td><td>94</td><td>100</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="note note--warn" style="margin-top:12px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>Fíjate en el sujeto 1: pasa de 12 a 28. Con \( N=5 \), un solo caso atípico puede cambiar mucho la correlación.</div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex between items-center">
+              <div class="card__label">Relación entre ambas medidas</div>
+              <span class="chip chip--accent">r = ?</span>
+            </div>
+            <div class="chart-box" style="height:255px;margin-top:2px">
+              <canvas data-chart="s3-retest" aria-label="Dispersión entre la primera y la segunda aplicación"></canvas>
+            </div>
+            <div class="formula formula--amber" style="margin-top:5px;font-size:12.5px">
+              \[ r_{12}=\frac{\operatorname{cov}(X_1,X_2)}{s_{X_1}s_{X_2}} \]
+            </div>
+            <div class="card__text" style="margin-top:7px">
+              La recta de regresión tiene poca pendiente: las puntuaciones de la segunda aplicación <b>apenas se predicen</b> desde la primera.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 06 · A2 CÁLCULO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 2 · Respuesta 2.a" data-section="Actividad 2">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--amber)">Actividad 2 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">2.a</span></div>
+          <h2 class="slide-title" data-anim>Una estabilidad temporal muy baja: .241</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Paso a paso</div>
+            <div class="steps" style="margin-top:8px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">Medias:
+                <div class="formula formula--amber">\( \bar{X}_1=\dfrac{\sum X_{1i}}{N}=\dfrac{94}{5}=18.8 \qquad \bar{X}_2=\dfrac{\sum X_{2i}}{N}=\dfrac{100}{5}=20 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">Covarianza:
+                <div class="formula formula--amber">\( s_{12}=\dfrac{\sum (X_{1i}-\bar{X}_1)(X_{2i}-\bar{X}_2)}{N}=\dfrac{54}{5}=10.8 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">Varianzas:
+                <div class="formula formula--amber">\( s^2_1=\dfrac{\sum x_1^2}{N}=\dfrac{276.8}{5}=55.36 \qquad s^2_2=\dfrac{\sum x_2^2}{N}=\dfrac{182}{5}=36.4 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">4</div><div class="step__body">Desviaciones típicas:
+                <div class="formula formula--amber">\( s_1=\sqrt{55.36}=7.4404 \qquad s_2=\sqrt{36.4}=6.0332 \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">5</div><div class="step__body">Correlación de Pearson:
+                <div class="formula formula--amber">\( r=\dfrac{s_{12}}{s_1\,s_2}=\dfrac{10.8}{7.4404\times 6.0332}=\dfrac{10.8}{44.8886}=.2406 \)</div>
+              </div></div>
+            </div>
+            <div class="hr" style="margin:10px 0"></div>
+            <div class="grid cols-3" style="gap:8px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans">.2406</div><div class="kpi__label">fiabilidad</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value">5,79 %</div><div class="kpi__label">varianza compartida</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value">+1,2</div><div class="kpi__label">cambio medio</div></div>
+            </div>
+          </div>
+
+          <div class="card card--amber" data-anim="right">
+            <div class="card__label">Interpretación</div>
+            <div class="card__title" style="font-size:18px;margin-top:5px">El test no es estable en dos semanas</div>
+            <ul class="list" style="margin-top:10px">
+              <li>La autoestima <b>debería ser relativamente estable</b>; un valor de .24 indica que la segunda medida aporta poca información sobre la primera.</li>
+              <li>Puede haber <b>aprendizaje, reactividad</b> o un cambio real en los niños.</li>
+              <li>Con \( N=5 \) la estimación es <b>muy inestable</b>: el intervalo de confianza de \( r \) sería enorme.</li>
+              <li>El caso 1 (12 → 28) y el caso 4 (30 → 23) empujan la correlación en direcciones opuestas.</li>
+            </ul>
+            <div class="note note--danger" style="margin-top:10px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>Test-retest mide <b>estabilidad</b>, no consistencia interna. Un test puede ser muy homogéneo y aun así cambiar con el tiempo.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 06b · TEORÍA PREVIA S3-A3 ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Teoría previa · Actividad 3" data-section="Fundamentos">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Antes de empezar · Teoría de la Actividad 3</div>
+          <h2 class="slide-title" data-anim>Consistencia interna: una sola aplicación</h2>
+          <p class="slide-sub" data-anim>Con una única aplicación no podemos comparar formas ni momentos. Entonces comparamos las <b>partes del propio test</b> entre sí.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Dos familias de métodos</div>
+            <div class="method-card" style="margin-top:6px;border-color:rgba(167,139,250,.3)">
+              <div class="method-card__head"><span class="method-card__dot" style="background:var(--violet)"></span>Partir el test en dos mitades</div>
+              <ul>
+                <li><b>Dos mitades + Spearman-Brown:</b> se correlacionan las mitades y se corrige por longitud.</li>
+                <li><b>Rulon:</b> usa la varianza de las <b>diferencias</b> entre mitades.</li>
+                <li><b>Guttman-Flanagan:</b> usa la varianza de cada mitad.</li>
+              </ul>
+            </div>
+            <div class="method-card" style="margin-top:7px;border-color:rgba(45,212,191,.25)">
+              <div class="method-card__head"><span class="method-card__dot" style="background:var(--teal)"></span>Usar todos los ítems a la vez</div>
+              <ul>
+                <li><b>Alfa de Cronbach:</b> cualquier tipo de ítem (polítomico).</li>
+                <li><b>KR-20:</b> ítems dicotómicos (0/1) → alfa con \( p_jq_j \).</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card--violet" data-anim="right">
+            <div class="card__label">Qué significa cada número</div>
+            <div class="table-wrap" style="margin-top:6px">
+              <table class="table table--dense">
+                <tbody>
+                  <tr><td>\( r_{1,2} \)</td><td>Correlación entre las <b>dos mitades</b> (test a la mitad)</td></tr>
+                  <tr><td>\( R \)</td><td>Fiabilidad del test <b>completo</b> (corregida)</td></tr>
+                  <tr><td>\( s^2_i \)</td><td>Varianza de cada ítem</td></tr>
+                  <tr><td>\( s^2_X \)</td><td>Varianza de las puntuaciones <b>totales</b></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ansblock" style="margin-top:8px">
+              <div style="font-size:11.8px;line-height:1.5;color:var(--muted)"><b style="color:#eaf2ff">Piensa:</b> si el test se parte en dos mitades, el resultado <b>no</b> es la fiabilidad del test: hay que <b>corregirlo</b> porque el test completo es el doble de largo.</div>
+            </div>
+            <div class="note note--warn" style="margin-top:8px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>Alfa alto no garantiza que el test mida <b>una sola cosa</b>: puede haber varios factores y ser consistente igualmente.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--tight" data-anim>
+          <div class="card__label">Las cinco fórmulas de la actividad</div>
+          <div class="grid" style="grid-template-columns:repeat(5,1fr);gap:8px;margin-top:6px">
+            <div class="formula formula--plain" style="font-size:10.5px;padding:6px 8px"><div class="formula__label">Dos mitades</div>\( R=\dfrac{2r_{1,2}}{1+r_{1,2}} \)</div>
+            <div class="formula formula--plain" style="font-size:10.5px;padding:6px 8px"><div class="formula__label">Rulon</div>\( R=1-\dfrac{s^2_d}{s^2_X} \)</div>
+            <div class="formula formula--plain" style="font-size:10.5px;padding:6px 8px"><div class="formula__label">Guttman-F.</div>\( R=2\left[1-\dfrac{s^2_1+s^2_2}{s^2_X}\right] \)</div>
+            <div class="formula formula--plain" style="font-size:10.5px;padding:6px 8px"><div class="formula__label">Alfa</div>\( \alpha=\dfrac{k}{k-1}\left[1-\dfrac{\sum s^2_i}{s^2_X}\right] \)</div>
+            <div class="formula formula--plain" style="font-size:10.5px;padding:6px 8px"><div class="formula__label">KR-20</div>\( KR_{20}=\dfrac{k}{k-1}\left[1-\dfrac{\sum p_iq_i}{s^2_X}\right] \)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 07 · A3 INTRO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3 · Una sola aplicación" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Actividad práctica 03</div>
+          <h2 class="slide-title" data-anim>Una sola aplicación: partir el test en dos</h2>
+        </div>
+
+        <div class="grid cols-3-1 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="flex between items-center" style="gap:12px">
+              <div class="enunciado__label" style="margin:0">Enunciado del seminario · Actividad 3 · Ejercicio 1</div>
+              <span class="chip chip--violet">0 / 1</span>
+            </div>
+            <p>1. Se aplicó a una muestra de 10 sujetos un test de liderazgo formado por 8 ítems de respuesta dicotómica. Las respuestas aparecen en la tabla siguiente:</p>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table table--dense table--center">
+                <thead><tr><th>Persona</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>Σ</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td>5</td></tr>
+                  <tr><td>2</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td class="on">1</td><td>3</td></tr>
+                  <tr><td>3</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td>3</td></tr>
+                  <tr><td>4</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td>3</td></tr>
+                  <tr><td>5</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td>7</td></tr>
+                  <tr><td>6</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td>2</td></tr>
+                  <tr><td>7</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td>8</td></tr>
+                  <tr><td>8</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td>5</td></tr>
+                  <tr><td>9</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td>6</td></tr>
+                  <tr><td>10</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td>5</td></tr>
+                </tbody>
+                <tfoot><tr><td>Σ</td><td>5</td><td>6</td><td>4</td><td>8</td><td>3</td><td>5</td><td>7</td><td>9</td><td>47</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="enunciado__task" style="margin-top:9px;display:flex;gap:8px;align-items:flex-start"><span class="qtag qtag--sm">3.1.a</span><span>Calcula el coeficiente de fiabilidad en este grupo, mediante el método de las dos mitades de Spearman-Brown.</span></div>
+            <div class="figcap">La mitad 1 (A–D) y la mitad 2 (E–H) deben ser equivalentes en contenido. Aquí se usa el orden del test.</div>
+          </div>
+
+          <div class="card card--violet" data-anim="right">
+            <div class="card__label">Cómo se corrige</div>
+            <div class="steps" style="margin-top:8px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">Correlaciona las dos mitades: \( r_{1,2} \).</div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">Corrige la longitud con Spearman-Brown:
+                <div class="formula formula--violet" style="font-size:12.5px">\( R=\dfrac{2r_{1,2}}{1+r_{1,2}} \)</div>
+              </div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">Interpreta el test <b>completo</b>, no la mitad.</div></div>
+            </div>
+            <div class="hr" style="margin:11px 0"></div>
+            <div class="card__label">Los otros métodos</div>
+            <ul class="list" style="margin-top:6px">
+              <li><b>Rulon:</b> \( 1-s^2_d/s^2_X \) con \( d=V_1-V_2 \).</li>
+              <li><b>Guttman-Flanagan:</b> \( 2[1-(s^2_1+s^2_2)/s^2_X] \).</li>
+              <li><b>Alfa de Cronbach:</b> usa la varianza de <i>todos</i> los ítems.</li>
+              <li><b>KR-20:</b> alfa para ítems dicotómicos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 08 · A3.1 DOS MITADES ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.1 · Respuesta 3.1.a" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Actividad 3 · Ejercicio 1 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">3.1.a</span></div>
+          <h2 class="slide-title" data-anim>Dos mitades: .288 entre mitades, .447 en el test completo</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Puntuaciones por mitad</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense table--center">
+                <thead><tr><th>Persona</th><th>Mitad 1 (A–D)</th><th>Mitad 2 (E–H)</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>2</td><td>3</td></tr>
+                  <tr><td>2</td><td>1</td><td>2</td></tr>
+                  <tr><td>3</td><td>2</td><td>1</td></tr>
+                  <tr><td>4</td><td>2</td><td>1</td></tr>
+                  <tr><td>5</td><td>3</td><td>4</td></tr>
+                  <tr><td>6</td><td>1</td><td>1</td></tr>
+                  <tr><td>7</td><td>4</td><td>4</td></tr>
+                  <tr><td>8</td><td>3</td><td>2</td></tr>
+                  <tr><td>9</td><td>4</td><td>2</td></tr>
+                  <tr><td>10</td><td>1</td><td>4</td></tr>
+                </tbody>
+                <tfoot><tr><td>Media</td><td>2,30</td><td>2,40</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="steps" style="margin-top:9px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">\( s^2_1=1.21 \) · \( s^2_2=1.44 \) · \( s_{12}=.38 \)</div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">\( r_{1,2}=\dfrac{.38}{1.1\times 1.2}=.2879 \)</div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">\( R=\dfrac{2(.2879)}{1+.2879}=\dfrac{.5758}{1.2879}=.4471 \)</div></div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex between items-center">
+              <div class="card__label">Puntuaciones de cada persona en ambas mitades</div>
+              <span class="chip chip--violet">N = 10</span>
+            </div>
+            <div class="chart-box" style="height:250px;margin-top:2px">
+              <canvas data-chart="s3-halves" aria-label="Barras agrupadas con las puntuaciones de cada persona en las dos mitades"></canvas>
+            </div>
+            <div class="grid cols-3" style="gap:7px;margin-top:5px">
+              <div class="kpi kpi--sm"><div class="kpi__value ans">.288</div><div class="kpi__label">r entre mitades</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value ans">.447</div><div class="kpi__label">R corregida</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value rose">19,98 %</div><div class="kpi__label">varianza compartida</div></div>
+            </div>
+            <div class="note note--warn" style="margin-top:8px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>La corrección sube el valor porque el test completo es el doble de largo, pero <b>no rescata</b> una consistencia baja: .447 sigue siendo insuficiente.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 09 · A3.2 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.2 · Rulon y Guttman" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--blue)">Actividad 3 · Ejercicio 2</div>
+          <h2 class="slide-title" data-anim>Rulon y Guttman-Flanagan: dos caminos, una misma lógica</h2>
+          <div class="enunciado enunciado--compact" data-anim style="margin-top:2px">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 3 · Ejercicio 2</div>
+            <p>2. Se administró un cuestionario de liderazgo; el cuestionario está formado por seis ítems de respuesta politómica (también conocidos como ítems tipo Likert). En la tabla siguiente aparecen las respuestas de cinco personas a cada uno de los seis ítems del cuestionario.</p>
+            <div class="enunciado__task" style="display:flex;gap:8px;align-items:flex-start;margin-top:7px"><span class="qtag qtag--sm">3.2.a</span><span>Estima el coeficiente de fiabilidad del test utilizando los coeficientes de Rulon y Guttman-Flanagan.</span></div>
+          </div>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="flex between items-center">
+              <div class="card__label">Respuestas originales</div>
+              <span class="chip">1 a 5</span>
+            </div>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table">
+                <thead><tr><th>Persona</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>4</td><td>4</td><td>3</td><td>3</td><td>4</td><td>5</td></tr>
+                  <tr><td>2</td><td>5</td><td>4</td><td>2</td><td>2</td><td>1</td><td>1</td></tr>
+                  <tr><td>3</td><td>3</td><td>4</td><td>3</td><td>4</td><td>5</td><td>3</td></tr>
+                  <tr><td>4</td><td>2</td><td>4</td><td>3</td><td>2</td><td>5</td><td>2</td></tr>
+                  <tr><td>5</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:12px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div><b>Mitades:</b> ítems A–C (mitad 1) e ítems D–F (mitad 2). Rulon usa la <b>diferencia</b> entre mitades; Guttman usa la <b>suma</b> de sus varianzas.</div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Las dos fórmulas</div>
+            <div class="formula" style="margin:8px 0 10px">
+              <div class="formula__label">Rulon</div>
+              \[ R=1-\frac{s^2_{d}}{s^2_X} \qquad d=V_1-V_2 \]
+            </div>
+            <div class="formula formula--violet">
+              <div class="formula__label">Guttman-Flanagan</div>
+              \[ R=2\left[1-\frac{s^2_{V_1}+s^2_{V_2}}{s^2_X}\right] \]
+            </div>
+            <div class="hr" style="margin:11px 0"></div>
+            <div class="card__label">Qué mide cada pieza</div>
+            <ul class="list" style="margin-top:6px">
+              <li>\( s^2_d \): cuánto <b>discrepan</b> las dos mitades en cada persona.</li>
+              <li>\( s^2_{V_1}+s^2_{V_2} \): variabilidad <b>dentro</b> de cada mitad.</li>
+              <li>\( s^2_X \): variabilidad de las puntuaciones totales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 10 · A3.2 CÁLCULO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.2 · Respuesta 3.2.a" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--blue)">Actividad 3 · Ejercicio 2 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">3.2.a</span></div>
+          <h2 class="slide-title" data-anim>Ambos métodos coinciden: .699</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="table-wrap">
+              <table class="table table--dense table--center">
+                <thead><tr><th>Persona</th><th>V1 (A–C)</th><th>V2 (D–F)</th><th>Total</th><th>d = V1−V2</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>11</td><td>12</td><td>23</td><td>−1</td></tr>
+                  <tr><td>2</td><td>11</td><td>4</td><td>15</td><td>7</td></tr>
+                  <tr><td>3</td><td>10</td><td>12</td><td>22</td><td>−2</td></tr>
+                  <tr><td>4</td><td>9</td><td>9</td><td>18</td><td>0</td></tr>
+                  <tr><td>5</td><td>4</td><td>3</td><td>7</td><td>1</td></tr>
+                </tbody>
+                <tfoot><tr><td>Media</td><td>9</td><td>8</td><td>17</td><td>1</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="grid cols-4" style="gap:6px;margin-top:9px">
+              <div class="kpi kpi--sm"><div class="kpi__value">6,8</div><div class="kpi__label">s²V1</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value">14,8</div><div class="kpi__label">s²V2</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value">33,2</div><div class="kpi__label">s²X</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value amber">10</div><div class="kpi__label">s²d</div></div>
+            </div>
+            <div class="hr" style="margin:11px 0"></div>
+            <div class="meter-row">
+              <div class="meter-row__top"><span>Varianza total</span><b>33,2</b></div>
+              <div class="meter"><span class="meter__fill" style="width:100%"></span></div>
+            </div>
+            <div class="meter-row" style="margin-top:7px">
+              <div class="meter-row__top"><span>Varianza de las mitades (6,8 + 14,8)</span><b>21,6</b></div>
+              <div class="meter"><span class="meter__fill meter__fill--violet" style="width:65%"></span></div>
+            </div>
+            <div class="meter-row" style="margin-top:7px">
+              <div class="meter-row__top"><span>Varianza de las diferencias</span><b>10,0</b></div>
+              <div class="meter"><span class="meter__fill meter__fill--amber" style="width:30%"></span></div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Cálculo</div>
+            <div class="formula" style="margin:7px 0 9px;font-size:13px">
+              \[ R_{\text{Rulon}}=1-\frac{10}{33.2}=1-.3012=.6988 \]
+            </div>
+            <div class="formula formula--violet" style="font-size:13px">
+              \[ R_{GF}=2\left[1-\frac{6.8+14.8}{33.2}\right]=2(1-.6506)=.6988 \]
+            </div>
+            <div class="flex between items-center" style="margin-top:14px">
+              <div class="result"><span class="result__eq">R =</span><span class="result__num ans">.699</span></div>
+              <span class="chip chip--amber">aceptable</span>
+            </div>
+            <div class="note note--key" style="margin-top:11px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>No es casualidad: algebraicamente, \( s^2_d=s^2_{V_1}+s^2_{V_2}-2s_{12} \) y \( s^2_X=s^2_{V_1}+s^2_{V_2}+2s_{12} \). <b>Ambas fórmulas son equivalentes</b> cuando se usan las mismas mitades.</div>
+            </div>
+            <div class="card__text" style="margin-top:8px">
+              La consistencia es aceptable, pero con \( N=5 \) el resultado es solo orientativo. La mitad 1 y la mitad 2 difieren bastante en variabilidad (6,8 vs 14,8).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 11 · A3.3 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.3 · Alfa de Cronbach" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--teal)">Actividad 3 · Ejercicio 3</div>
+          <h2 class="slide-title" data-anim>Alfa de Cronbach: cada ítem aporta su varianza</h2>
+          <div class="enunciado enunciado--compact" data-anim style="margin-top:2px">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 3 · Ejercicio 3</div>
+            <p>3. Se ha aplicado un test para evaluar el patrón Tipo A en personas que padecen algún síntoma de estrés. El cuestionario, en su versión reducida consta de cuatro ítems donde la persona tiene que valorar de Nada (1) a Muy alto (9) distintas situaciones relacionadas con su vida y su forma de gestionar el tiempo. Los datos obtenidos para cinco personas son:</p>
+            <div class="enunciado__task" style="display:flex;gap:8px;align-items:flex-start;margin-top:7px"><span class="qtag qtag--sm">3.3.a</span><span>Estime el coeficiente de fiabilidad utilizando el coeficiente alfa de Cronbach.</span></div>
+          </div>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="flex between items-center">
+              <div class="card__label">Respuestas de 5 personas</div>
+              <span class="chip chip--accent">1 – 9</span>
+            </div>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table">
+                <thead><tr><th>Persona</th><th>I1</th><th>I2</th><th>I3</th><th>I4</th><th>Total</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>5</td><td>6</td><td>4</td><td>6</td><td>21</td></tr>
+                  <tr><td>2</td><td>6</td><td>7</td><td>5</td><td>7</td><td>25</td></tr>
+                  <tr><td>3</td><td>6</td><td>7</td><td>6</td><td>8</td><td>27</td></tr>
+                  <tr><td>4</td><td>7</td><td>8</td><td>6</td><td>8</td><td>29</td></tr>
+                  <tr><td>5</td><td>5</td><td>6</td><td>4</td><td>5</td><td>20</td></tr>
+                </tbody>
+                <tfoot><tr><td>Media</td><td>5,8</td><td>6,8</td><td>5,0</td><td>6,8</td><td>24,4</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:12px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Alfa compara la varianza <b>de cada ítem</b> con la varianza <b>del total</b>. Si los ítems miden lo mismo, el total varía mucho más que cada ítem por separado.</div>
+            </div>
+          </div>
+
+          <div class="card card--accent" data-anim="right">
+            <div class="card__label">La fórmula</div>
+            <div class="formula formula--lg" style="margin:8px 0 12px">
+              \[ \alpha=\frac{k}{k-1}\left[1-\frac{\sum s^2_i}{s^2_X}\right] \]
+            </div>
+            <ul class="list">
+              <li>\( k \): número de ítems → aquí \( k=4 \).</li>
+              <li>\( s^2_i \): varianza de cada ítem.</li>
+              <li>\( s^2_X \): varianza de las puntuaciones totales.</li>
+              <li>\( \alpha \) es una proporción: se interpreta como la parte de varianza del total que es verdadera.</li>
+            </ul>
+            <div class="hr" style="margin:12px 0"></div>
+            <div class="flex between">
+              <div class="kpi kpi--sm"><div class="kpi__value">0</div><div class="kpi__label">sin consistencia</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value teal">1</div><div class="kpi__label">consistencia perfecta</div></div>
+            </div>
+            <div class="card__text" style="margin-top:10px">
+              No hay que confundir alfa con un <b>índice de unidimensionalidad</b>: un test puede tener alfa alto y contener más de un factor.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 12 · A3.3 CÁLCULO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.3 · Respuesta 3.3.a" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--teal)">Actividad 3 · Ejercicio 3 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">3.3.a</span></div>
+          <h2 class="slide-title" data-anim>Un alfa de .964: consistencia excelente</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Varianza de cada ítem</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense table--center">
+                <thead><tr><th>Ítem</th><th>Media</th><th>s²ᵢ</th></tr></thead>
+                <tbody>
+                  <tr><td>I1</td><td>5,8</td><td>0,56</td></tr>
+                  <tr><td>I2</td><td>6,8</td><td>0,56</td></tr>
+                  <tr><td>I3</td><td>5,0</td><td>0,80</td></tr>
+                  <tr><td>I4</td><td>6,8</td><td>1,36</td></tr>
+                </tbody>
+                <tfoot><tr><td>Σ</td><td></td><td>3,28</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="steps" style="margin-top:9px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">\( \sum s^2_i=.56+.56+.80+1.36=3.28 \)</div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">Totales: 21, 25, 27, 29, 20 → \( \bar{X}=24.4 \), \( s^2_X=11.84 \)</div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">\( \alpha=\dfrac{4}{3}\left[1-\dfrac{3.28}{11.84}\right]=\dfrac{4}{3}(.7230) \)</div></div>
+            </div>
+            <div class="result" style="margin-top:8px"><span class="result__eq">α =</span><span class="result__num ans">.9640</span></div>
+            <div class="split-line" style="margin-top:12px">Aportación de cada ítem</div>
+            <div class="chart-box" style="height:118px;margin-top:3px">
+              <canvas data-chart="s3-alpha-items" aria-label="Varianza de cada uno de los cuatro ítems"></canvas>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex between items-center">
+              <div class="card__label">Descomposición de la varianza total</div>
+              <span class="chip chip--accent">α = .964</span>
+            </div>
+            <div class="chart-box" style="height:230px;margin-top:2px">
+              <canvas data-chart="s3-alpha" aria-label="Dona con la proporción de varianza verdadera y de error según alfa"></canvas>
+            </div>
+            <div class="figcap">11,84 = 8,56 (verdadera) + 3,28 (error). La parte verdadera es el 72,3 % del total.</div>
+            <div class="note note--key" style="margin-top:8px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Alfa alto con solo 4 ítems sugiere ítems muy redundantes. En tests cortos, un alfa excesivamente alto puede indicar <b>solapamiento de contenido</b>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 13 · A3.4 ENUNCIADO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.4 · KR-20" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Actividad 3 · Ejercicio 4</div>
+          <h2 class="slide-title" data-anim>KR-20: consistencia con ítems dicotómicos</h2>
+          <div class="enunciado enunciado--compact" data-anim style="margin-top:2px">
+            <div class="enunciado__label">Enunciado del seminario · Actividad 3 · Ejercicio 4</div>
+            <p>4. Los resultados al aplicar una escala de actitudes hacia el uso de videojuegos formada por seis ítems dicotómicos en un grupo de 5 personas aparecen en la tabla siguiente:</p>
+            <div class="enunciado__task" style="display:flex;gap:8px;align-items:flex-start"><span class="qtag qtag--sm">3.4.a</span><span>Estima el coeficiente de fiabilidad para esta escala mediante la consistencia interna.</span></div>
+          </div>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="flex between items-center">
+              <div class="card__label">Matriz de respuestas</div>
+              <span class="chip chip--violet">0 / 1</span>
+            </div>
+            <div class="table-wrap" style="margin-top:8px">
+              <table class="table table--center">
+                <thead><tr><th>Persona</th><th>I1</th><th>I2</th><th>I3</th><th>I4</th><th>I5</th><th>I6</th><th>Σ</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td>3</td></tr>
+                  <tr><td>2</td><td class="on">1</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td>4</td></tr>
+                  <tr><td>3</td><td class="off">0</td><td class="on">1</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td>2</td></tr>
+                  <tr><td>4</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td class="on">1</td><td>6</td></tr>
+                  <tr><td>5</td><td class="on">1</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td class="off">0</td><td>1</td></tr>
+                </tbody>
+                <tfoot><tr><td>Σ</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td><td>16</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:12px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>KR-20 es <b>alfa aplicado a ítems 0/1</b>. La varianza de un ítem dicotómico es \( s^2_i=p_iq_i \), con \( q_i=1-p_i \).</div>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">La fórmula de Kuder-Richardson 20</div>
+            <div class="formula formula--lg" style="margin:8px 0 12px">
+              \[ KR_{20}=\frac{k}{k-1}\left[1-\frac{\sum p_iq_i}{s^2_X}\right] \]
+            </div>
+            <ul class="list">
+              <li>\( k=6 \) ítems · \( p_i \): proporción de aciertos o respuestas 1 al ítem \( i \).</li>
+              <li>\( q_i=1-p_i \).</li>
+              <li>\( s^2_X \): varianza de las puntuaciones totales.</li>
+            </ul>
+            <div class="hr" style="margin:10px 0 8px"></div>
+            <div class="card__label">KR-20 y KR-21: qué mide cada una</div>
+            <div class="table-wrap" style="margin-top:5px">
+              <table class="table table--dense">
+                <tbody>
+                  <tr>
+                    <td><b>KR-20</b></td>
+                    <td class="ta-l">Ítems de <b>distinta dificultad</b>. Usa la varianza de cada ítem (\( \sum p_iq_i \)): es el <b>alfa exacto</b> para ítems 0/1.</td>
+                  </tr>
+                  <tr>
+                    <td><b>KR-21</b></td>
+                    <td class="ta-l">Ítems de <b>dificultad similar</b> (una \( p \) común). Usa la media: \( KR_{21}=\dfrac{k}{k-1}\left[1-\dfrac{\bar{X}(k-\bar{X})}{k\,s^2_X}\right] \). Suele dar una <b>cota inferior</b> de KR-20.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap">Las dos son alfa para 0/1: miden <b>consistencia interna</b> en una sola aplicación. La “20” es solo el número de fórmula (Kuder y Richardson, 1937).</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 14 · A3.4 CÁLCULO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Actividad 3.4 · Respuesta 3.4.a" data-section="Actividad 3">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Actividad 3 · Ejercicio 4 · Respuesta <span class="qtag qtag--sm" style="vertical-align:2px">3.4.a</span></div>
+          <h2 class="slide-title" data-anim>Un KR-20 de .681: consistencia aceptable</h2>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch">
+          <div class="card" data-anim>
+            <div class="card__label">Proporciones y varianza de cada ítem</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table table--dense table--center">
+                <thead><tr><th>Ítem</th><th>p</th><th>q</th><th>p·q</th></tr></thead>
+                <tbody>
+                  <tr><td>I1</td><td>.8</td><td>.2</td><td>.16</td></tr>
+                  <tr><td>I2</td><td>.6</td><td>.4</td><td>.24</td></tr>
+                  <tr><td>I3</td><td>.6</td><td>.4</td><td>.24</td></tr>
+                  <tr><td>I4</td><td>.6</td><td>.4</td><td>.24</td></tr>
+                  <tr><td>I5</td><td>.4</td><td>.6</td><td>.24</td></tr>
+                  <tr><td>I6</td><td>.2</td><td>.8</td><td>.16</td></tr>
+                </tbody>
+                <tfoot><tr><td>Σ</td><td></td><td></td><td>1,28</td></tr></tfoot>
+              </table>
+            </div>
+            <div class="steps" style="margin-top:9px">
+              <div class="step"><div class="step__n">1</div><div class="step__body">Totales: 3, 4, 2, 6, 1 → \( \bar{X}=3.2 \), \( s^2_X=2.96 \)</div></div>
+              <div class="step"><div class="step__n">2</div><div class="step__body">\( KR_{20}=\dfrac{6}{5}\left[1-\dfrac{1.28}{2.96}\right]=1.2(1-.4324) \)</div></div>
+              <div class="step"><div class="step__n">3</div><div class="step__body">\( KR_{20}=1.2\times .5676=.6811 \)</div></div>
+            </div>
+            <div class="result" style="margin-top:8px"><span class="result__eq">KR-20 =</span><span class="result__num ans">.681</span></div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="flex between items-center">
+              <div class="card__label">Fiabilidad estimada</div>
+              <span class="chip chip--violet">6 ítems</span>
+            </div>
+            <div class="chart-box" style="height:240px;margin-top:2px">
+              <canvas data-chart="s3-kr20" aria-label="Dona con el 68,1 por ciento de consistencia y 31,9 por ciento de error"></canvas>
+            </div>
+            <div class="figcap">El 68,1 % de la varianza del total se considera verdadera; el 31,9 %, error.</div>
+            <div class="note note--warn" style="margin-top:8px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+              <div>Con 5 personas y 6 ítems, el valor es <b>inestable</b>; en una muestra grande, .68 sería aceptable pero mejorable. Recuerda: más ítems homogéneos → mayor KR-20.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 14b · HOJA DE RESPUESTAS S3 ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Hoja de respuestas · Seminario 3" data-section="Cierre">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Resumen · Seminario 3</div>
+          <h2 class="slide-title" data-anim>Hoja de respuestas: los siete coeficientes</h2>
+          <p class="slide-sub" data-anim>Cada respuesta lleva el número de actividad (y de ejercicio) tal como aparece en el documento del seminario.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:start">
+          <div class="card card--tight" data-anim>
+            <div class="card__label">Todos los resultados</div>
+            <div class="table-wrap" style="margin-top:6px">
+              <table class="table sheet">
+                <thead><tr><th class="q-col">Nº</th><th>Método</th><th>Respuesta</th></tr></thead>
+                <tbody>
+                  <tr><td class="q-cell">1.a</td><td>Formas paralelas</td><td class="ans-cell">0,9265</td></tr>
+                  <tr><td class="q-cell">2.a</td><td>Test-retest</td><td class="ans-cell">0,2406</td></tr>
+                  <tr><td class="q-cell">3.1.a</td><td>Dos mitades · r entre mitades</td><td class="ans-cell">0,2879</td></tr>
+                  <tr><td class="q-cell">3.1.a</td><td>Dos mitades · R corregida</td><td class="ans-cell">0,4471</td></tr>
+                  <tr><td class="q-cell">3.2.a</td><td>Rulon</td><td class="ans-cell">0,6988</td></tr>
+                  <tr><td class="q-cell">3.2.a</td><td>Guttman-Flanagan</td><td class="ans-cell">0,6988</td></tr>
+                  <tr><td class="q-cell">3.3.a</td><td>Alfa de Cronbach</td><td class="ans-cell">0,9640</td></tr>
+                  <tr><td class="q-cell">3.4.a</td><td>KR-20</td><td class="ans-cell">0,6811</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figcap" style="margin-top:6px">Los valores no se comparan entre sí: cada uno responde a una pregunta distinta.</div>
+            <div class="hr" style="margin:9px 0"></div>
+            <div class="card__label">Lectura rápida de los resultados</div>
+            <ul class="list" style="margin-top:5px">
+              <li><b>≥ .90 · excelente:</b> formas paralelas <span class="ans">.9265</span> y alfa <span class="ans">.9640</span>.</li>
+              <li><b>.70 – .89 · aceptable:</b> Rulon y Guttman <span class="ans">.6988</span> (roza el límite) y KR-20 <span class="ans">.6811</span>.</li>
+              <li><b>&lt; .70 · insuficiente:</b> dos mitades <span class="ans">.4471</span> y test-retest <span class="ans">.2406</span>.</li>
+            </ul>
+          </div>
+
+          <div class="card card--violet" data-anim="right">
+            <div class="card__label">Qué pregunta responde cada uno</div>
+            <div class="table-wrap" style="margin-top:6px">
+              <table class="table">
+                <tbody>
+                  <tr><td><b>1.a</b></td><td>¿Son <b>equivalentes</b> dos formas del test?</td></tr>
+                  <tr><td><b>2.a</b></td><td>¿Es <b>estable</b> en el tiempo?</td></tr>
+                  <tr><td><b>3.1.a</b></td><td>¿Son <b>homogéneas</b> las dos mitades?</td></tr>
+                  <tr><td><b>3.2.a</b></td><td>¿Coinciden las mitades? (varianzas)</td></tr>
+                  <tr><td><b>3.3.a</b></td><td>¿Son <b>consistentes</b> los 4 ítems?</td></tr>
+                  <tr><td><b>3.4.a</b></td><td>¿Ítems <b>0/1</b> consistentes?</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="ansblock" style="margin-top:8px">
+              <div style="font-size:11.8px;line-height:1.5;color:var(--muted)"><b style="color:#eaf2ff">Recuerda:</b> con \( N=5 \) o \( N=10 \) estos coeficientes son <b>orientativos</b>: un solo caso atípico puede moverlos mucho.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card--tight" data-anim style="border-color:rgba(251,146,60,.28);background:rgba(251,146,60,.05)">
+          <div class="flex items-center" style="gap:22px;flex-wrap:wrap">
+            <div style="display:flex;align-items:center;gap:8px"><span class="qtag">3.1.a</span><span class="small muted">Actividad (y ejercicio) + pregunta</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><span class="ans" style="font-size:15px">0,9265</span><span class="small muted">Respuesta, siempre en naranja</span></div>
+            <div style="display:flex;align-items:center;gap:8px"><span class="small muted">\( r \) = coeficiente de fiabilidad · \( R \) = corregido por longitud</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 15 · COMPARATIVA ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Comparativa de coeficientes" data-section="Cierre">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Síntesis</div>
+          <h2 class="slide-title" data-anim>Seis coeficientes, seis lecturas</h2>
+          <p class="slide-sub" data-anim>Los valores no se comparan entre sí: cada uno responde a una pregunta distinta, con datos y muestras distintas.</p>
+        </div>
+
+        <div class="grid cols-2 grow" style="align-items:stretch;margin-top:2px">
+          <div class="card" data-anim>
+            <div class="flex between items-center">
+              <div class="card__label">Resultados del seminario</div>
+              <span class="chip chip--accent">r</span>
+            </div>
+            <div class="chart-box" style="height:300px;margin-top:4px">
+              <canvas data-chart="s3-compare" aria-label="Barras horizontales con los seis coeficientes de fiabilidad"></canvas>
+            </div>
+          </div>
+
+          <div class="card" data-anim="right">
+            <div class="card__label">Qué evalúa cada uno</div>
+            <div class="table-wrap" style="margin-top:7px">
+              <table class="table sheet">
+                <thead><tr><th class="q-col">Nº</th><th>Método</th><th>Pregunta</th><th>Coeficiente</th></tr></thead>
+                <tbody>
+                  <tr><td class="q-cell">1.a</td><td>Formas paralelas</td><td>¿Son equivalentes?</td><td class="ans-cell">.9265</td></tr>
+                  <tr><td class="q-cell">2.a</td><td>Test-retest</td><td>¿Es estable en el tiempo?</td><td class="ans-cell">.2406</td></tr>
+                  <tr><td class="q-cell">3.1.a</td><td>Dos mitades (S-B)</td><td>¿Son homogéneas las mitades?</td><td class="ans-cell">.4471</td></tr>
+                  <tr><td class="q-cell">3.2.a</td><td>Rulon / Guttman</td><td>¿Coinciden las mitades?</td><td class="ans-cell">.6988</td></tr>
+                  <tr><td class="q-cell">3.3.a</td><td>Alfa de Cronbach</td><td>¿Son consistentes los ítems?</td><td class="ans-cell">.9640</td></tr>
+                  <tr><td class="q-cell">3.4.a</td><td>KR-20</td><td>¿Ítems dicotómicos consistentes?</td><td class="ans-cell">.6811</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="note note--key" style="margin-top:9px">
+              <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg>
+              <div>Un test puede ser <b>estable pero poco homogéneo</b>, o <b>homogéneo pero inestable</b>. La fiabilidad no es un único número mágico: es una familia de evidencias.</div>
+            </div>
+            <div class="card__text" style="margin-top:8px">
+              Además, la fiabilidad es <b>específica de la muestra</b>: cambiar la variabilidad del grupo cambia el coeficiente (Seminario 2, actividad 4).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ==================== 15b · QUÉ MIDE CADA MÉTODO ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Estabilidad, equivalencia o consistencia" data-section="Cierre">
+      <div class="slide__inner">
+        <div>
+          <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Síntesis · la pregunta correcta</div>
+          <h2 class="slide-title" data-anim>Tres fiabilidades distintas (no una sola)</h2>
+        </div>
+
+        <div class="card" data-anim style="padding:12px 16px">
+          <div class="table-wrap" style="margin-top:2px">
+            <table class="table table--dense table--cmp"><colgroup><col style="width:17%"><col style="width:41%"><col style="width:20%"><col style="width:22%"></colgroup>
+              <thead><tr><th>Método</th><th>Qué fiabilidad mide</th><th>Aplicaciones</th><th style="text-align:left">Coeficiente</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><b>Test-retest</b></td>
+                  <td class="ta-l"><b>Estabilidad temporal</b>: la medida se mantiene en el tiempo</td>
+                  <td class="ta-l">2 momentos distintos</td>
+                  <td class="ans ta-l">r de Pearson (T₁, T₂)</td>
+                </tr>
+                <tr>
+                  <td><b>Formas paralelas</b></td>
+                  <td class="ta-l"><b>Equivalencia</b> entre dos versiones del test</td>
+                  <td class="ta-l">2 versiones (misma sesión o dos)</td>
+                  <td class="ans ta-l">r de Pearson (A, B)</td>
+                </tr>
+                <tr>
+                  <td><b>Dos mitades</b> (split-half)</td>
+                  <td class="ta-l"><b>Consistencia interna</b>: homogeneidad entre mitades</td>
+                  <td class="ta-l">1 sola aplicación</td>
+                  <td class="ans ta-l">r + Spearman-Brown (λ₂, λ₆)</td>
+                </tr>
+                <tr>
+                  <td><b>Alfa de Cronbach</b></td>
+                  <td class="ta-l"><b>Consistencia interna</b> con ítems politómicos (Likert)</td>
+                  <td class="ta-l">1 sola aplicación</td>
+                  <td class="ans ta-l">α</td>
+                </tr>
+                <tr>
+                  <td><b>Omega de McDonald</b></td>
+                  <td class="ta-l">Consistencia interna <b>congenérica</b> (los ítems no pesan igual)</td>
+                  <td class="ta-l">1 sola aplicación</td>
+                  <td class="ans ta-l">ω</td>
+                </tr>
+                <tr>
+                  <td><b>KR-20 / KR-21</b></td>
+                  <td class="ta-l">Consistencia con ítems <b>dicotómicos</b> (distinta / similar dificultad)</td>
+                  <td class="ta-l">1 sola aplicación</td>
+                  <td class="ans ta-l">KR₂₀ · KR₂₁</td>
+                </tr>
+                <tr>
+                  <td><b>Alfa / Omega ordinal</b></td>
+                  <td class="ta-l">Consistencia cuando los datos se tratan como <b>ordinales</b> (policóricas/tetracóricas)</td>
+                  <td class="ta-l">1 sola aplicación</td>
+                  <td class="ans ta-l">α<sub>ord</sub> · ω<sub>ord</sub></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="figcap">Rulon y Guttman-Flanagan son variantes del método de las dos mitades: también estiman consistencia interna con una sola aplicación.</div>
+        </div>
+
+        <div class="note note--warn" data-anim>
+          <svg class="note__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.4 18a2 2 0 001.7 3h15.8a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+          <div><b>La diferencia clave:</b> el test-retest evalúa <b>estabilidad temporal</b> (dos momentos, misma prueba); la consistencia interna evalúa <b>homogeneidad entre ítems</b> en <b>una sola aplicación</b>. No son intercambiables: un test puede ser estable y poco homogéneo, o homogéneo e inestable. Omega es hoy el índice recomendado porque no exige tau-equivalencia (que todos los ítems pesen igual), supuesto que sí asume alfa.</div>
+        </div>
+
+        <div class="grid cols-3" data-anim>
+          <div class="card card--tight" style="border-color:rgba(251,191,36,.3)">
+            <div class="card__label" style="color:var(--amber-l)">¿Dos momentos?</div>
+            <div class="small muted" style="margin-top:4px">→ <b>Test-retest</b>: misma prueba, misma muestra, r de Pearson.</div>
+          </div>
+          <div class="card card--tight" style="border-color:rgba(167,139,250,.32)">
+            <div class="card__label" style="color:var(--violet-l)">¿Dos versiones?</div>
+            <div class="small muted" style="margin-top:4px">→ <b>Formas paralelas</b>: equivalencia entre A y B.</div>
+          </div>
+          <div class="card card--tight" style="border-color:rgba(45,212,191,.3)">
+            <div class="card__label" style="color:var(--teal-l)">¿Una sola aplicación?</div>
+            <div class="small muted" style="margin-top:4px">→ <b>Dos mitades, α, ω o KR-20</b>: consistencia interna.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- ==================== 16 · CIERRE ==================== -->
+    <section class="slide" data-part="Seminario 03 · Fiabilidad (II)" data-title="Cierre · Seminario 3" data-section="Cierre">
+      <div class="slide__inner">
+        <div class="end">
+          <div>
+            <div class="eyebrow" data-anim="fade" style="color:var(--violet)">Cierre · Seminario 3</div>
+            <h1 data-anim>Elegir bien<br>el coeficiente.</h1>
+            <p class="end__lead" data-anim>
+              La fiabilidad es una propiedad de las puntuaciones, no del test. Antes de calcular,
+              pregúntate qué fuente de error quieres controlar y qué diseño tienes.
+            </p>
+            <div class="tag-row" data-anim style="margin-top:18px">
+              <span class="chip chip--violet">2 aplicaciones → paralelas / test-retest</span>
+              <span class="chip">1 aplicación → mitades / α / KR-20</span>
+            </div>
+            <div class="end__links" data-anim>
+              <a class="cover__cta" href="#1" data-goto="0" style="margin:0;background:rgba(255,255,255,.06);color:var(--ink);border:1px solid var(--line)">
+                ← Repasar Seminario 2
+              </a>
+              <a class="cover__cta" href="index.html" style="margin:0;background:transparent;color:var(--muted);border:1px solid var(--line)">
+                Volver al índice
+              </a>
+            </div>
+          </div>
+
+          <div class="end__card" data-anim="right">
+            <div class="card__label">Checklist antes de responder</div>
+            <ul class="list list--check" style="margin-top:10px">
+              <li>¿Cuántas aplicaciones hay? ¿Una o dos?</li>
+              <li>¿Los ítems son dicotómicos o polítomicos?</li>
+              <li>¿Piden el coeficiente o el índice de fiabilidad?</li>
+              <li>¿Hay que corregir por longitud? Usa Spearman-Brown.</li>
+              <li>¿La muestra es grande? Con N pequeño, interpreta con cautela.</li>
+              <li>¿El resultado es estable, equivalente o consistente?</li>
+            </ul>
+            <div class="hr" style="margin:14px 0"></div>
+            <div class="grid cols-2" style="gap:8px">
+              <div class="kpi kpi--sm"><div class="kpi__value teal">α = .964</div><div class="kpi__label">mejor consistencia</div></div>
+              <div class="kpi kpi--sm"><div class="kpi__value violet">r = .927</div><div class="kpi__label">mejor equivalencia</div></div>
+            </div>
+            <div class="figcap" style="margin-top:9px">Material original: Prof.ª María José Quesada Rodríguez · Psicometría.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+  </main>
+</div>
+
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/vendor/katex/auto-render.min.js"></script>
+<script src="assets/vendor/chartjs/chart.umd.min.js"></script>
+<script src="assets/vendor/gsap/gsap.min.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/tooltips.js"></script>
+<script src="assets/js/glosario.js"></script>
+<script src="assets/js/buscador.js"></script>
+<script src="assets/js/deck.js"></script>
+</body>
+</html>
