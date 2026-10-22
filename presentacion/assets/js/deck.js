@@ -62,7 +62,7 @@
       <div class="deck-right">
         ${switchHTML}
         <span class="deck-counter"><b class="js-count">01</b><span style="opacity:.45"> / </span><span class="js-total">${pad(total)}</span></span>
-        <a class="home-btn" href="index.html" aria-label="Volver al inicio" title="Volver al inicio (I)">
+        <a class="home-btn" href="../index.html" aria-label="Volver al inicio" title="Volver al inicio del curso (I)">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>
           <span>Inicio</span>
         </a>
